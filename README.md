@@ -1,5 +1,12 @@
 # CPP-DataStructures-2ndYear
 Collection of Lab programs of my 2nd year C++ course
+---
+## Disclaimer 📌
+Note: 
+- These codes might differ slightly from those provided by the instructor, but they perform the intended tasks effectively. 
+- Since our lab setup used Visual Studio 2010, you may notice 
+    `#include <conio.h>` for `getch()` functions in some of the programs. 
+    For newer compilers (like g++ on Linux), this inclusion isn’t necessary and can be removed.
 
 ---
 ## Lab1 
