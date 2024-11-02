@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Data Structures Lab Programs</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        h2 { color: #555; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow-x: auto; }
+        .file { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>C++ Data Structures Lab Programs</h1>
+    <p><em>Note: These codes may differ slightly from those provided by the instructor, but they perform the intended tasks. `conio.h` was used for compatibility with Visual Studio 2010.</em></p>
+<h2>LAB1</h2>
+<div class='file'><h3>student.cpp</h3>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
+#include &lt;string&gt;
+
+using namespace std;
+
+class Student {
+        string name;
+        int roll;
+        float marks;
+    public:
+        void display() {
+            cout &lt;&lt; &quot;Name: &quot; &lt;&lt; name &lt;&lt; endl;
+            cout &lt;&lt; &quot;Roll: &quot; &lt;&lt; roll &lt;&lt; endl;
+            cout &lt;&lt; &quot;Marks: &quot; &lt;&lt; marks &lt;&lt; endl;
+        }
+        void set(string n, int r, float m) {
+            name = n;
+            roll = r;
+            marks = m;
+        }
+};
+
+int main(){
+    Student s1;
+    string name;
+    int roll;
+    float marks;
+    cout &lt;&lt; &quot;Enter name, roll and marks of student&quot; &lt;&lt; endl;
+    cin &gt;&gt; name &gt;&gt; roll &gt;&gt; marks;
+    s1.set(name, roll, marks);
+    s1.display();
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter name, roll and marks of student
+Ashwith
+29
+90
+Name: Ashwith 
+Roll: 29
+Marks: 90
+*/</code></pre></div>
+<div class='file'><h3>swap_aliasing.cpp</h3>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;conio.h&gt;
+
+using namespace std;
+
+void swap(int &amp;x, int &amp;y){
+	x = x + y;
+	y = x - y;
+	x = x - y;
+}
+
+int main(){
+	int x = 10,y = 20;
+	cout&lt;&lt;&quot;Before Swapping\nx = &quot;&lt;&lt;x&lt;&lt;endl&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;
+	swap(x,y);
+	cout&lt;&lt;&quot;After Swapping\nx = &quot;&lt;&lt;x&lt;&lt;endl&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;
+	getch();
+	return 0;
+}
+
+/*
+OUTPUT:
+Before Swapping
+x = 10
+y = 20
+After Swapping
+x = 20
+y = 10
+*/</code></pre></div>
+<div class='file'><h3>student_array.cpp</h3>
+<pre><code>#include &lt;iostream&gt;
+// #include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
+#include &lt;string&gt;
+
+using namespace std;
+
+class Student {
+        string name;
+        int roll;
+        float marks;
+    public:
+        void display() {
+            cout &lt;&lt; &quot;Name: &quot; &lt;&lt; name &lt;&lt; endl;
+            cout &lt;&lt; &quot;Roll: &quot; &lt;&lt; roll &lt;&lt; endl;
+            cout &lt;&lt; &quot;Marks: &quot; &lt;&lt; marks &lt;&lt; endl;
+        }
+        void set(string n, int r, float m) {
+            name = n;
+            roll = r;
+            marks = m;
+        }
+};
+
+int main(){
+    Student s[3];
+    string name;
+    int roll,n;
+    float marks;
+    cout &lt;&lt; &quot;Enter number of students&quot; &lt;&lt; endl;
+    cin &gt;&gt; n;
+    for(int i=0;i&lt;n;i++){
+        cout &lt;&lt; &quot;Enter name, roll and marks of student&quot; &lt;&lt; endl;
+        cin &gt;&gt; name &gt;&gt; roll &gt;&gt; marks;
+        s[i].set(name, roll, marks);
+    }
+    cout &lt;&lt; &quot;Details of students&quot; &lt;&lt; endl;
+    for(int i=0;i&lt;n;i++){
+        s[i].display();
+    }
+    // getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter number of students
+3
+Enter name, roll and marks of student
+Ashwith 29 90
+Enter name, roll and marks of student
+Arya 24 90
+Enter name, roll and marks of student
+Arnav 23 90
+Details of students
+Name: Ashwith
+Roll: 29
+Marks: 90
+Name: Arya
+Roll: 24
+Marks: 90
+Name: Arnav
+Roll: 23
+Marks: 90
+*/</code></pre></div>
+<div class='file'><h3>average_n_array.cpp</h3>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;conio.h&gt;  //for getch()
+
+using namespace std;
+int main(){
+	int a[50],n,sum=0;
+	float avg;
+	cout&lt;&lt;&quot;Enter the total number of elements&quot;&lt;&lt;endl;
+	cin&gt;&gt;n;
+	cout&lt;&lt;&quot;Enter n values&quot;&lt;&lt;endl;
+	for (int i=0; i&lt;n; i++){
+		cin&gt;&gt;a[i];
+		sum+=a[i];
+	}
+	cout&lt;&lt;&quot;Sum = &quot;&lt;&lt;sum&lt;&lt;&quot;\nAverage = &quot;&lt;&lt;sum/n&lt;&lt;endl;
+	getch();
+	return 0;
+}
+
+/*
+OUTPUT:
+Enter the total number of elements
+5
+Enter n values
+1
+2
+3
+4
+5
+Sum = 15
+Average = 3
+*/</code></pre></div>
+<div class='file'><h3>average_of_two.cpp</h3>
+<pre><code>#include&lt;iostream.h&gt;
+#include&lt;conio.h&gt;  //for getch()
+
+int main(){
+    int a,b;
+    float avg;
+    cout&lt;&lt;&quot;Enter two numbers&quot;&lt;&lt;endl;
+    cin&gt;&gt;a&gt;&gt;b;
+    avg=(a+b)/2.0;
+    cout&lt;&lt;&quot;Average of &quot;&lt;&lt;a&lt;&lt;&quot; and &quot;&lt;&lt;b&lt;&lt;&quot; is &quot;&lt;&lt;avg&lt;&lt;endl;
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter two numbers
+5
+6
+Average of 5 and 6 is 5.5
+*/</code></pre></div>
+<div class='file'><h3>average_n.cpp</h3>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;conio.h&gt;  // Not in C++11 and later
+
+using namespace std;
+int main(){
+	int temp,n,sum=0;
+	float avg;
+	cout&lt;&lt;&quot;Enter the total number of elements&quot;&lt;&lt;endl;
+	cin&gt;&gt;n;
+	cout&lt;&lt;&quot;Enter n values&quot;&lt;&lt;endl;
+	for (int i=0; i&lt;n; i++){
+		cout&lt;&lt;&quot;Enter element &quot;&lt;&lt;i+1&lt;&lt;endl;
+		cin&gt;&gt;temp;
+		sum+=temp;
+	}
+	cout&lt;&lt;&quot;Sum = &quot;&lt;&lt;sum&lt;&lt;&quot;\nAverage = &quot;&lt;&lt;sum/n&lt;&lt;endl;
+	getch();   // Not in C++11 and later
+	return 0;
+}
+
+/*
+OUTPUT:
+Enter the total number of elements
+5
+Enter n values
+Enter element 1
+1
+Enter element 2
+2
+Enter element 3
+3
+Enter element 4
+4
+Enter element 5
+5
+Sum = 15
+Average = 3
+*/</code></pre></div>
+<div class='file'><h3>swap_call_by_value.cpp</h3>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;conio.h&gt;
+
+using namespace std;
+
+int swap(int x, int y){
+	int temp = x;
+	x = y;
+	y = x;
+	cout&lt;&lt;&quot;After Swapping\nx = &quot;&lt;&lt;x&lt;&lt;endl&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;
+	return 0;
+}
+
+int main(){
+	int x = 10,y = 20;
+	cout&lt;&lt;&quot;Before Swapping\nx = &quot;&lt;&lt;x&lt;&lt;endl&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;
+	swap(x,y);
+	getch();
+	return 0;
+}
+
+/*
+OUTPUT:
+Before Swapping
+x = 10
+y = 20
+After Swapping
+x = 20
+y = 10
+*/</code></pre></div>
+<div class='file'><h3>swap_pointers.cpp</h3>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;conio.h&gt; //for getch()
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 10;
+    int y = 20;
+
+    std::cout &lt;&lt; &quot;Before swapping: x = &quot; &lt;&lt; x &lt;&lt; &quot;, y = &quot; &lt;&lt; y &lt;&lt; std::endl;
+
+    swap(&amp;x, &amp;y);
+
+    std::cout &lt;&lt; &quot;After swapping: x = &quot; &lt;&lt; x &lt;&lt; &quot;, y = &quot; &lt;&lt; y &lt;&lt; std::endl;
+    getch()
+    return 0;
+}
+
+/*
+OUTPUT:
+Before swapping: x = 10, y = 20
+After swapping: x = 20, y = 10
+*/</code></pre></div>
+<h2>LAB2</h2>
+<div class='file'><h3>friend_class.cpp</h3>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class sample1;
+class sample2
+{
+    int y, z;
+
+public:
+    void setValues(int a, int b)
+    {
+        y = a;
+        z = b;
+    }
+    friend class sample1;
+};
+class sample1
+{
+public:
+    void display1(sample2 s)
+    {
+        cout &lt;&lt; &quot;y = &quot; &lt;&lt; s.y &lt;&lt; endl;
+    }
+
+    void display2(sample2 s)
+    {
+        cout &lt;&lt; &quot;z = &quot; &lt;&lt; s.z &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    sample1 s1;
+    sample2 s2;
+    s2.setValues(10, 20);
+    s1.display1(s2);
+    s1.display2(s2);
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+/*
+OUTPUT:
+y = 10
+z = 20
+*/</code></pre></div>
+<div class='file'><h3>acess_specifier_public_private.cpp</h3>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class Disp{
+	int y;
+public:
+	int x;
+	void display(){
+		cout&lt;&lt;&quot;x = &quot;&lt;&lt;x&lt;&lt;endl;
+	}
+
+	void setY(int val){
+        y = val;
+    }
+    void showY(){
+        cout&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;
+    }
+
+};
+
+int main(){
+	Disp obj1;
+	obj1.x = 5;
+	obj1.display();
+    obj1.setY(10);
+    obj1.showY();
+	getch(); // Not in C++11 and later
+	return 0;
+}
+
+/*
+OUTPUT:
+x = 5
+y = 10
+*/</code></pre></div>
+<div class='file'><h3>friend_function.cpp</h3>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class Rectangle{
+    int length;
+    int breadth;
+public:
+    void setDimensions(int l, int b){
+        length = l;
+        breadth = b;
+    }
+    friend void Area(Rectangle);
+    };  
+    
+void Area(Rectangle r){
+    cout&lt;&lt;&quot;Area = &quot;&lt;&lt;r.length*r.breadth&lt;&lt;endl;
+}
+int main(){
+    Rectangle r;
+    r.setDimensions(10, 20);
+    Area(r);
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+/*
+OUTPUT:
+Area = 200
+*/</code></pre></div>
+<div class='file'><h3>acess_specifier_public.cpp</h3>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class Disp{
+public:
+	int x;
+	void display(){
+		cout&lt;&lt;&quot;x = &quot;&lt;&lt;x&lt;&lt;endl;
+	}
+};
+
+int main(){
+	Disp obj1;
+	obj1.x = 5;
+	obj1.display();
+	getch(); // Not in C++11 and later
+	return 0;
+}
+
+/*
+OUTPUT:
+x = 5
+*/</code></pre></div>
+<div class='file'><h3>friend_function_of_two_classes.cpp</h3>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+class sample2;
+class sample1{
+    int a;
+public:
+    void setA(int x){
+        a = x;
+    }
+    friend float mean(sample1, sample2);
+};
+class sample2{
+    int b;
+public:
+    void setB(int y){
+        b = y;
+    }
+    friend float mean(sample1, sample2);
+};
+float mean(sample1 s1, sample2 s2){
+    return float(s1.a + s2.b)/2;
+}
+int main(){
+    sample1 s1;
+    sample2 s2;
+    s1.setA(25);
+    s2.setB(30);
+    cout&lt;&lt;&quot;Mean = &quot;&lt;&lt;mean(s1, s2)&lt;&lt;endl;
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+/*
+OUTPUT:
+Mean = 27.5
+*/</code></pre></div>
+
+</body>
+</html>
