@@ -15,7 +15,6 @@ def get_cpp_files():
             for file in files:
                 if file.endswith('.cpp'):
                     cpp_files[lab_name].append(os.path.join(root, file))
-    print(cpp_files)
     return cpp_files
 
 def generate_html(cpp_files):
@@ -25,7 +24,11 @@ def generate_html(cpp_files):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ Data Structures Lab Programs</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/cpp.min.js"></script>
+<script>hljs.highlightAll();</script>
+<title>C++ Data Structures Lab Programs</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         h1 { color: #333; }
@@ -52,10 +55,12 @@ def generate_html(cpp_files):
                 escaped_code = html.escape(code)  # Escape special characters
             
             # Add escaped code block
-            html_content += f"<pre><code>{escaped_code}</code></pre></div>\n"
+            html_content += f"<pre><code class=\"language-cpp\">{escaped_code}</code></pre></div>\n"
 
     # Close HTML tags
     html_content += """
+<script src="https://{{cdn}}/prismjs@v1.x/components/prism-core.min.js"></script>
+	<script src="https://{{cdn}}/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>
 """

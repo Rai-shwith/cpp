@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ Data Structures Lab Programs</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/cpp.min.js"></script>
+<script>hljs.highlightAll();</script>
+<title>C++ Data Structures Lab Programs</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         h1 { color: #333; }
@@ -18,7 +22,7 @@
     <p><em>Note: These codes may differ slightly from those provided by the instructor, but they perform the intended tasks. `conio.h` was used for compatibility with Visual Studio 2010.</em></p>
 <h2>LAB1</h2>
 <div class='file'><h3>student.cpp</h3>
-<pre><code>#include &lt;iostream&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
 #include &lt;string&gt;
 
@@ -65,7 +69,7 @@ Roll: 29
 Marks: 90
 */</code></pre></div>
 <div class='file'><h3>swap_aliasing.cpp</h3>
-<pre><code>#include&lt;iostream&gt;
+<pre><code class="language-cpp">#include&lt;iostream&gt;
 #include&lt;conio.h&gt;
 
 using namespace std;
@@ -95,7 +99,7 @@ x = 20
 y = 10
 */</code></pre></div>
 <div class='file'><h3>student_array.cpp</h3>
-<pre><code>#include &lt;iostream&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 // #include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
 #include &lt;string&gt;
 
@@ -160,7 +164,7 @@ Roll: 23
 Marks: 90
 */</code></pre></div>
 <div class='file'><h3>average_n_array.cpp</h3>
-<pre><code>#include&lt;iostream&gt;
+<pre><code class="language-cpp">#include&lt;iostream&gt;
 #include&lt;conio.h&gt;  //for getch()
 
 using namespace std;
@@ -193,7 +197,7 @@ Sum = 15
 Average = 3
 */</code></pre></div>
 <div class='file'><h3>average_of_two.cpp</h3>
-<pre><code>#include&lt;iostream.h&gt;
+<pre><code class="language-cpp">#include&lt;iostream.h&gt;
 #include&lt;conio.h&gt;  //for getch()
 
 int main(){
@@ -215,7 +219,7 @@ Enter two numbers
 Average of 5 and 6 is 5.5
 */</code></pre></div>
 <div class='file'><h3>average_n.cpp</h3>
-<pre><code>#include&lt;iostream&gt;
+<pre><code class="language-cpp">#include&lt;iostream&gt;
 #include&lt;conio.h&gt;  // Not in C++11 and later
 
 using namespace std;
@@ -254,7 +258,7 @@ Sum = 15
 Average = 3
 */</code></pre></div>
 <div class='file'><h3>swap_call_by_value.cpp</h3>
-<pre><code>#include&lt;iostream&gt;
+<pre><code class="language-cpp">#include&lt;iostream&gt;
 #include&lt;conio.h&gt;
 
 using namespace std;
@@ -285,7 +289,7 @@ x = 20
 y = 10
 */</code></pre></div>
 <div class='file'><h3>swap_pointers.cpp</h3>
-<pre><code>#include &lt;iostream&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;conio.h&gt; //for getch()
 void swap(int* a, int* b) {
     int temp = *a;
@@ -313,7 +317,7 @@ After swapping: x = 20, y = 10
 */</code></pre></div>
 <h2>LAB2</h2>
 <div class='file'><h3>friend_class.cpp</h3>
-<pre><code>#include &lt;iostream&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -362,7 +366,7 @@ y = 10
 z = 20
 */</code></pre></div>
 <div class='file'><h3>acess_specifier_public_private.cpp</h3>
-<pre><code>#include&lt;iostream&gt;
+<pre><code class="language-cpp">#include&lt;iostream&gt;
 #include&lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -400,7 +404,7 @@ x = 5
 y = 10
 */</code></pre></div>
 <div class='file'><h3>friend_function.cpp</h3>
-<pre><code>#include&lt;iostream&gt;
+<pre><code class="language-cpp">#include&lt;iostream&gt;
 #include&lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -432,7 +436,7 @@ OUTPUT:
 Area = 200
 */</code></pre></div>
 <div class='file'><h3>acess_specifier_public.cpp</h3>
-<pre><code>#include&lt;iostream&gt;
+<pre><code class="language-cpp">#include&lt;iostream&gt;
 #include&lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -458,7 +462,7 @@ OUTPUT:
 x = 5
 */</code></pre></div>
 <div class='file'><h3>friend_function_of_two_classes.cpp</h3>
-<pre><code>#include&lt;iostream&gt;
+<pre><code class="language-cpp">#include&lt;iostream&gt;
 #include&lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -497,5 +501,7 @@ OUTPUT:
 Mean = 27.5
 */</code></pre></div>
 
+<script src="https://{{cdn}}/prismjs@v1.x/components/prism-core.min.js"></script>
+	<script src="https://{{cdn}}/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>
