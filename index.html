@@ -1,507 +1,130 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/cpp.min.js"></script>
-<script>hljs.highlightAll();</script>
-<title>C++ Data Structures Lab Programs</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { color: #333; }
-        h2 { color: #555; }
-        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow-x: auto; }
-        .file { margin-bottom: 20px; }
-    </style>
+    <title>C++ Lab Codes</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Highlight.js CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 </head>
-<body>
-    <h1>C++ Data Structures Lab Programs</h1>
-    <p><em>Note: These codes may differ slightly from those provided by the instructor, but they perform the intended tasks. `conio.h` was used for compatibility with Visual Studio 2010.</em></p>
-<h2>LAB1</h2>
-<div class='file'><h3>student.cpp</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
-#include &lt;string&gt;
 
+<body class="bg-gray-100 text-gray-900 font-sans antialiased transition-colors duration-300"
+    x-data="{ darkMode: false }" :class="darkMode ? 'bg-gray-900 text-gray-100' : ''">
+
+    <div class="container mx-auto py-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-4xl font-extrabold text-blue-500 dark:text-blue-400">C++ Lab Codes</h1>
+            <button @click="darkMode = !darkMode"
+                class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg shadow-md focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                <span x-show="!darkMode">🌞 Light Mode</span>
+                <span x-show="darkMode">🌙 Dark Mode</span>
+            </button>
+        </div>
+
+        <!-- Lab 1 -->
+        <div class="mb-8">
+            <button
+                class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors"
+                onclick="toggleLab('lab1')">
+                Lab 1 - Basics of C++
+            </button>
+            <div id="lab1" class="mt-4 hidden space-y-4">
+
+                <!-- Program 1 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+                    <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100"
+                        onclick="toggleProgram('program1')">
+                        Program 1 - Hello World
+                    </button>
+                    <div id="program1" class="mt-4 hidden">
+                        <h3 class="text-md font-semibold text-gray-700 dark:text-gray-300">Topic: Introduction to C++
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-2"><strong>Question:</strong> Write a program to
+                            print "Hello, World!" in C++.</p>
+                        <div class="mt-4">
+                            <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">Code:</h4>
+                            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
-
-class Student {
-        string name;
-        int roll;
-        float marks;
-    public:
-        void display() {
-            cout &lt;&lt; &quot;Name: &quot; &lt;&lt; name &lt;&lt; endl;
-            cout &lt;&lt; &quot;Roll: &quot; &lt;&lt; roll &lt;&lt; endl;
-            cout &lt;&lt; &quot;Marks: &quot; &lt;&lt; marks &lt;&lt; endl;
-        }
-        void set(string n, int r, float m) {
-            name = n;
-            roll = r;
-            marks = m;
-        }
-};
-
-int main(){
-    Student s1;
-    string name;
-    int roll;
-    float marks;
-    cout &lt;&lt; &quot;Enter name, roll and marks of student&quot; &lt;&lt; endl;
-    cin &gt;&gt; name &gt;&gt; roll &gt;&gt; marks;
-    s1.set(name, roll, marks);
-    s1.display();
-    getch();
-    return 0;
-}
-
-/*
-OUTPUT:
-Enter name, roll and marks of student
-Ashwith
-29
-90
-Name: Ashwith 
-Roll: 29
-Marks: 90
-*/</code></pre></div>
-<div class='file'><h3>swap_aliasing.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt;
-
-using namespace std;
-
-void swap(int &amp;x, int &amp;y){
-	x = x + y;
-	y = x - y;
-	x = x - y;
-}
-
-int main(){
-	int x = 10,y = 20;
-	cout&lt;&lt;&quot;Before Swapping\nx = &quot;&lt;&lt;x&lt;&lt;endl&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;
-	swap(x,y);
-	cout&lt;&lt;&quot;After Swapping\nx = &quot;&lt;&lt;x&lt;&lt;endl&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;
-	getch();
-	return 0;
-}
-
-/*
-OUTPUT:
-Before Swapping
-x = 10
-y = 20
-After Swapping
-x = 20
-y = 10
-*/</code></pre></div>
-<div class='file'><h3>student_array.cpp</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-// #include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
-#include &lt;string&gt;
-
-using namespace std;
-
-class Student {
-        string name;
-        int roll;
-        float marks;
-    public:
-        void display() {
-            cout &lt;&lt; &quot;Name: &quot; &lt;&lt; name &lt;&lt; endl;
-            cout &lt;&lt; &quot;Roll: &quot; &lt;&lt; roll &lt;&lt; endl;
-            cout &lt;&lt; &quot;Marks: &quot; &lt;&lt; marks &lt;&lt; endl;
-        }
-        void set(string n, int r, float m) {
-            name = n;
-            roll = r;
-            marks = m;
-        }
-};
-
-int main(){
-    Student s[3];
-    string name;
-    int roll,n;
-    float marks;
-    cout &lt;&lt; &quot;Enter number of students&quot; &lt;&lt; endl;
-    cin &gt;&gt; n;
-    for(int i=0;i&lt;n;i++){
-        cout &lt;&lt; &quot;Enter name, roll and marks of student&quot; &lt;&lt; endl;
-        cin &gt;&gt; name &gt;&gt; roll &gt;&gt; marks;
-        s[i].set(name, roll, marks);
-    }
-    cout &lt;&lt; &quot;Details of students&quot; &lt;&lt; endl;
-    for(int i=0;i&lt;n;i++){
-        s[i].display();
-    }
-    // getch();
-    return 0;
-}
-
-/*
-OUTPUT:
-Enter number of students
-3
-Enter name, roll and marks of student
-Ashwith 29 90
-Enter name, roll and marks of student
-Arya 24 90
-Enter name, roll and marks of student
-Arnav 23 90
-Details of students
-Name: Ashwith
-Roll: 29
-Marks: 90
-Name: Arya
-Roll: 24
-Marks: 90
-Name: Arnav
-Roll: 23
-Marks: 90
-*/</code></pre></div>
-<div class='file'><h3>average_n_array.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt;  //for getch()
-
-using namespace std;
-int main(){
-	int a[50],n,sum=0;
-	float avg;
-	cout&lt;&lt;&quot;Enter the total number of elements&quot;&lt;&lt;endl;
-	cin&gt;&gt;n;
-	cout&lt;&lt;&quot;Enter n values&quot;&lt;&lt;endl;
-	for (int i=0; i&lt;n; i++){
-		cin&gt;&gt;a[i];
-		sum+=a[i];
-	}
-	cout&lt;&lt;&quot;Sum = &quot;&lt;&lt;sum&lt;&lt;&quot;\nAverage = &quot;&lt;&lt;sum/n&lt;&lt;endl;
-	getch();
-	return 0;
-}
-
-/*
-OUTPUT:
-Enter the total number of elements
-5
-Enter n values
-1
-2
-3
-4
-5
-Sum = 15
-Average = 3
-*/</code></pre></div>
-<div class='file'><h3>average_of_two.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream.h&gt;
-#include&lt;conio.h&gt;  //for getch()
-
-int main(){
-    int a,b;
-    float avg;
-    cout&lt;&lt;&quot;Enter two numbers&quot;&lt;&lt;endl;
-    cin&gt;&gt;a&gt;&gt;b;
-    avg=(a+b)/2.0;
-    cout&lt;&lt;&quot;Average of &quot;&lt;&lt;a&lt;&lt;&quot; and &quot;&lt;&lt;b&lt;&lt;&quot; is &quot;&lt;&lt;avg&lt;&lt;endl;
-    getch();
-    return 0;
-}
-
-/*
-OUTPUT:
-Enter two numbers
-5
-6
-Average of 5 and 6 is 5.5
-*/</code></pre></div>
-<div class='file'><h3>average_n.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt;  // Not in C++11 and later
-
-using namespace std;
-int main(){
-	int temp,n,sum=0;
-	float avg;
-	cout&lt;&lt;&quot;Enter the total number of elements&quot;&lt;&lt;endl;
-	cin&gt;&gt;n;
-	cout&lt;&lt;&quot;Enter n values&quot;&lt;&lt;endl;
-	for (int i=0; i&lt;n; i++){
-		cout&lt;&lt;&quot;Enter element &quot;&lt;&lt;i+1&lt;&lt;endl;
-		cin&gt;&gt;temp;
-		sum+=temp;
-	}
-	cout&lt;&lt;&quot;Sum = &quot;&lt;&lt;sum&lt;&lt;&quot;\nAverage = &quot;&lt;&lt;sum/n&lt;&lt;endl;
-	getch();   // Not in C++11 and later
-	return 0;
-}
-
-/*
-OUTPUT:
-Enter the total number of elements
-5
-Enter n values
-Enter element 1
-1
-Enter element 2
-2
-Enter element 3
-3
-Enter element 4
-4
-Enter element 5
-5
-Sum = 15
-Average = 3
-*/</code></pre></div>
-<div class='file'><h3>swap_call_by_value.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt;
-
-using namespace std;
-
-int swap(int x, int y){
-	int temp = x;
-	x = y;
-	y = x;
-	cout&lt;&lt;&quot;After Swapping\nx = &quot;&lt;&lt;x&lt;&lt;endl&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;
-	return 0;
-}
-
-int main(){
-	int x = 10,y = 20;
-	cout&lt;&lt;&quot;Before Swapping\nx = &quot;&lt;&lt;x&lt;&lt;endl&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;
-	swap(x,y);
-	getch();
-	return 0;
-}
-
-/*
-OUTPUT:
-Before Swapping
-x = 10
-y = 20
-After Swapping
-x = 20
-y = 10
-*/</code></pre></div>
-<div class='file'><h3>swap_pointers.cpp</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; //for getch()
-void swap(int* a, int* b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
 
 int main() {
-    int x = 10;
-    int y = 20;
-
-    std::cout &lt;&lt; &quot;Before swapping: x = &quot; &lt;&lt; x &lt;&lt; &quot;, y = &quot; &lt;&lt; y &lt;&lt; std::endl;
-
-    swap(&amp;x, &amp;y);
-
-    std::cout &lt;&lt; &quot;After swapping: x = &quot; &lt;&lt; x &lt;&lt; &quot;, y = &quot; &lt;&lt; y &lt;&lt; std::endl;
-    getch()
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
     return 0;
-}
+}</code></pre>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">Output:</h4>
+                            <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">Hello, World!</pre>
+                        </div>
+                    </div>
+                </div>
 
-/*
-OUTPUT:
-Before swapping: x = 10, y = 20
-After swapping: x = 20, y = 10
-*/</code></pre></div>
-<h2>LAB2</h2>
-<div class='file'><h3>friend_class.cpp</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; // Not in C++11 and later
-
+                <!-- Program 2 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+                    <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100"
+                        onclick="toggleProgram('program2')">
+                        Program 2 - Basic Arithmetic
+                    </button>
+                    <div id="program2" class="mt-4 hidden">
+                        <h3 class="text-md font-semibold text-gray-700 dark:text-gray-300">Topic: Arithmetic Operations
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-2"><strong>Question:</strong> Write a program to
+                            add, subtract, multiply, and divide two numbers.</p>
+                        <div class="mt-4">
+                            <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">Code:</h4>
+                            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 
-class sample1;
-class sample2
-{
-    int y, z;
-
-public:
-    void setValues(int a, int b)
-    {
-        y = a;
-        z = b;
-    }
-    friend class sample1;
-};
-class sample1
-{
-public:
-    void display1(sample2 s)
-    {
-        cout &lt;&lt; &quot;y = &quot; &lt;&lt; s.y &lt;&lt; endl;
-    }
-
-    void display2(sample2 s)
-    {
-        cout &lt;&lt; &quot;z = &quot; &lt;&lt; s.z &lt;&lt; endl;
-    }
-};
-
-int main()
-{
-    sample1 s1;
-    sample2 s2;
-    s2.setValues(10, 20);
-    s1.display1(s2);
-    s1.display2(s2);
-    getch(); // Not in C++11 and later
+int main() {
+    int a = 10, b = 5;
+    cout &lt;&lt; "Sum: " &lt;&lt; (a + b) &lt;&lt; endl;
+    cout &lt;&lt; "Difference: " &lt;&lt; (a - b) &lt;&lt; endl;
+    cout &lt;&lt; "Product: " &lt;&lt; (a * b) &lt;&lt; endl;
+    cout &lt;&lt; "Quotient: " &lt;&lt; (a / b) &lt;&lt; endl;
     return 0;
-}
+}</code></pre>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">Output:</h4>
+                            <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Sum: 15
+Difference: 5
+Product: 50
+Quotient: 2</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-/*
-OUTPUT:
-y = 10
-z = 20
-*/</code></pre></div>
-<div class='file'><h3>acess_specifier_public_private.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt; // Not in C++11 and later
+        <!-- More labs can be added below in a similar fashion -->
 
-using namespace std;
+    </div>
 
-class Disp{
-	int y;
-public:
-	int x;
-	void display(){
-		cout&lt;&lt;&quot;x = &quot;&lt;&lt;x&lt;&lt;endl;
-	}
+    <!-- JavaScript for Toggle and Highlight.js initialization -->
+    <script>
+        // Initialize code highlighting
+        document.addEventListener("DOMContentLoaded", () => {
+            hljs.highlightAll();
+        });
 
-	void setY(int val){
-        y = val;
-    }
-    void showY(){
-        cout&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;
-    }
+        // Toggle visibility of lab sections
+        function toggleLab(labId) {
+            const lab = document.getElementById(labId);
+            lab.classList.toggle("hidden");
+        }
 
-};
-
-int main(){
-	Disp obj1;
-	obj1.x = 5;
-	obj1.display();
-    obj1.setY(10);
-    obj1.showY();
-	getch(); // Not in C++11 and later
-	return 0;
-}
-
-/*
-OUTPUT:
-x = 5
-y = 10
-*/</code></pre></div>
-<div class='file'><h3>friend_function.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt; // Not in C++11 and later
-
-using namespace std;
-
-class Rectangle{
-    int length;
-    int breadth;
-public:
-    void setDimensions(int l, int b){
-        length = l;
-        breadth = b;
-    }
-    friend void Area(Rectangle);
-    };  
-    
-void Area(Rectangle r){
-    cout&lt;&lt;&quot;Area = &quot;&lt;&lt;r.length*r.breadth&lt;&lt;endl;
-}
-int main(){
-    Rectangle r;
-    r.setDimensions(10, 20);
-    Area(r);
-    getch(); // Not in C++11 and later
-    return 0;
-}
-
-/*
-OUTPUT:
-Area = 200
-*/</code></pre></div>
-<div class='file'><h3>acess_specifier_public.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt; // Not in C++11 and later
-
-using namespace std;
-
-class Disp{
-public:
-	int x;
-	void display(){
-		cout&lt;&lt;&quot;x = &quot;&lt;&lt;x&lt;&lt;endl;
-	}
-};
-
-int main(){
-	Disp obj1;
-	obj1.x = 5;
-	obj1.display();
-	getch(); // Not in C++11 and later
-	return 0;
-}
-
-/*
-OUTPUT:
-x = 5
-*/</code></pre></div>
-<div class='file'><h3>friend_function_of_two_classes.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt; // Not in C++11 and later
-
-using namespace std;
-class sample2;
-class sample1{
-    int a;
-public:
-    void setA(int x){
-        a = x;
-    }
-    friend float mean(sample1, sample2);
-};
-class sample2{
-    int b;
-public:
-    void setB(int y){
-        b = y;
-    }
-    friend float mean(sample1, sample2);
-};
-float mean(sample1 s1, sample2 s2){
-    return float(s1.a + s2.b)/2;
-}
-int main(){
-    sample1 s1;
-    sample2 s2;
-    s1.setA(25);
-    s2.setB(30);
-    cout&lt;&lt;&quot;Mean = &quot;&lt;&lt;mean(s1, s2)&lt;&lt;endl;
-    getch(); // Not in C++11 and later
-    return 0;
-}
-
-/*
-OUTPUT:
-Mean = 27.5
-*/</code></pre></div>
-
-<script src="https://{{cdn}}/prismjs@v1.x/components/prism-core.min.js"></script>
-	<script src="https://{{cdn}}/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+        // Toggle visibility of program sections within a lab
+        function toggleProgram(programId) {
+            const program = document.getElementById(programId);
+            program.classList.toggle("hidden");
+        }
+    </script>
+    <!-- AlpineJS for theme toggle functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2/dist/cdn.min.js"></script>
 </body>
+
 </html>

@@ -1,9 +1,13 @@
 import os
 import html  # Import the html library for escaping text
+from bs4 import BeautifulSoup
 
 # Root directory where your C++ labs are stored
 ROOT_DIR = '.'  # Adjust if the script is not in the same directory
 OUTPUT_FILE = 'index.html'
+
+with open('index.html', 'r') as f:
+    soup = BeautifulSoup(f, 'html.parser')
 
 def get_cpp_files():
     cpp_files = {}
