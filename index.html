@@ -1,18 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ Data Structures Lab Programs</title>
-    <!-- Link to CSS and JS files -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/cpp.min.js"></script>
-    <script>hljs.highlightAll();</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/cpp.min.js"></script>
+<script>hljs.highlightAll();</script>
+<title>C++ Data Structures Lab Programs</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        h2 { color: #555; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow-x: auto; }
+        .file { margin-bottom: 20px; }
+    </style>
 </head>
-
 <body>
     <h1>C++ Data Structures Lab Programs</h1>
     <p><em>Note: These codes may differ slightly from those provided by the instructor, but they perform the intended tasks. `conio.h` was used for compatibility with Visual Studio 2010.</em></p>
@@ -293,26 +297,18 @@ void swap(int* a, int* b) {
     *b = temp;
 }
 
-        <!-- Lab Program Sections -->
-        <section id="labs">
-            <!-- LAB 1 -->
-            <div class="lab">
-                <h2 onclick="toggleLab(this)">➤ Lab 1</h2>
-                <div class="files hidden">
-                    <div class="file">
-                        <h3>Average of two elements</h3>
-                        <pre><code class="language-cpp">
-#include &lt;iostream&gt;
 int main() {
-    int a = 5, b = 10;
-    std::cout &lt;&lt; "Average: " &lt;&lt; (a + b) / 2;
+    int x = 10;
+    int y = 20;
+
+    std::cout &lt;&lt; &quot;Before swapping: x = &quot; &lt;&lt; x &lt;&lt; &quot;, y = &quot; &lt;&lt; y &lt;&lt; std::endl;
+
+    swap(&amp;x, &amp;y);
+
+    std::cout &lt;&lt; &quot;After swapping: x = &quot; &lt;&lt; x &lt;&lt; &quot;, y = &quot; &lt;&lt; y &lt;&lt; std::endl;
+    getch()
     return 0;
 }
-                        </code></pre>
-                    </div>
-                    <!-- More files go here in the same format as above -->
-                </div>
-            </div>
 
 /*
 OUTPUT:
@@ -409,15 +405,20 @@ class sample2
     int y, z;
 
 public:
-    int x;
+    void setValues(int a, int b)
+    {
+        y = a;
+        z = b;
+    }
+    friend class sample1;
 };
-                        </code></pre>
-                    </div>
-                    <!-- More files go here in the same format as above -->
-                </div>
-            </div>
-        </section>
-    </div>
+class sample1
+{
+public:
+    void display1(sample2 s)
+    {
+        cout &lt;&lt; &quot;y = &quot; &lt;&lt; s.y &lt;&lt; endl;
+    }
 
     void display2(sample2 s)
     {
@@ -795,5 +796,4 @@ Roll No. :29Branch : ECE
 <script src="https://{{cdn}}/prismjs@v1.x/components/prism-core.min.js"></script>
 	<script src="https://{{cdn}}/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
-
 </html>
