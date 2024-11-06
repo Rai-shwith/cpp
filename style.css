@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f3f4f7, #e0e5ec);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container Styles */
+.container {
+    width: 85%;
+    max-width: 1000px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2em;
+    color: #3498db;
+    margin-bottom: 0.3em;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #444;
+}
+
+.note {
+    font-size: 0.9em;
+    margin: 8px 0;
+    color: #777;
+}
+
+/* Lab Section Styles */
+section#labs {
+    margin-top: 20px;
+}
+
+.lab {
+    margin-bottom: 15px;
+    background: #f5f8fa;
+    padding: 15px;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.lab:hover {
+    background-color: #f0f4f9;
+}
+
+.lab h2 {
+    font-size: 1.4em;
+    color: #2d98da;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.lab h2:hover {
+    color: #3867d6;
+    /* transform: scale(1.05); */
+}
+
+/* File and Code Styles */
+.file h3 {
+    font-size: 1.1em;
+    color: #4b6584;
+    margin-top: 10px;
+}
+
+pre {
+    background-color: #f1f3f6;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.95em;
+    overflow-x: auto;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Prism Syntax Highlighting */
+code[class*="language-"] {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #e74c3c; /* Text color for code */
+}
+
+.language-cpp .token.keyword {
+    color: #d35400;
+}
+
+.language-cpp .token.string {
+    color: #27ae60;
+}
+
+.language-cpp .token.function {
+    color: #2980b9;
+}
+
+.language-cpp .token.comment {
+    color: #95a5a6;
+}
+
+/* Hidden File Section */
+.hidden {
+    display: none;
+}
