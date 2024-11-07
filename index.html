@@ -22,7 +22,8 @@
     <p><em>Note: These codes may differ slightly from those provided by the instructor, but they perform the intended tasks. `conio.h` was used for compatibility with Visual Studio 2010.</em></p>
 <h2>LAB1</h2>
 <div class='file'><h3>student_array.cpp</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that stores and displays the details of n students. The program should ask the user to input the name, roll number, and marks of each student, and then display the details of all the students.
+#include &lt;iostream&gt;
 // #include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
 #include &lt;string&gt;
 
@@ -87,7 +88,8 @@ Roll: 23
 Marks: 90
 */</code></pre></div>
 <div class='file'><h3>average_of_two.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream.h&gt;
+<pre><code class="language-cpp">// Write a C++ program that calculates the average of two numbers entered by the user.
+#include&lt;iostream.h&gt;
 #include&lt;conio.h&gt;  //for getch()
 
 int main(){
@@ -109,7 +111,8 @@ Enter two numbers
 Average of 5 and 6 is 5.5
 */</code></pre></div>
 <div class='file'><h3>average_n_array.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that calculates the sum and average of n integers entered by the user using array.
+#include&lt;iostream&gt;
 #include&lt;conio.h&gt;  //for getch()
 
 using namespace std;
@@ -142,7 +145,8 @@ Sum = 15
 Average = 3
 */</code></pre></div>
 <div class='file'><h3>swap_aliasing.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that swaps the values of two integers using pass-by-reference.
+#include&lt;iostream&gt;
 #include&lt;conio.h&gt;
 
 using namespace std;
@@ -172,7 +176,8 @@ x = 20
 y = 10
 */</code></pre></div>
 <div class='file'><h3>average_n.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that calculates the sum and average of n integers entered by the user.
+#include&lt;iostream&gt;
 #include&lt;conio.h&gt;  // Not in C++11 and later
 
 using namespace std;
@@ -211,7 +216,8 @@ Sum = 15
 Average = 3
 */</code></pre></div>
 <div class='file'><h3>student.cpp</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that accepts the name, roll number, and marks of a student, then displays the student&#x27;s details using a class.
+#include &lt;iostream&gt;
 #include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
 #include &lt;string&gt;
 
@@ -258,7 +264,8 @@ Roll: 29
 Marks: 90
 */</code></pre></div>
 <div class='file'><h3>swap_call_by_value.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that swaps the values of two integers using pass-by-value.
+#include&lt;iostream&gt;
 #include&lt;conio.h&gt;
 
 using namespace std;
@@ -289,7 +296,8 @@ x = 20
 y = 10
 */</code></pre></div>
 <div class='file'><h3>swap_pointers.cpp</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that swaps the values of two integers using pointers.
+#include &lt;iostream&gt;
 #include &lt;conio.h&gt; //for getch()
 void swap(int* a, int* b) {
     int temp = *a;
@@ -317,7 +325,8 @@ After swapping: x = 20, y = 10
 */</code></pre></div>
 <h2>LAB2</h2>
 <div class='file'><h3>acess_specifier_public_private.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that demonstrates the use of public and private members in a class. The program should include a class with a public variable and a private variable, along with functions to set and display both of them.
+#include&lt;iostream&gt;
 #include&lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -355,7 +364,8 @@ x = 5
 y = 10
 */</code></pre></div>
 <div class='file'><h3>friend_function_of_two_classes.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that demonstrates the use of friend functions. The program should calculate the mean of two private variables from two different classes using a friend function. The program should involve two classes, sample1 and sample2, and a friend function mean that accesses the private data of both classes
+#include&lt;iostream&gt;
 #include&lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -394,7 +404,8 @@ OUTPUT:
 Mean = 27.5
 */</code></pre></div>
 <div class='file'><h3>friend_class.cpp</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that demonstrates the use of friend classes. The program should have two classes, sample1 and sample2. The sample1 class should be able to access the private members of the sample2 class through a friend relationship.
+#include &lt;iostream&gt;
 #include &lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -443,7 +454,8 @@ y = 10
 z = 20
 */</code></pre></div>
 <div class='file'><h3>acess_specifier_public.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that demonstrates how to use a public member variable in a class. The program should display the value of a public variable x through a member function.
+#include&lt;iostream&gt;
 #include&lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -469,7 +481,8 @@ OUTPUT:
 x = 5
 */</code></pre></div>
 <div class='file'><h3>friend_function.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that demonstrates the use of friend functions to calculate the area of a rectangle. The program should involve a Rectangle class with private data members for length and breadth, and a friend function Area() that calculates the area of the rectangle.
+#include&lt;iostream&gt;
 #include&lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -502,7 +515,8 @@ Area = 200
 */</code></pre></div>
 <h2>LAB3</h2>
 <div class='file'><h3>max_of_two_objects_using_friend_function.cpp</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that uses two classes, xyz and abc, where each class has a private integer member variable. Both classes should have a member function to set the value of the integer. Additionally, implement a friend function max() that compares the values of these two classes and prints the greater value.
+#include&lt;iostream&gt;
 #include&lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -551,8 +565,9 @@ OUTPUT:
 Max value is 20
 */</code></pre></div>
 <div class='file'><h3>destructor.cpp</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-// #include &lt;conio.h&gt; // Not in C++11 and later
+<pre><code class="language-cpp">// Write a C++ program that demonstrates the use of constructors and destructors. The program should track and display the number of objects created and destroyed. The alpha class should maintain a static counter that is incremented when an object is created and decremented when an object is destroyed. The program should also show the impact of block-scoped objects on the counter.
+#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
 int count = 0;
@@ -580,7 +595,7 @@ int main(){
         alpha a6;
     }
     cout&lt;&lt;&quot;Re-Entering main function&quot;&lt;&lt;endl;
-    // getch(); // Not in C++11 and later
+    getch(); // Not in C++11 and later
     return 0;
 }
 
@@ -604,7 +619,8 @@ No. of object remaining 1
 No. of object remaining 0
 */</code></pre></div>
 <div class='file'><h3>swap_2_nums_of_2_objects_of_different_class_using_friend_function.cpp</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that uses two classes, A and B, where each class contains a private integer member. Implement a friend function swap() to exchange the values of the two integer members from different classes. The program should display the values before and after swapping.
+#include &lt;iostream&gt;
 #include &lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -657,7 +673,7 @@ b = 10
 */
 </code></pre></div>
 <div class='file'><h3>parameterized_constructor_for_student_class.cpp</h3>
-<pre><code class="language-cpp">// Student Class implementation using default constructor
+<pre><code class="language-cpp">// Write a C++ program to implement a Student class that uses a parameterized constructor to initialize the student&#x27;s name, roll number, and branch. The program should take input for the student&#x27;s details and display them using a member function.
 #include&lt;iostream&gt;
 #include&lt;conio.h&gt;
 #include &lt;string&gt;
@@ -713,7 +729,8 @@ Roll No. :29
 Branch : ECE
 */</code></pre></div>
 <div class='file'><h3>copy_constructor.cpp</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
+<pre><code class="language-cpp">// Write a C++ program that demonstrates the use of copy constructors. The program should include a class with a default constructor, a parameterized constructor, and a copy constructor. When an object is copied, the copy constructor should be called, and a message should be displayed.
+#include &lt;iostream&gt;
 #include &lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
@@ -743,7 +760,7 @@ OUTPUT:
 Copy Constructor Called 10
 */</code></pre></div>
 <div class='file'><h3>default_constructor.cpp</h3>
-<pre><code class="language-cpp">// Student Class implementation using default constructor
+<pre><code class="language-cpp">// Write a C++ program to create a Student class using a default constructor. The program should prompt the user to enter the student&#x27;s name, roll number, and branch, and then display the student details using a member function.
 #include&lt;iostream&gt;
 #include&lt;conio.h&gt;
 #include &lt;string&gt;
