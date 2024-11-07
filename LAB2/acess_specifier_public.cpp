@@ -1,3 +1,4 @@
+// Write a C++ program that demonstrates how to use a public member variable in a class. The program should display the value of a public variable x through a member function.
 #include<iostream>
 #include<conio.h> // Not in C++11 and later
 
