@@ -1,3 +1,4 @@
+// Write a C++ program that stores and displays the details of n students. The program should ask the user to input the name, roll number, and marks of each student, and then display the details of all the students.
 #include <iostream>
 // #include <conio.h> //for getch() comment this line if you using visual studio 2010 or older
 #include <string>

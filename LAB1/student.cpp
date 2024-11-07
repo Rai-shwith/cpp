@@ -1,3 +1,4 @@
+// Write a C++ program that accepts the name, roll number, and marks of a student, then displays the student's details using a class.
 #include <iostream>
 #include <conio.h> //for getch() comment this line if you using visual studio 2010 or older
 #include <string>

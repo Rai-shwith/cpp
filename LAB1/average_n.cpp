@@ -1,3 +1,4 @@
+// Write a C++ program that calculates the sum and average of n integers entered by the user.
 #include<iostream>
 #include<conio.h>  // Not in C++11 and later
 
