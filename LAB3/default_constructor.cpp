@@ -1,4 +1,4 @@
-// Student Class implementation using default constructor
+// Write a C++ program to create a Student class using a default constructor. The program should prompt the user to enter the student's name, roll number, and branch, and then display the student details using a member function.
 #include<iostream>
 #include<conio.h>
 #include <string>

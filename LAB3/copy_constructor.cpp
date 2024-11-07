@@ -1,3 +1,4 @@
+// Write a C++ program that demonstrates the use of copy constructors. The program should include a class with a default constructor, a parameterized constructor, and a copy constructor. When an object is copied, the copy constructor should be called, and a message should be displayed.
 #include <iostream>
 #include <conio.h> // Not in C++11 and later
 

@@ -1,5 +1,6 @@
+// Write a C++ program that demonstrates the use of constructors and destructors. The program should track and display the number of objects created and destroyed. The alpha class should maintain a static counter that is incremented when an object is created and decremented when an object is destroyed. The program should also show the impact of block-scoped objects on the counter.
 #include <iostream>
-// #include <conio.h> // Not in C++11 and later
+#include <conio.h> // Not in C++11 and later
 
 using namespace std;
 int count = 0;
@@ -27,7 +28,7 @@ int main(){
         alpha a6;
     }
     cout<<"Re-Entering main function"<<endl;
-    // getch(); // Not in C++11 and later
+    getch(); // Not in C++11 and later
     return 0;
 }
 

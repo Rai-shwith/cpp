@@ -1,3 +1,4 @@
+// Write a C++ program that uses two classes, xyz and abc, where each class has a private integer member variable. Both classes should have a member function to set the value of the integer. Additionally, implement a friend function max() that compares the values of these two classes and prints the greater value.
 #include<iostream>
 #include<conio.h> // Not in C++11 and later
 

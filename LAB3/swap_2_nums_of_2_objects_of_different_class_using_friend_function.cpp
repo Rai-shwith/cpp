@@ -1,3 +1,4 @@
+// Write a C++ program that uses two classes, A and B, where each class contains a private integer member. Implement a friend function swap() to exchange the values of the two integer members from different classes. The program should display the values before and after swapping.
 #include <iostream>
 #include <conio.h> // Not in C++11 and later
 
