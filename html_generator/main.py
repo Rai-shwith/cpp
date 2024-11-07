@@ -44,10 +44,10 @@ def generate_html(cpp_files):
 
     # Loop through labs and files
     for lab, files in cpp_files.items():
-        html_content += f"<h2>{lab}</h2>\n"
+        html_content += f"<details><summary>{lab}</summary>\n"
         for file_path in files:
             file_name = os.path.basename(file_path)
-            html_content += f"<div class='file'><h3>{file_name}</h3>\n"
+            html_content += f"<details class='file'><summary>{file_name}</summary>\n"
             
             # Read and escape the file content
             with open(file_path, 'r') as f:
@@ -55,7 +55,8 @@ def generate_html(cpp_files):
                 escaped_code = html.escape(code)  # Escape special characters
             
             # Add escaped code block
-            html_content += f"<pre><code class=\"language-cpp\">{escaped_code}</code></pre></div>\n"
+            html_content += f"<pre><code class=\"language-cpp\">{escaped_code}</code></pre></details>\n"
+        html_content += "</details>\n"
 
     # Close HTML tags
     html_content += """
