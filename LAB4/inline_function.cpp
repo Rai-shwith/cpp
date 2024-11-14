@@ -1,3 +1,4 @@
+// Write a C++ program using an inline function to find the maximum of two integers.
 #include <iostream>
 #include <conio.h> // for getch()
 
@@ -17,7 +18,7 @@ int main()
 }
 
 /*
-OUTPUT
+OUTPUT:
 Max (20,10): 20
 Max (0,200): 200
 Max (100,1010): 1010

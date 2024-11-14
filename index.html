@@ -1,131 +1,1477 @@
 <!DOCTYPE html>
 <html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   C++ Lab Codes
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <!-- Highlight.js CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js">
+  </script>
+ </head>
+ <body :class="darkMode ? 'bg-gray-900 text-gray-100' : ''" class="bg-gray-100 text-gray-900 font-sans antialiased transition-colors duration-300" x-data="{ darkMode: true }">
+  <div class="container mx-auto py-8">
+   <div class="flex justify-between items-center mb-8">
+    <h1 class="text-4xl font-extrabold text-blue-500 dark:text-blue-400">
+     C++ Lab Codes
+    </h1>
+    <label class="switch">
+     <span class="sun">
+      <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <g fill="#ffd43b">
+        <circle cx="12" cy="12" r="5">
+        </circle>
+        <path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z">
+        </path>
+       </g>
+      </svg>
+     </span>
+     <span class="moon">
+      <svg viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+       <path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+       </path>
+      </svg>
+     </span>
+     <input @click="darkMode = !darkMode" checked="false" class="input" type="checkbox"/>
+     <span class="slider">
+     </span>
+    </label>
+   </div>
+   <div id="lab-container">
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB1')">
+      LAB1
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB1">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/student.cpp')">
+        Student
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/student.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that accepts the name, roll number, and marks of a student, then displays the student's details using a class.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
+#include &lt;string&gt;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ Lab Codes</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Highlight.js CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-</head>
-
-<body class="bg-gray-100 text-gray-900 font-sans antialiased transition-colors duration-300"
-    x-data="{ darkMode: true }" :class="darkMode ? 'bg-gray-900 text-gray-100' : ''">
-
-    <div class="container mx-auto py-8">
-        <div class="flex justify-between items-center mb-8">
-            <h1 class="text-4xl font-extrabold text-blue-500 dark:text-blue-400">C++ Lab Codes</h1>
-                <label class="switch">
-                  <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
-                  <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
-                  <input type="checkbox" checked="false" class="input"  @click="darkMode = !darkMode">
-                  <span class="slider"></span>
-                </label>
-        </div>
-
-        <!-- Lab 1 -->
-        <div class="mb-8">
-            <button
-                class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors"
-                onclick="toggleLab('lab1')">
-                Lab 1 - Basics of C++
-            </button>
-            <div id="lab1" class="mt-4 hidden space-y-4">
-
-                <!-- Program 1 -->
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-                    <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100"
-                        onclick="toggleProgram('program1')">
-                        Program 1 - Hello World
-                    </button>
-                    <div id="program1" class="mt-4 hidden">
-                        <h3 class="text-md font-semibold text-gray-700 dark:text-gray-300">Topic: Introduction to C++
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-400 mt-2"><strong>Question:</strong> Write a program to
-                            print "Hello, World!" in C++.</p>
-                        <div class="mt-4">
-                            <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">Code:</h4>
-                            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 
-int main() {
-    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
-    return 0;
-}</code></pre>
-                        </div>
-                        <div class="mt-4">
-                            <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">Output:</h4>
-                            <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">Hello, World!</pre>
-                        </div>
-                    </div>
-                </div>
+class Student {
+        string name;
+        int roll;
+        float marks;
+    public:
+        void display() {
+            cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+            cout &lt;&lt; "Roll: " &lt;&lt; roll &lt;&lt; endl;
+            cout &lt;&lt; "Marks: " &lt;&lt; marks &lt;&lt; endl;
+        }
+        void set(string n, int r, float m) {
+            name = n;
+            roll = r;
+            marks = m;
+        }
+};
 
-                <!-- Program 2 -->
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-                    <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100"
-                        onclick="toggleProgram('program2')">
-                        Program 2 - Basic Arithmetic
-                    </button>
-                    <div id="program2" class="mt-4 hidden">
-                        <h3 class="text-md font-semibold text-gray-700 dark:text-gray-300">Topic: Arithmetic Operations
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-400 mt-2"><strong>Question:</strong> Write a program to
-                            add, subtract, multiply, and divide two numbers.</p>
-                        <div class="mt-4">
-                            <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">Code:</h4>
-                            <pre><code class="language-cpp">#include &lt;iostream&gt;
+int main(){
+    Student s1;
+    string name;
+    int roll;
+    float marks;
+    cout &lt;&lt; "Enter name, roll and marks of student" &lt;&lt; endl;
+    cin &gt;&gt; name &gt;&gt; roll &gt;&gt; marks;
+    s1.set(name, roll, marks);
+    s1.display();
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Enter name, roll and marks of student
+Ashwith
+29
+90
+Name: Ashwith 
+Roll: 29
+Marks: 90
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/swap_aliasing.cpp')">
+        Swap Aliasing
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/swap_aliasing.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that swaps the values of two integers using pass-by-reference.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt;
+
 using namespace std;
 
-int main() {
-    int a = 10, b = 5;
-    cout &lt;&lt; "Sum: " &lt;&lt; (a + b) &lt;&lt; endl;
-    cout &lt;&lt; "Difference: " &lt;&lt; (a - b) &lt;&lt; endl;
-    cout &lt;&lt; "Product: " &lt;&lt; (a * b) &lt;&lt; endl;
-    cout &lt;&lt; "Quotient: " &lt;&lt; (a / b) &lt;&lt; endl;
-    return 0;
-}</code></pre>
-                        </div>
-                        <div class="mt-4">
-                            <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">Output:</h4>
-                            <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
-Sum: 15
-Difference: 5
-Product: 50
-Quotient: 2</pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
+void swap(int &amp;x, int &amp;y){
+	x = x + y;
+	y = x - y;
+	x = x - y;
+}
+
+int main(){
+	int x = 10,y = 20;
+	cout&lt;&lt;"Before Swapping\nx = "&lt;&lt;x&lt;&lt;endl&lt;&lt;"y = "&lt;&lt;y&lt;&lt;endl;
+	swap(x,y);
+	cout&lt;&lt;"After Swapping\nx = "&lt;&lt;x&lt;&lt;endl&lt;&lt;"y = "&lt;&lt;y&lt;&lt;endl;
+	getch();
+	return 0;
+}
+
+</code></pre>
         </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Before Swapping
+x = 10
+y = 20
+After Swapping
+x = 20
+y = 10
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/student_array.cpp')">
+        Student Array
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/student_array.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that stores and displays the details of n students. The program should ask the user to input the name, roll number, and marks of each student, and then display the details of all the students.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+// #include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
+#include &lt;string&gt;
 
-        <!-- More labs can be added below in a similar fashion -->
+using namespace std;
 
-
-    <!-- JavaScript for Toggle and Highlight.js initialization -->
-    <script>
-        // Initialize code highlighting
-        document.addEventListener("DOMContentLoaded", () => {
-            hljs.highlightAll();
-        });
-
-        // Toggle visibility of lab sections
-        function toggleLab(labId) {
-            const lab = document.getElementById(labId);
-            lab.classList.toggle("hidden");
+class Student {
+        string name;
+        int roll;
+        float marks;
+    public:
+        void display() {
+            cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+            cout &lt;&lt; "Roll: " &lt;&lt; roll &lt;&lt; endl;
+            cout &lt;&lt; "Marks: " &lt;&lt; marks &lt;&lt; endl;
         }
-
-        // Toggle visibility of program sections within a lab
-        function toggleProgram(programId) {
-            const program = document.getElementById(programId);
-            program.classList.toggle("hidden");
+        void set(string n, int r, float m) {
+            name = n;
+            roll = r;
+            marks = m;
         }
-    </script>
-    <!-- AlpineJS for theme toggle functionality -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2/dist/cdn.min.js"></script>
-</body>
+};
 
+int main(){
+    Student s[3];
+    string name;
+    int roll,n;
+    float marks;
+    cout &lt;&lt; "Enter number of students" &lt;&lt; endl;
+    cin &gt;&gt; n;
+    for(int i=0;i&lt;n;i++){
+        cout &lt;&lt; "Enter name, roll and marks of student" &lt;&lt; endl;
+        cin &gt;&gt; name &gt;&gt; roll &gt;&gt; marks;
+        s[i].set(name, roll, marks);
+    }
+    cout &lt;&lt; "Details of students" &lt;&lt; endl;
+    for(int i=0;i&lt;n;i++){
+        s[i].display();
+    }
+    // getch();
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Enter number of students
+3
+Enter name, roll and marks of student
+Ashwith 29 90
+Enter name, roll and marks of student
+Arya 24 90
+Enter name, roll and marks of student
+Arnav 23 90
+Details of students
+Name: Ashwith
+Roll: 29
+Marks: 90
+Name: Arya
+Roll: 24
+Marks: 90
+Name: Arnav
+Roll: 23
+Marks: 90
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/average_n_array.cpp')">
+        Average N Array
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/average_n_array.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that calculates the sum and average of n integers entered by the user using array.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt;  //for getch()
+
+using namespace std;
+int main(){
+	int a[50],n,sum=0;
+	float avg;
+	cout&lt;&lt;"Enter the total number of elements"&lt;&lt;endl;
+	cin&gt;&gt;n;
+	cout&lt;&lt;"Enter n values"&lt;&lt;endl;
+	for (int i=0; i&lt;n; i++){
+		cin&gt;&gt;a[i];
+		sum+=a[i];
+	}
+	cout&lt;&lt;"Sum = "&lt;&lt;sum&lt;&lt;"\nAverage = "&lt;&lt;sum/n&lt;&lt;endl;
+	getch();
+	return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Enter the total number of elements
+5
+Enter n values
+1
+2
+3
+4
+5
+Sum = 15
+Average = 3
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/average_of_two.cpp')">
+        Average Of Two
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/average_of_two.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that calculates the average of two numbers entered by the user.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream.h&gt;
+#include&lt;conio.h&gt;  //for getch()
+
+int main(){
+    int a,b;
+    float avg;
+    cout&lt;&lt;"Enter two numbers"&lt;&lt;endl;
+    cin&gt;&gt;a&gt;&gt;b;
+    avg=(a+b)/2.0;
+    cout&lt;&lt;"Average of "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;" is "&lt;&lt;avg&lt;&lt;endl;
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Enter two numbers
+5
+6
+Average of 5 and 6 is 5.5
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/average_n.cpp')">
+        Average N
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/average_n.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that calculates the sum and average of n integers entered by the user.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt;  // Not in C++11 and later
+
+using namespace std;
+int main(){
+	int temp,n,sum=0;
+	float avg;
+	cout&lt;&lt;"Enter the total number of elements"&lt;&lt;endl;
+	cin&gt;&gt;n;
+	cout&lt;&lt;"Enter n values"&lt;&lt;endl;
+	for (int i=0; i&lt;n; i++){
+		cout&lt;&lt;"Enter element "&lt;&lt;i+1&lt;&lt;endl;
+		cin&gt;&gt;temp;
+		sum+=temp;
+	}
+	cout&lt;&lt;"Sum = "&lt;&lt;sum&lt;&lt;"\nAverage = "&lt;&lt;sum/n&lt;&lt;endl;
+	getch();   // Not in C++11 and later
+	return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Enter the total number of elements
+5
+Enter n values
+Enter element 1
+1
+Enter element 2
+2
+Enter element 3
+3
+Enter element 4
+4
+Enter element 5
+5
+Sum = 15
+Average = 3
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/swap_call_by_value.cpp')">
+        Swap Call By Value
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/swap_call_by_value.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that swaps the values of two integers using pass-by-value.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt;
+
+using namespace std;
+
+int swap(int x, int y){
+	int temp = x;
+	x = y;
+	y = x;
+	cout&lt;&lt;"After Swapping\nx = "&lt;&lt;x&lt;&lt;endl&lt;&lt;"y = "&lt;&lt;y&lt;&lt;endl;
+	return 0;
+}
+
+int main(){
+	int x = 10,y = 20;
+	cout&lt;&lt;"Before Swapping\nx = "&lt;&lt;x&lt;&lt;endl&lt;&lt;"y = "&lt;&lt;y&lt;&lt;endl;
+	swap(x,y);
+	getch();
+	return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Before Swapping
+x = 10
+y = 20
+After Swapping
+x = 20
+y = 10
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/swap_pointers.cpp')">
+        Swap Pointers
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/swap_pointers.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that swaps the values of two integers using pointers.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; //for getch()
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 10;
+    int y = 20;
+
+    std::cout &lt;&lt; "Before swapping: x = " &lt;&lt; x &lt;&lt; ", y = " &lt;&lt; y &lt;&lt; std::endl;
+
+    swap(&amp;x, &amp;y);
+
+    std::cout &lt;&lt; "After swapping: x = " &lt;&lt; x &lt;&lt; ", y = " &lt;&lt; y &lt;&lt; std::endl;
+    getch()
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Before swapping: x = 10, y = 20
+After swapping: x = 20, y = 10
+</pre>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB2')">
+      LAB2
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB2">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB2/friend_class.cpp')">
+        Friend Class
+       </button>
+       <div class="mt-4 hidden" id="./LAB2/friend_class.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that demonstrates the use of friend classes. The program should have two classes, sample1 and sample2. The sample1 class should be able to access the private members of the sample2 class through a friend relationship.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class sample1;
+class sample2
+{
+    int y, z;
+
+public:
+    void setValues(int a, int b)
+    {
+        y = a;
+        z = b;
+    }
+    friend class sample1;
+};
+class sample1
+{
+public:
+    void display1(sample2 s)
+    {
+        cout &lt;&lt; "y = " &lt;&lt; s.y &lt;&lt; endl;
+    }
+
+    void display2(sample2 s)
+    {
+        cout &lt;&lt; "z = " &lt;&lt; s.z &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    sample1 s1;
+    sample2 s2;
+    s2.setValues(10, 20);
+    s1.display1(s2);
+    s1.display2(s2);
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+y = 10
+z = 20
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB2/acess_specifier_public_private.cpp')">
+        Acess Specifier Public Private
+       </button>
+       <div class="mt-4 hidden" id="./LAB2/acess_specifier_public_private.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that demonstrates the use of public and private members in a class. The program should include a class with a public variable and a private variable, along with functions to set and display both of them.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class Disp{
+	int y;
+public:
+	int x;
+	void display(){
+		cout&lt;&lt;"x = "&lt;&lt;x&lt;&lt;endl;
+	}
+
+	void setY(int val){
+        y = val;
+    }
+    void showY(){
+        cout&lt;&lt;"y = "&lt;&lt;y&lt;&lt;endl;
+    }
+
+};
+
+int main(){
+	Disp obj1;
+	obj1.x = 5;
+	obj1.display();
+    obj1.setY(10);
+    obj1.showY();
+	getch(); // Not in C++11 and later
+	return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+x = 5
+y = 10
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB2/friend_function.cpp')">
+        Friend Function
+       </button>
+       <div class="mt-4 hidden" id="./LAB2/friend_function.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that demonstrates the use of friend functions to calculate the area of a rectangle. The program should involve a Rectangle class with private data members for length and breadth, and a friend function Area() that calculates the area of the rectangle.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class Rectangle{
+    int length;
+    int breadth;
+public:
+    void setDimensions(int l, int b){
+        length = l;
+        breadth = b;
+    }
+    friend void Area(Rectangle);
+    };  
+    
+void Area(Rectangle r){
+    cout&lt;&lt;"Area = "&lt;&lt;r.length*r.breadth&lt;&lt;endl;
+}
+int main(){
+    Rectangle r;
+    r.setDimensions(10, 20);
+    Area(r);
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Area = 200
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB2/acess_specifier_public.cpp')">
+        Acess Specifier Public
+       </button>
+       <div class="mt-4 hidden" id="./LAB2/acess_specifier_public.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that demonstrates how to use a public member variable in a class. The program should display the value of a public variable x through a member function.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class Disp{
+public:
+	int x;
+	void display(){
+		cout&lt;&lt;"x = "&lt;&lt;x&lt;&lt;endl;
+	}
+};
+
+int main(){
+	Disp obj1;
+	obj1.x = 5;
+	obj1.display();
+	getch(); // Not in C++11 and later
+	return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+x = 5
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB2/friend_function_of_two_classes.cpp')">
+        Friend Function Of Two Classes
+       </button>
+       <div class="mt-4 hidden" id="./LAB2/friend_function_of_two_classes.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that demonstrates the use of friend functions. The program should calculate the mean of two private variables from two different classes using a friend function. The program should involve two classes, sample1 and sample2, and a friend function mean that accesses the private data of both classes
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+class sample2;
+class sample1{
+    int a;
+public:
+    void setA(int x){
+        a = x;
+    }
+    friend float mean(sample1, sample2);
+};
+class sample2{
+    int b;
+public:
+    void setB(int y){
+        b = y;
+    }
+    friend float mean(sample1, sample2);
+};
+float mean(sample1 s1, sample2 s2){
+    return float(s1.a + s2.b)/2;
+}
+int main(){
+    sample1 s1;
+    sample2 s2;
+    s1.setA(25);
+    s2.setB(30);
+    cout&lt;&lt;"Mean = "&lt;&lt;mean(s1, s2)&lt;&lt;endl;
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Mean = 27.5
+</pre>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB3')">
+      LAB3
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB3">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/copy_constructor.cpp')">
+        Copy Constructor
+       </button>
+       <div class="mt-4 hidden" id="./LAB3/copy_constructor.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that demonstrates the use of copy constructors. The program should include a class with a default constructor, a parameterized constructor, and a copy constructor. When an object is copied, the copy constructor should be called, and a message should be displayed.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class example{
+    int data;
+    public:
+    example () {} // Default Constructor
+    example(int i){ // Parameterized Constructor
+        data = i;
+    }
+    example(example &amp;sample){ // Copy Constructor
+        data = sample.data;
+        cout&lt;&lt;"Copy Constructor Called "&lt;&lt;data&lt;&lt;endl;
+    }
+}
+
+int main(){
+    example e1(10);
+    example e2(e1);
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Copy Constructor Called 10
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/default_constructor.cpp')">
+        Default Constructor
+       </button>
+       <div class="mt-4 hidden" id="./LAB3/default_constructor.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program to create a Student class using a default constructor. The program should prompt the user to enter the student's name, roll number, and branch, and then display the student details using a member function.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+class Student{
+	string name,branch;
+	int rollno;
+public:
+	Student(); // Default Constructor declaration
+	void display();
+};
+
+Student::Student(){ // Default Constructor definition
+	cout&lt;&lt;"Enter the Name: "&lt;&lt;endl;
+	cin&gt;&gt;name;
+	cout&lt;&lt;"Enter the Roll No.: "&lt;&lt;endl;
+	cin&gt;&gt;rollno;
+	cout&lt;&lt;"Enter the Branch: "&lt;&lt;endl;
+	cin&gt;&gt;branch;
+}
+
+void Student::display(){
+	cout&lt;&lt;"\nStudent Details"&lt;&lt;endl;
+	cout&lt;&lt;"Name : "&lt;&lt;name&lt;&lt;"\nRoll No. :"&lt;&lt;rollno&lt;&lt;"Branch : "&lt;&lt;branch&lt;&lt;endl;
+}
+
+int main(){
+	Student s;
+	s.display();
+	getch();
+	return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Enter the Name:
+Ashwith
+Enter the Roll No.:
+29
+Enter the Branch:
+ECE
+
+Student Details
+Name : Ashwith
+Roll No. :29Branch : ECE
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/max_of_two_objects_using_friend_function.cpp')">
+        Max Of Two Objects Using Friend Function
+       </button>
+       <div class="mt-4 hidden" id="./LAB3/max_of_two_objects_using_friend_function.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that uses two classes, xyz and abc, where each class has a private integer member variable. Both classes should have a member function to set the value of the integer. Additionally, implement a friend function max() that compares the values of these two classes and prints the greater value.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class abc;
+
+class xyz{
+    int x;
+    public:
+    void setvalue(int i){
+        x = i;
+    }
+    friend void max(xyz, abc);
+};
+
+class abc{
+    int a;
+    public:
+    void setvalue(int i){
+        a = i;
+    }
+    friend void max(xyz, abc);
+};  
+
+void max(xyz m, abc n){
+    if(m.x &gt; n.a){
+        cout&lt;&lt;"Max value is "&lt;&lt;m.x&lt;&lt;endl;
+    }
+    else{
+        cout&lt;&lt;"Max value is "&lt;&lt;n.a&lt;&lt;endl;
+    }
+}
+
+int main(){
+    xyz m;
+    abc n;
+    m.setvalue(10);
+    n.setvalue(20);
+    max(m, n);
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Max value is 20
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/parameterized_constructor_for_student_class.cpp')">
+        Parameterized Constructor For Student Class
+       </button>
+       <div class="mt-4 hidden" id="./LAB3/parameterized_constructor_for_student_class.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program to implement a Student class that uses a parameterized constructor to initialize the student's name, roll number, and branch. The program should take input for the student's details and display them using a member function.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+class Student{
+	string name,branch;
+	int rollno;
+public:
+	Student(string,int,string); // Parameterized Constructor declaration
+	void display();
+};
+
+Student::Student(string n,int r,string  b){ // Parameterized Constructor definition
+	name = n;
+    rollno = r;
+    branch = b;
+}
+
+void Student::display(){
+	cout&lt;&lt;"\nStudent Details"&lt;&lt;endl;
+	cout&lt;&lt;"Name : "&lt;&lt;name&lt;&lt;"\nRoll No. :"&lt;&lt;rollno&lt;&lt;"Branch : "&lt;&lt;branch&lt;&lt;endl;
+}
+
+int main(){
+    string name, branch;
+    int rollno;
+    cout&lt;&lt;"Enter the Name: "&lt;&lt;endl;
+	cin&gt;&gt;name;
+	cout&lt;&lt;"Enter the Roll No.: "&lt;&lt;endl;
+	cin&gt;&gt;rollno;
+	cout&lt;&lt;"Enter the Branch: "&lt;&lt;endl;
+	cin&gt;&gt;branch;
+	Student s(name,rollno,branch);
+	s.display();
+	getch();
+	return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Enter the Name:
+Ashwith
+Enter the Roll No.:
+29
+Enter the Branch:
+ECE
+
+Student Details
+Name : Ashwith
+Roll No. :29
+Branch : ECE
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/swap_2_nums_of_2_objects_of_different_class_using_friend_function.cpp')">
+        Swap 2 Nums Of 2 Objects Of Different Class Using Friend Function
+       </button>
+       <div class="mt-4 hidden" id="./LAB3/swap_2_nums_of_2_objects_of_different_class_using_friend_function.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that uses two classes, A and B, where each class contains a private integer member. Implement a friend function swap() to exchange the values of the two integer members from different classes. The program should display the values before and after swapping.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class B;
+class A{
+    public:
+    int a;
+    void setvalue(int i){
+        a = i;
+    }
+    friend void swap(A &amp;, B &amp;);
+};
+class B{
+    public:
+    int b;
+    void setvalue(int i){
+        b = i;
+    }
+    friend void swap(A &amp;, B &amp;);
+};
+
+void swap(A &amp;m, B &amp;n){
+    int temp = m.a;
+    m.a = n.b;
+    n.b = temp;
+}
+
+int main(){
+    A m;
+    B n;
+    m.setvalue(10);
+    n.setvalue(20);
+    cout&lt;&lt;"Before Swapping\na = "&lt;&lt;m.a&lt;&lt;endl&lt;&lt;"b = "&lt;&lt;n.b&lt;&lt;endl;
+    swap(m, n);
+    cout&lt;&lt;"After Swapping\na = "&lt;&lt;m.a&lt;&lt;endl&lt;&lt;"b = "&lt;&lt;n.b&lt;&lt;endl;
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Before Swapping
+a = 10
+b = 20
+After Swapping
+a = 20
+b = 10
+
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/destructor.cpp')">
+        Destructor
+       </button>
+       <div class="mt-4 hidden" id="./LAB3/destructor.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that demonstrates the use of constructors and destructors. The program should track and display the number of objects created and destroyed. The alpha class should maintain a static counter that is incremented when an object is created and decremented when an object is destroyed. The program should also show the impact of block-scoped objects on the counter.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+int count = 0;
+class alpha{
+    public:
+    alpha(){
+        count++;
+        cout&lt;&lt;"No. of object created "&lt;&lt;count&lt;&lt;endl;
+    }
+    ~alpha(){
+        count--;
+        cout&lt;&lt;"No. of object remaining "&lt;&lt;count&lt;&lt;endl;
+    }
+};
+
+int main(){
+    cout&lt;&lt;"Enter main function"&lt;&lt;endl;
+    alpha a1, a2, a3,a4;
+    {
+        cout&lt;&lt;"Entering Block 1"&lt;&lt;endl;
+        alpha a5;
+    }
+    {
+        cout&lt;&lt;"Entering Block 2"&lt;&lt;endl;
+        alpha a6;
+    }
+    cout&lt;&lt;"Re-Entering main function"&lt;&lt;endl;
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Enter main function
+No. of object created 1
+No. of object created 2
+No. of object created 3
+No. of object created 4
+Entering Block 1
+No. of object created 5
+No. of object remaining 4
+Entering Block 2
+No. of object created 5
+No. of object remaining 4
+Re-Entering main function
+No. of object remaining 3
+No. of object remaining 2
+No. of object remaining 1
+No. of object remaining 0
+</pre>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB4')">
+      LAB4
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB4">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB4/binary_overloading.cpp')">
+        Binary Overloading
+       </button>
+       <div class="mt-4 hidden" id="./LAB4/binary_overloading.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program to add two complex numbers using operator overloading and display the result.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt;
+
+using namespace std;
+
+class Complex{
+	float real;
+	float img;
+public:
+	Complex(float r,float i);
+	Complex operator +(const Complex&amp;);
+	void show();
+};
+
+Complex::Complex(float r,float i){
+	real = r;
+	img = i;
+}
+void Complex::show(){
+	if (img&gt;0){
+		cout&lt;&lt;real&lt;&lt;"+"&lt;&lt;img&lt;&lt;"i"&lt;&lt;endl;
+	}else{
+		cout&lt;&lt;real&lt;&lt;img&lt;&lt;"i"&lt;&lt;endl;
+	}
+}
+
+Complex Complex::operator +(const Complex &amp;other){
+	float r = real + other.real;
+	float i = img + other.img;
+	Complex sum(r,i);
+	return sum;
+}
+
+int main(){
+	Complex complex1(1,1);
+	Complex complex2(1,5);
+	Complex complex3(4,1);
+	Complex complex4(-10,-5);
+	Complex sum1 = complex1+complex2;
+	sum1.show();
+	Complex sum2 = complex3+complex4;
+	sum2.show();
+	getch();
+	return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+2+6i
+-6-4i
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB4/unary_operator_overloading.cpp')">
+        Unary Operator Overloading
+       </button>
+       <div class="mt-4 hidden" id="./LAB4/unary_operator_overloading.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program to overload the unary minus operator to negate the values of the data members of a class Space that represents a point in 3D space.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+
+using namespace std;
+
+class Space
+{
+    int x, y, z;
+public:
+void getdata(int a, int b, int c); 
+void display(void);
+void operator -();
+};
+
+void Space::getdata(int a, int b, int c)
+{
+    x = a;
+    y = b;
+    z = c;
+}
+void Space::display(void)
+{
+    cout &lt;&lt; "x:" &lt;&lt; x &lt;&lt; " y:" &lt;&lt; y &lt;&lt; " z:" &lt;&lt; z &lt;&lt; "\n";
+}
+void Space::operator -()
+{
+    x = -x;
+    y = -y;
+    z = -z;
+}
+
+int main()
+{
+    Space S;
+    S.getdata(10, -20, 30);
+    cout &lt;&lt; "S: ";
+    S.display();
+    -S;
+    cout &lt;&lt; "S: ";
+    S.display();
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+S: x:10 y:-20 z:30
+S: x:-10 y:20 z:-30
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB4/inline_function.cpp')">
+        Inline Function
+       </button>
+       <div class="mt-4 hidden" id="./LAB4/inline_function.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program using an inline function to find the maximum of two integers.
+        </p>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Code:
+         </h4>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+
+using namespace std;
+inline int Max(int x, int y)
+{
+    return (x &gt; y) ? x : y;
+}
+
+int main()
+{
+    cout &lt;&lt; "Max (20,10): " &lt;&lt; Max(20, 10) &lt;&lt; endl;
+    cout &lt;&lt; "Max (0,200): " &lt;&lt; Max(0, 200) &lt;&lt; endl;
+    cout &lt;&lt; "Max (100,1010): " &lt;&lt; Max(100, 1010) &lt;&lt; endl;
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </div>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">
+Max (20,10): 20
+Max (0,200): 200
+Max (100,1010): 1010
+</pre>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- More labs can be added below in a similar fashion -->
+   <!-- JavaScript for Toggle and Highlight.js initialization -->
+   <script>
+    // Initialize code highlighting
+            document.addEventListener("DOMContentLoaded", () => {
+                hljs.highlightAll();
+            });
+
+            // Toggle visibility of lab sections
+            function toggleLab(labId) {
+                const lab = document.getElementById(labId);
+                lab.classList.toggle("hidden");
+            }
+
+            // Toggle visibility of program sections within a lab
+            function toggleProgram(programId) {
+                const program = document.getElementById(programId);
+                program.classList.toggle("hidden");
+            }
+   </script>
+   <!-- AlpineJS for theme toggle functionality -->
+   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2/dist/cdn.min.js">
+   </script>
+  </div>
+ </body>
 </html>
