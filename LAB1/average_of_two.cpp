@@ -1,3 +1,4 @@
+// Write a C++ program that calculates the average of two numbers entered by the user.
 #include<iostream.h>
 #include<conio.h>  //for getch()
 

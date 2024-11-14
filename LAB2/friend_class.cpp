@@ -1,3 +1,4 @@
+// Write a C++ program that demonstrates the use of friend classes. The program should have two classes, sample1 and sample2. The sample1 class should be able to access the private members of the sample2 class through a friend relationship.
 #include <iostream>
 #include <conio.h> // Not in C++11 and later
 

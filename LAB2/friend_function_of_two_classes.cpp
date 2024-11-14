@@ -1,3 +1,4 @@
+// Write a C++ program that demonstrates the use of friend functions. The program should calculate the mean of two private variables from two different classes using a friend function. The program should involve two classes, sample1 and sample2, and a friend function mean that accesses the private data of both classes
 #include<iostream>
 #include<conio.h> // Not in C++11 and later
 

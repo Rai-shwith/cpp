@@ -1,3 +1,4 @@
+// Write a C++ program that demonstrates the use of friend functions to calculate the area of a rectangle. The program should involve a Rectangle class with private data members for length and breadth, and a friend function Area() that calculates the area of the rectangle.
 #include<iostream>
 #include<conio.h> // Not in C++11 and later
 
