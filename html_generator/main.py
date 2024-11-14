@@ -50,7 +50,7 @@ def get_lab_component(file_path,title,question,code,result):
                 <div class="mt-4">
                     <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">Output:</h4>
                     <pre
-                        class="bg-gray-900 text-green-400 p-3 rounded-md dark:bg-gray-700">{result}</pre>
+                        class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">{result}</pre>
                 </div>
             </div>
         </div>
