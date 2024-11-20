@@ -45,226 +45,6 @@
    </div>
    <div id="lab-container">
     <div class="mb-8">
-     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB5')">
-      LAB5
-     </button>
-     <div class="mt-4 hidden space-y-4" id="LAB5">
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB5/private_inheritance.cpp')">
-        Private Inheritance
-       </button>
-       <div class="mt-4 hidden" id="./LAB5/private_inheritance.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a program to demonstrate the use of private inheritance.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; // for getch()
-
-using namespace std;
-
-class B
-{
-    int a;
-
-public:
-    int b;
-    void get_ab();
-    int get_a();
-    void show_a();
-};
-
-void B::get_ab()
-{
-    cout &lt;&lt; "Enter values for a and b: ";
-    cin &gt;&gt; a &gt;&gt; b;
-}
-int B::get_a()
-{
-    return a;
-}
-void B::show_a()
-{
-    cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
-}
-
-class D : private B
-{
-    int c;
-
-public:
-    void mul();
-    void display();
-};
-void D::mul()
-{
-    get_ab();
-    c = b * get_a();
-}
-void D::display()
-{
-    show_a();
-    cout &lt;&lt; "b = " &lt;&lt; b &lt;&lt; endl;
-    cout &lt;&lt; "c = " &lt;&lt; c &lt;&lt; endl;
-}
-
-int main()
-{
-    D d;
-    d.mul();
-    d.display();
-    getch();
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Enter values for a and b: 5 10
-a = 5
-b = 10
-c = 50
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB5/public_inheritance.cpp')">
-        Public Inheritance
-       </button>
-       <div class="mt-4 hidden" id="./LAB5/public_inheritance.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a program to demonstrate the use of private inheritance.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; // for getch()
-
-using namespace std;
-
-class B
-{
-    int a;
-
-public:
-    int b;
-    void get_ab();
-    int get_a();
-};
-
-void B::get_ab()
-{
-    cout &lt;&lt; "Enter values for a and b: ";
-    cin &gt;&gt; a &gt;&gt; b;
-}
-int B::get_a()
-{
-    return a;
-}
-
-class D : public B
-{
-    int c;
-
-public:
-    void mul();
-    void display();
-};
-void D::mul()
-{
-    c = b * get_a();
-}
-void D::display()
-{
-    cout &lt;&lt; "a = " &lt;&lt; get_a()&lt;&lt;endl;
-    cout &lt;&lt; "b = " &lt;&lt; b &lt;&lt; endl;
-    cout &lt;&lt; "c = " &lt;&lt; c &lt;&lt; endl;
-}
-
-int main()
-{
-    D d;
-	d.get_ab();
-    d.mul();
-    d.display();
-    getch();
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Enter values for a and b: 4 8
-a = 4
-b = 8
-c = 32
-</pre>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="mb-8">
      <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB1')">
       LAB1
      </button>
@@ -1303,266 +1083,6 @@ Area = 200
      </div>
     </div>
     <div class="mb-8">
-     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB4')">
-      LAB4
-     </button>
-     <div class="mt-4 hidden space-y-4" id="LAB4">
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB4/binary_overloading.cpp')">
-        Binary Overloading
-       </button>
-       <div class="mt-4 hidden" id="./LAB4/binary_overloading.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program to add two complex numbers using operator overloading and display the result.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt;
-
-using namespace std;
-
-class Complex{
-	float real;
-	float img;
-public:
-	Complex(float r,float i);
-	Complex operator +(const Complex&amp;);
-	void show();
-};
-
-Complex::Complex(float r,float i){
-	real = r;
-	img = i;
-}
-void Complex::show(){
-	if (img&gt;0){
-		cout&lt;&lt;real&lt;&lt;"+"&lt;&lt;img&lt;&lt;"i"&lt;&lt;endl;
-	}else{
-		cout&lt;&lt;real&lt;&lt;img&lt;&lt;"i"&lt;&lt;endl;
-	}
-}
-
-Complex Complex::operator +(const Complex &amp;other){
-	float r = real + other.real;
-	float i = img + other.img;
-	Complex sum(r,i);
-	return sum;
-}
-
-int main(){
-	Complex complex1(1,1);
-	Complex complex2(1,5);
-	Complex complex3(4,1);
-	Complex complex4(-10,-5);
-	Complex sum1 = complex1+complex2;
-	sum1.show();
-	Complex sum2 = complex3+complex4;
-	sum2.show();
-	getch();
-	return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-2+6i
--6-4i
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB4/inline_function.cpp')">
-        Inline Function
-       </button>
-       <div class="mt-4 hidden" id="./LAB4/inline_function.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program using an inline function to find the maximum of two integers.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; // for getch()
-
-using namespace std;
-inline int Max(int x, int y)
-{
-    return (x &gt; y) ? x : y;
-}
-
-int main()
-{
-    cout &lt;&lt; "Max (20,10): " &lt;&lt; Max(20, 10) &lt;&lt; endl;
-    cout &lt;&lt; "Max (0,200): " &lt;&lt; Max(0, 200) &lt;&lt; endl;
-    cout &lt;&lt; "Max (100,1010): " &lt;&lt; Max(100, 1010) &lt;&lt; endl;
-    getch();
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Max (20,10): 20
-Max (0,200): 200
-Max (100,1010): 1010
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB4/unary_operator_overloading.cpp')">
-        Unary Operator Overloading
-       </button>
-       <div class="mt-4 hidden" id="./LAB4/unary_operator_overloading.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program to overload the unary minus operator to negate the values of the data members of a class Space that represents a point in 3D space.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; // for getch()
-
-using namespace std;
-
-class Space
-{
-    int x, y, z;
-public:
-void getdata(int a, int b, int c); 
-void display(void);
-void operator -();
-};
-
-void Space::getdata(int a, int b, int c)
-{
-    x = a;
-    y = b;
-    z = c;
-}
-void Space::display(void)
-{
-    cout &lt;&lt; "x:" &lt;&lt; x &lt;&lt; " y:" &lt;&lt; y &lt;&lt; " z:" &lt;&lt; z &lt;&lt; "\n";
-}
-void Space::operator -()
-{
-    x = -x;
-    y = -y;
-    z = -z;
-}
-
-int main()
-{
-    Space S;
-    S.getdata(10, -20, 30);
-    cout &lt;&lt; "S: ";
-    S.display();
-    -S;
-    cout &lt;&lt; "S: ";
-    S.display();
-    getch();
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-S: x:10 y:-20 z:30
-S: x:-10 y:20 z:-30
-</pre>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="mb-8">
      <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB3')">
       LAB3
      </button>
@@ -2103,6 +1623,621 @@ ECE
 Student Details
 Name : Ashwith
 Roll No. :29Branch : ECE
+</pre>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB4')">
+      LAB4
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB4">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB4/binary_overloading.cpp')">
+        Binary Overloading
+       </button>
+       <div class="mt-4 hidden" id="./LAB4/binary_overloading.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program to add two complex numbers using operator overloading and display the result.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt;
+
+using namespace std;
+
+class Complex{
+	float real;
+	float img;
+public:
+	Complex(float r,float i);
+	Complex operator +(const Complex&amp;);
+	void show();
+};
+
+Complex::Complex(float r,float i){
+	real = r;
+	img = i;
+}
+void Complex::show(){
+	if (img&gt;0){
+		cout&lt;&lt;real&lt;&lt;"+"&lt;&lt;img&lt;&lt;"i"&lt;&lt;endl;
+	}else{
+		cout&lt;&lt;real&lt;&lt;img&lt;&lt;"i"&lt;&lt;endl;
+	}
+}
+
+Complex Complex::operator +(const Complex &amp;other){
+	float r = real + other.real;
+	float i = img + other.img;
+	Complex sum(r,i);
+	return sum;
+}
+
+int main(){
+	Complex complex1(1,1);
+	Complex complex2(1,5);
+	Complex complex3(4,1);
+	Complex complex4(-10,-5);
+	Complex sum1 = complex1+complex2;
+	sum1.show();
+	Complex sum2 = complex3+complex4;
+	sum2.show();
+	getch();
+	return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+2+6i
+-6-4i
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB4/inline_function.cpp')">
+        Inline Function
+       </button>
+       <div class="mt-4 hidden" id="./LAB4/inline_function.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program using an inline function to find the maximum of two integers.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+
+using namespace std;
+inline int Max(int x, int y)
+{
+    return (x &gt; y) ? x : y;
+}
+
+int main()
+{
+    cout &lt;&lt; "Max (20,10): " &lt;&lt; Max(20, 10) &lt;&lt; endl;
+    cout &lt;&lt; "Max (0,200): " &lt;&lt; Max(0, 200) &lt;&lt; endl;
+    cout &lt;&lt; "Max (100,1010): " &lt;&lt; Max(100, 1010) &lt;&lt; endl;
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Max (20,10): 20
+Max (0,200): 200
+Max (100,1010): 1010
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB4/unary_operator_overloading.cpp')">
+        Unary Operator Overloading
+       </button>
+       <div class="mt-4 hidden" id="./LAB4/unary_operator_overloading.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program to overload the unary minus operator to negate the values of the data members of a class Space that represents a point in 3D space.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+
+using namespace std;
+
+class Space
+{
+    int x, y, z;
+public:
+void getdata(int a, int b, int c); 
+void display(void);
+void operator -();
+};
+
+void Space::getdata(int a, int b, int c)
+{
+    x = a;
+    y = b;
+    z = c;
+}
+void Space::display(void)
+{
+    cout &lt;&lt; "x:" &lt;&lt; x &lt;&lt; " y:" &lt;&lt; y &lt;&lt; " z:" &lt;&lt; z &lt;&lt; "\n";
+}
+void Space::operator -()
+{
+    x = -x;
+    y = -y;
+    z = -z;
+}
+
+int main()
+{
+    Space S;
+    S.getdata(10, -20, 30);
+    cout &lt;&lt; "S: ";
+    S.display();
+    -S;
+    cout &lt;&lt; "S: ";
+    S.display();
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+S: x:10 y:-20 z:30
+S: x:-10 y:20 z:-30
+</pre>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB5')">
+      LAB5
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB5">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB5/private_inheritance.cpp')">
+        Private Inheritance
+       </button>
+       <div class="mt-4 hidden" id="./LAB5/private_inheritance.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a program to demonstrate the use of private inheritance.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+
+using namespace std;
+
+class B
+{
+    int a;
+
+public:
+    int b;
+    void get_ab();
+    int get_a();
+    void show_a();
+};
+
+void B::get_ab()
+{
+    cout &lt;&lt; "Enter values for a and b: ";
+    cin &gt;&gt; a &gt;&gt; b;
+}
+int B::get_a()
+{
+    return a;
+}
+void B::show_a()
+{
+    cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+}
+
+class D : private B
+{
+    int c;
+
+public:
+    void mul();
+    void display();
+};
+void D::mul()
+{
+    get_ab();
+    c = b * get_a();
+}
+void D::display()
+{
+    show_a();
+    cout &lt;&lt; "b = " &lt;&lt; b &lt;&lt; endl;
+    cout &lt;&lt; "c = " &lt;&lt; c &lt;&lt; endl;
+}
+
+int main()
+{
+    D d;
+    d.mul();
+    d.display();
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter values for a and b: 5 10
+a = 5
+b = 10
+c = 50
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB5/public_inheritance.cpp')">
+        Public Inheritance
+       </button>
+       <div class="mt-4 hidden" id="./LAB5/public_inheritance.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a program to demonstrate the use of private inheritance.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+
+using namespace std;
+
+class B
+{
+    int a;
+
+public:
+    int b;
+    void get_ab();
+    int get_a();
+};
+
+void B::get_ab()
+{
+    cout &lt;&lt; "Enter values for a and b: ";
+    cin &gt;&gt; a &gt;&gt; b;
+}
+int B::get_a()
+{
+    return a;
+}
+
+class D : public B
+{
+    int c;
+
+public:
+    void mul();
+    void display();
+};
+void D::mul()
+{
+    c = b * get_a();
+}
+void D::display()
+{
+    cout &lt;&lt; "a = " &lt;&lt; get_a()&lt;&lt;endl;
+    cout &lt;&lt; "b = " &lt;&lt; b &lt;&lt; endl;
+    cout &lt;&lt; "c = " &lt;&lt; c &lt;&lt; endl;
+}
+
+int main()
+{
+    D d;
+	d.get_ab();
+    d.mul();
+    d.display();
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter values for a and b: 4 8
+a = 4
+b = 8
+c = 32
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB5/multilevel_inheritance.cpp')">
+        Multilevel Inheritance
+       </button>
+       <div class="mt-4 hidden" id="./LAB5/multilevel_inheritance.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a program to demonstrate Multilevel Inheritance.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+#include &lt;string&gt;
+using namespace std;
+
+class Studet
+{
+protected:
+    string name;
+    int roll;
+
+public:
+    void get_data(int r, string n)
+    {
+        name = n;
+        roll = r;
+    }
+    void put_data()
+    {
+        cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+        cout &lt;&lt; "Roll No: " &lt;&lt; roll &lt;&lt; endl;
+    }
+};
+class Test : public Studet
+{
+protected:
+    float sub1, sub2;
+    public:
+    void get_test(float m1,float m2)
+    {
+        sub1 = m1;
+        sub2 = m2;
+    }
+    void put_test()
+    {
+        cout &lt;&lt; "Marks in Subject 1: " &lt;&lt; sub1 &lt;&lt; endl;
+        cout &lt;&lt; "Marks in Subject 2: " &lt;&lt; sub2 &lt;&lt; endl;
+    }
+};
+class Result : public Test
+{
+    float total;
+    public:
+    void display()
+    {
+        total = sub1 + sub2;
+        put_data();
+        put_test();
+        cout &lt;&lt; "Total Marks: " &lt;&lt; total &lt;&lt; endl;
+    }
+};
+
+int main(){
+	string name;
+	int rollno;
+	float subj1,subj2;
+    Result r;
+    cout&lt;&lt;"Enter the roll number of the student: "&lt;&lt;endl;
+    cin&gt;&gt;rollno;
+    cout&lt;&lt;"Enter the name of the student: "&lt;&lt;endl;
+    cin&gt;&gt;name;
+    cout&lt;&lt;"Enter the marks of two subjects: "&lt;&lt;endl;
+    cin&gt;&gt;subj1&gt;&gt;subj2;
+    r.get_data(rollno,name);
+    r.get_test(subj1,subj2);
+    cout&lt;&lt;"\n\n**********RESULT**********\n\n";
+    r.display();
+    cout&lt;&lt;"\n\n**************************\n\n";
+    getch();
+    return 0;
+}
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the roll number of the student:
+29
+Enter the name of the student:
+Ashwith
+Enter the marks of two subjects:
+99 100
+
+
+**********RESULT**********
+
+Name: Ashwith
+Roll NO: 29
+Marks in Subject 1: 99
+Marks in Subject 2: 100
+Total Marks: 199
+
+
+**************************
 </pre>
         </div>
        </div>
