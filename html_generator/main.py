@@ -24,7 +24,7 @@ with open('index.html', 'r') as f:
 def get_cpp_files():
     cpp_files = {}
     # Traverse directories for C++ files
-    for root, _, files in os.walk(ROOT_DIR):
+    for root, _, files in sorted(os.walk(ROOT_DIR),key=lambda x: x[0]):
         if 'LAB' in root:  # Limit to 'LAB' directories
             lab_name = os.path.basename(root)
             cpp_files[lab_name] = []
