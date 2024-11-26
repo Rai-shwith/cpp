@@ -17,6 +17,20 @@
   </script>
  </head>
  <body :class="darkMode ? 'bg-gray-900 text-gray-100' : ''" class="font-sans antialiased transition-colors duration-300" x-data="{ darkMode: true }">
+    <!-- Disclaimer Pop Up -->
+    <div id="disclaimer-popup" class="fixed inset-0 bg-black z-50 hidden">
+        <div class="popup-content w-full flex flex-col items-center px-7">
+          <h2 class="text-2xl font-bold my-4">Disclaimer</h2>
+          <ol class="list-decimal ml-4">
+            <li >If you are using modern C++, please remove <code class="text-blue-600 language-cpp">#include &lt;conio.h&gt;</code> and <code class="text-blue-600 language-cpp">getch()</code>.</li>
+            <li >The programs include additional content beyond the instructor's requirements but not less.</li>
+            <li >If you encounter issues, raise them in the GitHub repository.</li>
+            <li >The code is licensed under MIT, and <a href="https://github.com/Rai-shwith" class="text-blue-500">I am</a> not responsible for misuse.</li>
+          </ol>
+          <button class="close-btn px-3 py-1 my-2 rounded-md w-fit bg-blue-400 text-black" id="accept-disclaimer">I Understand</button>
+        </div>
+      </div>
+    
   <div class="container mx-auto py-8">
    <div class="flex justify-between items-center mb-8">
     <h1 class="text-4xl font-extrabold text-blue-500 dark:text-blue-400">
@@ -2246,49 +2260,8 @@ Total Marks: 199
      </div>
     </div>
    </div>
-   <!-- More labs can be added below in a similar fashion -->
+   <script src="script.js"></script>
    <!-- JavaScript for Toggle and Highlight.js initialization -->
-   <script>
-    // Initialize code highlighting
-            document.addEventListener("DOMContentLoaded", () => {
-                hljs.highlightAll();
-            });
-
-            // Toggle visibility of lab sections
-            function toggleLab(labId) {
-                const lab = document.getElementById(labId);
-                lab.classList.toggle("hidden");
-            }
-
-            // Toggle visibility of program sections within a lab
-            function toggleProgram(programId) {
-                const program = document.getElementById(programId);
-                program.classList.toggle("hidden");
-            }
-            function unescapeHTML(str) {
-                const textArea = document.createElement('textarea');
-                textArea.innerHTML = str;
-                return textArea.value;
-            }
-            function getParent(element, tagName) {
-                while (element.tagName !== tagName) {
-                    element = element.parentElement;
-                }
-                return element;
-            }
-            function copyCode(e) {
-                console.log("Entering copyCode")
-                const codeSection = getParent(e.target.parentElement, 'SECTION');
-                let code = codeSection.querySelector('code').innerText;
-                code = unescapeHTML(code);
-                // Use the Clipboard API to copy the text
-                navigator.clipboard.writeText(code).then(() => {
-                    console.log("Text copied to clipboard");
-                }).catch((err) => {
-                    console.error("Failed to copy text: ", err);
-                });
-            }
-   </script>
    <!-- AlpineJS for theme toggle functionality -->
    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2/dist/cdn.min.js">
    </script>
