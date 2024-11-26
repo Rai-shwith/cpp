@@ -119,15 +119,35 @@ def generate_html(cpp_files):
         lab_box.append(BeautifulSoup(lab_component, 'html.parser'))
     return soup.prettify()
             
+def generate_readme(cpp_files):
+    readme = """# CPP-DataStructures-2ndYear
+Collection of Lab programs of my 2nd year C++ course
+---
+## Disclaimer 📌
+Note: 
+- These codes might differ slightly from those provided by the instructor, but they perform the intended tasks effectively. 
+- Since our lab setup used Visual Studio 2010, you may notice 
+    `#include <conio.h>` for `getch()` functions in some of the programs. 
+    For newer compilers (like g++ on Linux), this inclusion isn't necessary and can be removed.
+"""
+    for lab, files in cpp_files.items():
+        readme += f"\n---\n## {lab}\n"
+        for file_path in files:
+            title = generate_title(file_path=file_path)
+            readme+= f"- [{title}]({file_path})\n"
+    return readme
 
 def main():
     cpp_files = get_cpp_files()
     html = generate_html(cpp_files)
-    
     with open(OUTPUT_FILE, 'w') as f:
         f.write(html)
-        
     print(f"HTML file '{OUTPUT_FILE}' generated successfully!")
+    readme = generate_readme(cpp_files)
+    with open('README.md', 'w') as f:
+        f.write(readme)
+    print("README.md generated successfully!")
+        
 
 if __name__ == "__main__":
     main()
