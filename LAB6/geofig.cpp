@@ -1,3 +1,4 @@
+// Write a program to calculate the area of a triangle and a rectangle using virtual functions. 
 #include<iostream>
 #include<conio.h> //for getch()
 

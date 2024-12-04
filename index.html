@@ -10,9 +10,9 @@
   <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6603452020198848">
   </script>
   <link href="style.css" rel="stylesheet"/>
-  <link href="output.css" rel="stylesheet">
-   <!-- Highlight.js CDN -->
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css" rel="stylesheet"/>
+  <link href="output.css" rel="stylesheet"/>
+  <!-- Highlight.js CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css" rel="stylesheet">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js">
    </script>
   </link>
@@ -2277,6 +2277,350 @@ Total Marks: 199
 
 
 **************************
+</pre>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB6')">
+      LAB6
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB6">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB6/pointer_to_objects.cpp')">
+        Pointer To Objects
+       </button>
+       <div class="mt-4 hidden" id="./LAB6/pointer_to_objects.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a program to demonstrate the use of pointers to objects.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt; //for getch()
+
+using namespace std;
+class Date{
+    private:
+    int day,month,year;
+    public:
+    Date(){
+        day=month=year=0;
+    }
+    void setDate(int d,int m,int y){
+        day=d;
+        month=m;
+        year=y;
+    }
+    void printDate(){
+        cout&lt;&lt;"Date: "&lt;&lt;day&lt;&lt;"/"&lt;&lt;month&lt;&lt;"/"&lt;&lt;year&lt;&lt;endl;
+    }
+};
+int main(){
+    Date D1,*dptr;
+    cout&lt;&lt;"Initializing using the object"&lt;&lt;endl;
+    D1.setDate(2,12,2024);
+    cout&lt;&lt;"Printing using the object"&lt;&lt;endl;
+    D1.printDate();
+    dptr=&amp;D1;
+    cout&lt;&lt;"Printing using the object pointer"&lt;&lt;endl;
+    dptr-&gt;printDate();
+    cout&lt;&lt;"Initializing using the object pointer"&lt;&lt;endl;
+    dptr-&gt;setDate(3,12,2024);
+    cout&lt;&lt;"Printing using the object"&lt;&lt;endl;
+    D1.printDate();
+    cout&lt;&lt;"Printing using the object pointer"&lt;&lt;endl;
+    dptr-&gt;printDate();
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT
+Initializing using the object
+Printing using the object
+Date: 2/12/2024
+Printing using the object pointer
+Date: 2/12/2024
+Initializing using the object pointer
+Printing using the object
+Date: 3/12/2024
+Printing using the object pointer
+Date: 3/12/2024
+*</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">a program to demonstrate the use of pointers to objects.
+#include<iostream>
+#include<conio.h> //for getch()
+
+using namespace std;
+class Date{
+    private:
+    int day,month,year;
+    public:
+    Date(){
+        day=month=year=0;
+    }
+    void setDate(int d,int m,int y){
+        day=d;
+        month=m;
+        year=y;
+    }
+    void printDate(){
+        cout&lt;&lt;"Date: "&lt;<day<<" "<<month<<"="" "<<year<<endl;="" cout<<"initializing="" cout<<"printing="" d1,*dptr;="" d1.printdate();="" d1.setdate(2,12,2024);="" date="" dptr="&amp;D1;" dptr-="" int="" main(){="" object="" object"<<endl;="" pointer"<<endl;="" the="" using="" }="" };="">printDate();
+    cout&lt;&lt;"Initializing using the object pointer"&lt;<endl; dptr-="">setDate(3,12,2024);
+    cout&lt;&lt;"Printing using the object"&lt;<endl; cout<<"printing="" d1.printdate();="" dptr-="" object="" pointer"<<endl;="" the="" using="">printDate();
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT
+Initializing using the object
+Printing using the object
+Date: 2/12/2024
+Printing using the object pointer
+Date: 2/12/2024
+Initializing using the object pointer
+Printing using the object
+Date: 3/12/2024
+Printing using the object pointer
+Date: 3/12/2024
+</endl;></endl;></day<<"></conio.h></iostream></pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB6/virtual_functions.cpp')">
+        Virtual Functions
+       </button>
+       <div class="mt-4 hidden" id="./LAB6/virtual_functions.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a simple program to demonstrate the use virtual functions.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+using namespace std;
+
+class Base{
+    public:
+    void display(){
+        cout&lt;&lt;"Display Base class"&lt;&lt;endl;
+    }
+    virtual void show(){
+        cout&lt;&lt;"Show Base class"&lt;&lt;endl;
+    }
+};
+
+class Derived:public Base{
+    public:
+    void display(){
+        cout&lt;&lt;"Display Derived class"&lt;&lt;endl;
+    }
+    void show(){
+        cout&lt;&lt;"Show Derived class"&lt;&lt;endl;
+    }
+};
+
+int main(){
+    Base b;
+    Derived d;
+    Base *bptr;
+    cout&lt;&lt;"bptr points to Base class"&lt;&lt;endl;
+    bptr=&amp;b;
+    bptr-&gt;display();
+    bptr-&gt;show();
+    cout&lt;&lt;"bptr points to Derived class"&lt;&lt;endl;
+    bptr=&amp;d;
+    bptr-&gt;display();
+    bptr-&gt;show();
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+bptr points to Base class
+Display Base class
+Show Base class
+bptr points to Derived class
+Display Base class
+Show Derived class
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB6/geofig.cpp')">
+        Geofig
+       </button>
+       <div class="mt-4 hidden" id="./LAB6/geofig.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a program to calculate the area of a triangle and a rectangle using virtual functions.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt; //for getch()
+
+using namespace std;
+
+class geofig{
+    public:
+    float a,b,area;
+    void get_data(){
+        cin&gt;&gt;a&gt;&gt;b;
+    }
+    virtual void display(){
+		// Empty
+	}
+};
+
+class tri:public geofig{
+    public:
+    void display(){
+        area=0.5*a*b;
+        cout&lt;&lt;"Height and base of the triangle are: "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;endl;
+        cout&lt;&lt;"Area of the triangle is: "&lt;&lt;area&lt;&lt;endl;
+    }
+};
+
+class rect:public geofig{
+    public:
+    void display(){
+        area=a*b;
+        cout&lt;&lt;"Length and breadth of the rectangle are: "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;endl;
+        cout&lt;&lt;"Area of the rectangle is: "&lt;&lt;area&lt;&lt;endl;
+    }
+};
+
+int main(){
+    geofig *ptr;
+	tri t1;
+	rect r1;
+	char c;
+	cout&lt;&lt;"Enter the type of figure (t/r): "&lt;&lt;endl;
+    cin&gt;&gt;c;
+    if(c=='t'){
+        cout&lt;&lt;"Enter the height and base of the triangle: "&lt;&lt;endl;
+        ptr=&amp;t1;
+        ptr-&gt;get_data();
+        ptr-&gt;display();
+    }
+    else if(c=='r'){
+        cout&lt;&lt;"Enter the length and breadth of the rectangle: "&lt;&lt;endl;
+        ptr=&amp;r1;
+        ptr-&gt;get_data();
+        ptr-&gt;display();
+    }
+    else{
+        cout&lt;&lt;"Invalid input"&lt;&lt;endl;
+    }
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the type of figure (t/r):
+t
+Enter the height and base of the triangle:
+5 10
+Height and base of the triangle are: 5 and 10
+Area of the triangle is: 25
 </pre>
         </div>
        </div>

@@ -47,3 +47,9 @@ Note:
 - [Private Inheritance](./LAB5/private_inheritance.cpp)
 - [Public Inheritance](./LAB5/public_inheritance.cpp)
 - [Multilevel Inheritance](./LAB5/multilevel_inheritance.cpp)
+
+---
+## LAB6
+- [Pointer To Objects](./LAB6/pointer_to_objects.cpp)
+- [Virtual Functions](./LAB6/virtual_functions.cpp)
+- [Geofig](./LAB6/geofig.cpp)

@@ -1,4 +1,4 @@
-
+// Write a simple program to demonstrate the use virtual functions.
 #include <iostream>
 #include <conio.h> // for getch()
 using namespace std;

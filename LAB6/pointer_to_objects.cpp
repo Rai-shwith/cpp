@@ -1,3 +1,4 @@
+// Write a program to demonstrate the use of pointers to objects.
 #include<iostream>
 #include<conio.h> //for getch()
 
