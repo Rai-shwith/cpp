@@ -57,3 +57,13 @@ int main(){
     getch();
     return 0;
 }
+
+/*
+OUTPUT:
+Enter the type of figure (t/r):
+t
+Enter the height and base of the triangle:
+5 10
+Height and base of the triangle are: 5 and 10
+Area of the triangle is: 25
+*/
