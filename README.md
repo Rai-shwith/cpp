@@ -53,3 +53,9 @@ Note:
 - [Pointer To Objects](./LAB6/pointer_to_objects.cpp)
 - [Virtual Functions](./LAB6/virtual_functions.cpp)
 - [Geofig](./LAB6/geofig.cpp)
+
+---
+## LAB7
+- [Postfix To Infix](./LAB7/postfix_to_infix.cpp)
+- [Stack Implementation](./LAB7/stack_implementation.cpp)
+- [Infix To Postfix](./LAB7/infix_to_postfix.cpp)

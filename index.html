@@ -12,10 +12,9 @@
   <link href="style.css" rel="stylesheet"/>
   <link href="output.css" rel="stylesheet"/>
   <!-- Highlight.js CDN -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css" rel="stylesheet">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js">
-   </script>
-  </link>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js">
+  </script>
  </head>
  <body :class="darkMode ? 'bg-gray-900 text-gray-100' : ''" class="font-sans antialiased transition-colors duration-300" x-data="{ darkMode: true }">
   <!-- Disclaimer Pop Up -->
@@ -2621,6 +2620,411 @@ Enter the height and base of the triangle:
 5 10
 Height and base of the triangle are: 5 and 10
 Area of the triangle is: 25
+</pre>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB7')">
+      LAB7
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB7">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB7/postfix_to_infix.cpp')">
+        Postfix To Infix
+       </button>
+       <div class="mt-4 hidden" id="./LAB7/postfix_to_infix.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a program to convert postfix expression to infix expression using stack.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;cstring&gt;
+
+using namespace std;
+
+class Stack
+{
+public:
+    char postfix[30];
+    int s[30];
+    int result;
+    int top;
+    Stack()
+    {
+        top = -1;
+    }
+
+    // Fuction to evaluate postfix expression
+    void evaluateExprssions()
+    {
+        for (int i = 0; i &lt; strlen(postfix); i++)
+        {
+            char ch = postfix[i];
+            if (isdigit(ch))
+            {
+                s[++top] = ch - '0';
+            }
+            else
+            {
+                int op2 = s[top--];
+                int op1 = s[top--];
+                performOperation(op1, op2, ch);
+                s[++top] = result;
+            }
+        }
+    }
+
+    void performOperation(int op1,int op2,char symbol){
+        switch (symbol)
+        {
+        case '+':
+            result = op1 + op2;
+            break;
+        case '-':
+            result = op1 - op2;
+            break;
+        case '*':
+            result = op1 * op2;
+            break;
+        case '/':
+            result = op1 / op2;
+            break;
+        case '^':
+        case '$':
+            result = pow(op1, op2);
+            break;
+        }
+    }
+};
+
+int main()
+{
+    Stack ob;
+    cout &lt;&lt; "Enter the postfix expression: ";
+    cin &gt;&gt; ob.postfix;
+    ob.evaluateExprssions();
+    cout &lt;&lt; "Result: " &lt;&lt; ob.result &lt;&lt; endl;
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB7/stack_implementation.cpp')">
+        Stack Implementation
+       </button>
+       <div class="mt-4 hidden" id="./LAB7/stack_implementation.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a simple program to demonstrate the use of Stack
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for _getch()
+# define stack_size 5
+
+using namespace std;
+
+class stack
+{
+    int top;
+    int s[stack_size]
+public:
+	int item;
+    stack()
+    {
+        top = -1;
+    }
+    void push(int item)
+    {
+        if (top &gt;= stack_size - 1)
+            cout &lt;&lt; "Stack Overflow" &lt;&lt; endl;
+        else
+            s[++top] = item;
+        cout &lt;&lt; item &lt;&lt; " pushed into stack" &lt;&lt; endl;
+    }
+    void pop()
+    {
+        if (top &lt; 0)
+            cout &lt;&lt; "Stack is empty" &lt;&lt; endl;
+        else
+            cout &lt;&lt; s[top--] &lt;&lt; " popped from stack" &lt;&lt; endl;
+    }
+    void display()
+    {
+        if (top &lt; 0)
+            cout &lt;&lt; "Stack is empty" &lt;&lt; endl;
+        else
+            cout &lt;&lt; "Stack elements are: ";
+        for (int i = 0; i &lt;= top; i++)
+        {
+            cout &lt;&lt; s[i] &lt;&lt; " ";
+        }
+        cout &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    stack ob;
+    int choice;
+    cout &lt;&lt; "1. Push" &lt;&lt; endl;
+    cout &lt;&lt; "2. Pop" &lt;&lt; endl;
+    cout &lt;&lt; "3. Display" &lt;&lt; endl;
+    cout &lt;&lt; "4. Exit" &lt;&lt; endl;
+    for(;;)
+    {
+        cout &lt;&lt; "Enter your choice: ";
+        cin &gt;&gt; choice;
+        switch (choice)
+        {
+        case 1:
+            cout &lt;&lt; "Enter the element to be pushed: ";
+            cin &gt;&gt; ob.item;
+            ob.push(ob.item);
+            break;
+        case 2:
+            ob.pop();
+            break;
+        case 3:
+            ob.display();
+            break;
+        case 4:
+            exit(0);
+        default:
+            cout &lt;&lt; "Invalid choice" &lt;&lt; endl;
+        }
+    }
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter your choice: 1
+Enter the element to be pushed: 5
+5 pushed into stack
+
+Enter your choice: 1
+Enter the element to be pushed: 10
+10 pushed into stack
+
+Enter your choice: 1
+Enter the element to be pushed: 15
+15 pushed into stack
+
+Enter your choice: 2
+15 popped from stack
+
+Enter your choice: 3
+Stack elements are: 5 10
+
+Enter your choice: 2
+10 popped from stack
+
+Enter your choice: 2
+5 popped from stack
+
+Enter your choice: 2
+Stack is empty
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB7/infix_to_postfix.cpp')">
+        Infix To Postfix
+       </button>
+       <div class="mt-4 hidden" id="./LAB7/infix_to_postfix.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a program to convert infix expression to postfix expression using stack.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;stack&gt;
+#include &lt;conio.h&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+// Function to return precedence of operators
+int precedence(char ch)
+{
+    if (ch == '+' || ch == '-')
+        return 1;
+    else if (ch == '*' || ch == '/')
+        return 2;
+    else if (ch == '^')
+        return 3;
+    else
+        return -1;
+}
+
+// Function to convert infix to postfix
+void infixToPostfix(string s)
+{
+    stack&lt;char&gt; st;
+    string result = "";
+    for (int i = 0; i &lt; s.length(); i++)
+    {
+        char c = s[i];
+        // If the scanned character is an operand, add it to output
+        if ((c &gt;= 'a' &amp;&amp; c &lt;= 'z') || (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') || (c &gt;= '0' &amp;&amp; c &lt;= '9'))
+            result += c;
+        // If the scanned character is an '(', push it to the stack
+        else if (c == '(')
+            st.push(c);
+        // If the scanned character is an ')', pop and output from the stack until an '(' is encountered
+        else if (c == ')')
+        {
+            while (!st.empty() &amp;&amp; st.top() != '(')
+            {
+                result += st.top();
+                st.pop();
+            }
+            if (!st.empty())
+                st.pop();
+        }
+        // If the scanned character is an operator, pop all the operators from the stack which are greater than or equal to in precedence than that of the scanned operator.
+        else
+        {
+            while (!st.empty() &amp;&amp; precedence(c) &lt;= precedence(st.top()))
+            {
+                result += st.top();
+                st.pop();
+            }
+            st.push(c);
+        }
+    }
+    while (!st.empty())
+    {
+        result += st.top();
+        st.pop();
+    }
+    cout &lt;&lt; "Postfix expression: " &lt;&lt; result &lt;&lt; endl;
+}
+
+// Main function
+int main(){
+    string exp;
+    cout &lt;&lt; "Enter the infix expression: ";
+    cin &gt;&gt; exp;
+    infixToPostfix(exp);
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the infix expression: A+B+C/D*E(F+G)/H
+Postfix expression: AB+CD/EFG+*H/+
 </pre>
         </div>
        </div>
