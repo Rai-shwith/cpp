@@ -48,12 +48,12 @@ int main()
 {
     stack ob;
     int choice;
+    cout << "1. Push" << endl;
+    cout << "2. Pop" << endl;
+    cout << "3. Display" << endl;
+    cout << "4. Exit" << endl;
     for(;;)
     {
-        cout << "1. Push" << endl;
-        cout << "2. Pop" << endl;
-        cout << "3. Display" << endl;
-        cout << "4. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
         switch (choice)
@@ -88,48 +88,27 @@ OUTPUT:
 Enter your choice: 1
 Enter the element to be pushed: 5
 5 pushed into stack
-1. Push
-2. Pop
-3. Display
-4. Exit
+
 Enter your choice: 1
 Enter the element to be pushed: 10
 10 pushed into stack
-1. Push
-2. Pop
-3. Display
-4. Exit
+
 Enter your choice: 1
 Enter the element to be pushed: 15
 15 pushed into stack
-1. Push
-2. Pop
-3. Display
-4. Exit
+
 Enter your choice: 2
 15 popped from stack
-1. Push
-2. Pop
-3. Display
-4. Exit
+
 Enter your choice: 3
 Stack elements are: 5 10
-1. Push
-2. Pop
-3. Display
-4. Exit
+
 Enter your choice: 2
 10 popped from stack
-1. Push
-2. Pop
-3. Display
-4. Exit
+
 Enter your choice: 2
 5 popped from stack
-1. Push
-2. Pop
-3. Display
-4. Exit
+
 Enter your choice: 2
 Stack is empty
 */
