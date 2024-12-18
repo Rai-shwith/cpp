@@ -59,3 +59,7 @@ Note:
 - [Postfix To Infix](./LAB7/postfix_to_infix.cpp)
 - [Stack Implementation](./LAB7/stack_implementation.cpp)
 - [Infix To Postfix](./LAB7/infix_to_postfix.cpp)
+
+---
+## LAB8
+- [Linear Queue](./LAB8/linear_queue.cpp)
