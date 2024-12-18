@@ -1,24 +1,25 @@
-// Write a program to implement a linear queue.
+// Write a program to implement a circular queue .
 #include <iostream>
 #include <conio.h> // for getch()
 
-#define size 5
+#define size 3
 
 using namespace std;
 
-class Queue
+class CircularQueue
 {
     int front, rear;
     int arr[size];
+	int count;
     public:
-    Queue()
-    {
+    CircularQueue()
+    {	count = 0;
         front = -1;
         rear = -1;
     }
     void enqueue(int data)
-    {
-        if (rear == size - 1)
+	{	
+        if (count == size)
         {
             cout << "Queue is full" << endl;
         }
@@ -28,25 +29,23 @@ class Queue
             {
                 front = 0;
             }
-            rear++;
+            rear = (rear+1)%size;
             arr[rear] = data;
+			count = count+1;
             cout << data << " is enqueued" << endl;
         }
     }
     void dequeue()
     {
-        if (front == -1)
+        if (count == 0)
         {
             cout << "Queue is empty" << endl;
         }
         else
         {
             cout << arr[front] << " is dequeued" << endl;
-            front++;
-            if (front > rear)
-            {
-                front = rear = -1;
-            }
+            front = (front+1)%size;
+            count--;
         }
     }
     void display()
@@ -58,9 +57,13 @@ class Queue
         else
         {
             cout << "Queue elements are: ";
-            for (int i = front; i <= rear; i++)
+			int j = 0;
+			int i = front;
+            while (j<count)
             {
                 cout << arr[i] << " ";
+				i = (i+1)%size;
+				j++;
             }
             cout << endl;
         }
@@ -69,9 +72,10 @@ class Queue
 
 int main()
 {
-    Queue ob;
+    CircularQueue ob;
     int choice;
     int item;
+	cout<<"Circular Queue\n";
     cout << "1. Enqueue" << endl;
     cout << "2. Dequeue" << endl;
     cout << "3. Display" << endl;
@@ -83,7 +87,7 @@ int main()
         switch (choice)
         {
         case 1:
-            cout << "Enter the element to be Enqueue: ";
+            cout << "Enter the element to be Enqueue : ";
             cin >> item;
             ob.enqueue(item);
             break;
@@ -102,28 +106,33 @@ int main()
     getch();
     return 0;
 }
-
 /*
 OUTPUT:
+Circular Queue
 1. Enqueue
 2. Dequeue
 3. Display
 4. Exit
 Enter your choice: 1
-Enter the element to be Enqueue: 3
+Enter the element to be Enqueue : 1
+1 is enqueued
+Enter your choice: 1
+Enter the element to be Enqueue : 2
+2 is enqueued
+Enter your choice: 1
+Enter the element to be Enqueue : 3
 3 is enqueued
 Enter your choice: 1
-Enter the element to be Enqueue: 5
-5 is enqueued
-Enter your choice: 1
-Enter the element to be Enqueue: 0
-0 is enqueued
+Enter the element to be Enqueue : 4
+Queue is full
+Enter your choice: 3
+Queue elements are: 1 2 3
+Enter your choice: 2
+1 is dequeued
+Enter your choice: 2
+2 is dequeued
 Enter your choice: 2
 3 is dequeued
-Enter your choice: 2
-5 is dequeued
-Enter your choice: 2
-0 is dequeued
 Enter your choice: 2
 Queue is empty
 Enter your choice:
