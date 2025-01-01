@@ -68,3 +68,4 @@ Note:
 ---
 ## LAB9
 - [Linked List](./LAB9/linked_list.cpp)
+- [Doubly Linked List](./LAB9/doubly_linked_list.cpp)

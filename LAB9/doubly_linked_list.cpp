@@ -1,4 +1,4 @@
-// Write a program to implement a singly linked list.
+// Write a program to implement a doubly linked list.
 #include <iostream>
 #include <conio.h> // for getch()
 
@@ -8,10 +8,11 @@ struct Node
 {
     int data;
     Node *next;
+    Node *prev;
 };
 
 class list
-{
+{   
 public:
     Node *head;
     int item;
@@ -25,6 +26,11 @@ public:
         Node *newNode = new Node;
         newNode->data = item;
         newNode->next = head;
+        newNode->prev = NULL;
+        if (head != NULL)
+        {
+            head->prev = newNode;
+        }
         head = newNode;
     }
 
@@ -35,6 +41,7 @@ public:
         newNode->next = NULL;
         if (head == NULL)
         {
+            newNode->prev = NULL;
             head = newNode;
         }
         else
@@ -45,8 +52,10 @@ public:
                 curr = curr->next;
             }
             curr->next = newNode;
+            newNode->prev = curr;
         }
     }
+
     void delete_front()
     {
         if (head == NULL)
@@ -57,6 +66,10 @@ public:
         {
             Node *newNode = head;
             head = head->next;
+            if (head != NULL)
+            {
+                head->prev = NULL;
+            }
             delete newNode;
         }
     }
@@ -110,6 +123,10 @@ public:
                     {
                         prev->next = curr->next;
                     }
+                    if (curr->next != NULL)
+                    {
+                        curr->next->prev = prev;
+                    }
                     delete curr;
                     return;
                 }
@@ -119,9 +136,7 @@ public:
             cout << "Element not found" << endl;
         }
     }
-
-    void display()
-    {
+    void display(){
         if (head == NULL)
         {
             cout << "List is empty" << endl;
@@ -139,8 +154,7 @@ public:
     }
 };
 
-int main()
-{
+int main(){
     list ob;
     int choice;
     int item;
@@ -190,8 +204,6 @@ int main()
     getch();
     return 0;
 }
-
-
 /*
 OUTPUT:
 1. Insert at front
@@ -201,17 +213,8 @@ OUTPUT:
 5. Search and delete
 6. Display
 7. Exit
-Enter your choice: 6
-List is empty
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
 Enter your choice: 1
-Enter the element to be inserted at front : 5
+Enter the element to be inserted at front : 1
 1. Insert at front
 2. Insert at rear
 3. Delete from front
@@ -220,7 +223,16 @@ Enter the element to be inserted at front : 5
 6. Display
 7. Exit
 Enter your choice: 2
-Enter the element to be inserted at rear : 10
+Enter the element to be inserted at rear : 2
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 2
+Enter the element to be inserted at rear : 3
 1. Insert at front
 2. Insert at rear
 3. Delete from front
@@ -229,7 +241,7 @@ Enter the element to be inserted at rear : 10
 6. Display
 7. Exit
 Enter your choice: 1
-Enter the element to be inserted at front : 15
+Enter the element to be inserted at front : 4
 1. Insert at front
 2. Insert at rear
 3. Delete from front
@@ -238,7 +250,7 @@ Enter the element to be inserted at front : 15
 6. Display
 7. Exit
 Enter your choice: 6
-15 5 10
+4 1 2 3
 1. Insert at front
 2. Insert at rear
 3. Delete from front
@@ -255,7 +267,7 @@ Enter your choice: 3
 6. Display
 7. Exit
 Enter your choice: 6
-5 10
+1 2 3
 1. Insert at front
 2. Insert at rear
 3. Delete from front
@@ -263,24 +275,8 @@ Enter your choice: 6
 5. Search and delete
 6. Display
 7. Exit
-Enter your choice: 4
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
-Enter your choice: 6
-5
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
-Enter your choice: 4
+Enter your choice: 5
+Enter the element to be searched and deleted : 2
 1. Insert at front
 2. Insert at rear
 3. Delete from front
@@ -289,6 +285,31 @@ Enter your choice: 4
 6. Display
 7. Exit
 Enter your choice: 6
+1 3
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 3
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 3
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 3
 List is empty
 1. Insert at front
 2. Insert at rear
