@@ -3391,6 +3391,353 @@ Enter your choice:
       </div>
      </div>
     </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB9')">
+      LAB9
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB9">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB9/linked_list.cpp')">
+        Linked List
+       </button>
+       <div class="mt-4 hidden" id="./LAB9/linked_list.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;conio.h&gt; // for _getch()
+
+using namespace std;
+
+struct Node
+{
+    int data;
+    Node *next;
+};
+
+class list
+{
+public:
+    Node *head;
+    int item;
+    list()
+    {
+        head = NULL;
+    }
+
+    void insert_front()
+    {
+        Node *newNode = new Node;
+        newNode-&gt;data = item;
+        newNode-&gt;next = head;
+        head = newNode;
+    }
+
+    void insert_rear()
+    {
+        Node *newNode = new Node;
+        newNode-&gt;data = item;
+        newNode-&gt;next = NULL;
+        if (head == NULL)
+        {
+            head = newNode;
+        }
+        else
+        {
+            Node *curr = head;
+            while (curr-&gt;next != NULL)
+            {
+                curr = curr-&gt;next;
+            }
+            curr-&gt;next = newNode;
+        }
+    }
+    void delete_front()
+    {
+        if (head == NULL)
+        {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            Node *newNode = head;
+            head = head-&gt;next;
+            delete newNode;
+        }
+    }
+
+    void delete_rear()
+    {
+        if (head == NULL)
+        {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            Node *curr = head;
+            Node *prev = NULL;
+            while (curr-&gt;next != NULL)
+            {
+                prev = curr;
+                curr = curr-&gt;next;
+            }
+            if (prev == NULL)
+            {
+                head = NULL;
+            }
+            else
+            {
+                prev-&gt;next = NULL;
+            }
+            delete curr;
+        }
+    }
+
+    void search_and_delete()
+    {
+        if (head == NULL)
+        {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            Node *curr = head;
+            Node *prev = NULL;
+            while (curr != NULL)
+            {
+                if (curr-&gt;data == item)
+                {
+                    if (prev == NULL)
+                    {
+                        head = curr-&gt;next;
+                    }
+                    else
+                    {
+                        prev-&gt;next = curr-&gt;next;
+                    }
+                    delete curr;
+                    return;
+                }
+                prev = curr;
+                curr = curr-&gt;next;
+            }
+            cout &lt;&lt; "Element not found" &lt;&lt; endl;
+        }
+    }
+
+    void display()
+    {
+        if (head == NULL)
+        {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            Node *curr = head;
+            while (curr != NULL)
+            {
+                cout &lt;&lt; curr-&gt;data &lt;&lt; " ";
+                curr = curr-&gt;next;
+            }
+            cout &lt;&lt; endl;
+        }
+    }
+};
+
+int main()
+{
+    list ob;
+    int choice;
+    int item;
+    for (;;)
+    {
+        cout &lt;&lt; "1. Insert at front" &lt;&lt; endl;
+        cout &lt;&lt; "2. Insert at rear" &lt;&lt; endl;
+        cout &lt;&lt; "3. Delete from front" &lt;&lt; endl;
+        cout &lt;&lt; "4. Delete from rear" &lt;&lt; endl;
+        cout &lt;&lt; "5. Search and delete" &lt;&lt; endl;
+        cout &lt;&lt; "6. Display" &lt;&lt; endl;
+        cout &lt;&lt; "7. Exit" &lt;&lt; endl;
+        cout &lt;&lt; "Enter your choice: ";
+        cin &gt;&gt; choice;
+        switch (choice)
+        {
+        case 1:
+            cout &lt;&lt; "Enter the element to be inserted at front : ";
+            cin &gt;&gt; ob.item;
+            ob.insert_front();
+            break;
+        case 2:
+            cout &lt;&lt; "Enter the element to be inserted at rear : ";
+            cin &gt;&gt; ob.item;
+            ob.insert_rear();
+            break;
+        case 3:
+            ob.delete_front();
+            break;
+        case 4:
+            ob.delete_rear();
+            break;
+        case 5:
+            cout &lt;&lt; "Enter the element to be searched and deleted : ";
+            cin &gt;&gt; item;
+            ob.search_and_delete();
+            break;
+        case 6:
+            ob.display();
+            break;
+        case 7:
+            exit(0);
+        default:
+            cout &lt;&lt; "Invalid choice" &lt;&lt; endl;
+        }
+    }
+    _getch();
+    return 0;
+}
+
+?
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 6
+List is empty
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 1
+Enter the element to be inserted at front : 5
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 2
+Enter the element to be inserted at rear : 10
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 1
+Enter the element to be inserted at front : 15
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 6
+15 5 10
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 3
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 6
+5 10
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 4
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 6
+5
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 4
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 6
+List is empty
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+</pre>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
    </div>
    <script src="script.js">
    </script>

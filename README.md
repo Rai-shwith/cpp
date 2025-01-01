@@ -64,3 +64,7 @@ Note:
 ## LAB8
 - [Linear Queue](./LAB8/linear_queue.cpp)
 - [Circular Queue](./LAB8/circular_queue.cpp)
+
+---
+## LAB9
+- [Linked List](./LAB9/linked_list.cpp)
