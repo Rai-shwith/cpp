@@ -1,7 +1,7 @@
 import os
 import html  # Import the html library for escaping text
 from bs4 import BeautifulSoup
-
+import re
 # Root directory where your C++ labs are stored
 ROOT_DIR = '.'  # Adjust if the script is not in the same directory
 OUTPUT_FILE = 'index.html'
@@ -25,7 +25,7 @@ def get_cpp_files():
     cpp_files = {}
     # Traverse directories for C++ files
     for root, _, files in sorted(os.walk(ROOT_DIR),key=lambda x: x[0]):
-        if 'LAB' in root:  # Limit to 'LAB' directories
+        if 'LAB'  in root or 'Test Questions' in root:  # Limit to 'LAB' directories
             lab_name = os.path.basename(root)
             cpp_files[lab_name] = []
             for file in files:
@@ -38,10 +38,10 @@ def get_lab_component(file_path,title,question,code,result):
     return f"""
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
             <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100"
-                onclick="toggleProgram('{file_path}')">
+                onclick="toggleProgram('{file_path.replace("\\","/")}')">
                 {title}
             </button>
-            <div id="{file_path}" class="mt-4 hidden">
+            <div id="{file_path.replace("\\","/")}" class="mt-4 hidden">
                 <p class="text-gray-600 dark:text-gray-400 mt-2"><strong>Question:</strong>{question}</p>
                 <section class="mt-4">
                     <div class="flex justify-between">
@@ -110,7 +110,8 @@ def generate_html(cpp_files):
     lab_box.clear()
     for lab, files in cpp_files.items():
         programs = [] # store the inner HTML for each program
-        for file_path in files:
+        for file_path in sorted(files, key=lambda x: int(re.search(r'\d+', os.path.basename(x)).group()) if re.search(r'\d+', os.path.basename(x)) else 0):
+            print(file_path)
             title = generate_title(file_path=file_path)
             (question,code,result) = get_question_code_result(file_path=file_path)
             programs.append(get_lab_component(file_path=file_path,title=title,question=question,code=code,result=result))
@@ -140,11 +141,11 @@ Note:
 def main():
     cpp_files = get_cpp_files()
     html = generate_html(cpp_files)
-    with open(OUTPUT_FILE, 'w') as f:
+    with open(OUTPUT_FILE, 'w',encoding="utf-8") as f:
         f.write(html)
     print(f"HTML file '{OUTPUT_FILE}' generated successfully!")
     readme = generate_readme(cpp_files)
-    with open('README.md', 'w') as f:
+    with open('README.md', 'w', encoding="utf-8") as f:
         f.write(readme)
     print("README.md generated successfully!")
         

@@ -88,6 +88,315 @@
      </button>
      <div class="mt-4 hidden space-y-4" id="LAB1">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/average_n.cpp')">
+        Average N
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/average_n.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that calculates the sum and average of n integers entered by the user.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt;  // Not in C++11 and later
+
+using namespace std;
+int main(){
+	int temp,n,sum=0;
+	float avg;
+	cout&lt;&lt;"Enter the total number of elements"&lt;&lt;endl;
+	cin&gt;&gt;n;
+	cout&lt;&lt;"Enter n values"&lt;&lt;endl;
+	for (int i=0; i&lt;n; i++){
+		cout&lt;&lt;"Enter element "&lt;&lt;i+1&lt;&lt;endl;
+		cin&gt;&gt;temp;
+		sum+=temp;
+	}
+	cout&lt;&lt;"Sum = "&lt;&lt;sum&lt;&lt;"\nAverage = "&lt;&lt;sum/n&lt;&lt;endl;
+	getch();   // Not in C++11 and later
+	return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the total number of elements
+5
+Enter n values
+Enter element 1
+1
+Enter element 2
+2
+Enter element 3
+3
+Enter element 4
+4
+Enter element 5
+5
+Sum = 15
+Average = 3
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/average_n_array.cpp')">
+        Average N Array
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/average_n_array.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that calculates the sum and average of n integers entered by the user using array.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt;  //for getch()
+
+using namespace std;
+int main(){
+	int a[50],n,sum=0;
+	float avg;
+	cout&lt;&lt;"Enter the total number of elements"&lt;&lt;endl;
+	cin&gt;&gt;n;
+	cout&lt;&lt;"Enter n values"&lt;&lt;endl;
+	for (int i=0; i&lt;n; i++){
+		cin&gt;&gt;a[i];
+		sum+=a[i];
+	}
+	cout&lt;&lt;"Sum = "&lt;&lt;sum&lt;&lt;"\nAverage = "&lt;&lt;sum/n&lt;&lt;endl;
+	getch();
+	return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the total number of elements
+5
+Enter n values
+1
+2
+3
+4
+5
+Sum = 15
+Average = 3
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/average_of_two.cpp')">
+        Average Of Two
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/average_of_two.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that calculates the average of two numbers entered by the user.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include&lt;iostream.h&gt;
+#include&lt;conio.h&gt;  //for getch()
+
+int main(){
+    int a,b;
+    float avg;
+    cout&lt;&lt;"Enter two numbers"&lt;&lt;endl;
+    cin&gt;&gt;a&gt;&gt;b;
+    avg=(a+b)/2.0;
+    cout&lt;&lt;"Average of "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;" is "&lt;&lt;avg&lt;&lt;endl;
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter two numbers
+5
+6
+Average of 5 and 6 is 5.5
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/student.cpp')">
+        Student
+       </button>
+       <div class="mt-4 hidden" id="./LAB1/student.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that accepts the name, roll number, and marks of a student, then displays the student's details using a class.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
+#include &lt;string&gt;
+
+using namespace std;
+
+class Student {
+        string name;
+        int roll;
+        float marks;
+    public:
+        void display() {
+            cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+            cout &lt;&lt; "Roll: " &lt;&lt; roll &lt;&lt; endl;
+            cout &lt;&lt; "Marks: " &lt;&lt; marks &lt;&lt; endl;
+        }
+        void set(string n, int r, float m) {
+            name = n;
+            roll = r;
+            marks = m;
+        }
+};
+
+int main(){
+    Student s1;
+    string name;
+    int roll;
+    float marks;
+    cout &lt;&lt; "Enter name, roll and marks of student" &lt;&lt; endl;
+    cin &gt;&gt; name &gt;&gt; roll &gt;&gt; marks;
+    s1.set(name, roll, marks);
+    s1.display();
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter name, roll and marks of student
+Ashwith
+29
+90
+Name: Ashwith 
+Roll: 29
+Marks: 90
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
        <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/student_array.cpp')">
         Student Array
        </button>
@@ -195,145 +504,6 @@ Marks: 90
        </div>
       </div>
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/average_of_two.cpp')">
-        Average Of Two
-       </button>
-       <div class="mt-4 hidden" id="./LAB1/average_of_two.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program that calculates the average of two numbers entered by the user.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include&lt;iostream.h&gt;
-#include&lt;conio.h&gt;  //for getch()
-
-int main(){
-    int a,b;
-    float avg;
-    cout&lt;&lt;"Enter two numbers"&lt;&lt;endl;
-    cin&gt;&gt;a&gt;&gt;b;
-    avg=(a+b)/2.0;
-    cout&lt;&lt;"Average of "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;" is "&lt;&lt;avg&lt;&lt;endl;
-    getch();
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Enter two numbers
-5
-6
-Average of 5 and 6 is 5.5
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/average_n_array.cpp')">
-        Average N Array
-       </button>
-       <div class="mt-4 hidden" id="./LAB1/average_n_array.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program that calculates the sum and average of n integers entered by the user using array.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt;  //for getch()
-
-using namespace std;
-int main(){
-	int a[50],n,sum=0;
-	float avg;
-	cout&lt;&lt;"Enter the total number of elements"&lt;&lt;endl;
-	cin&gt;&gt;n;
-	cout&lt;&lt;"Enter n values"&lt;&lt;endl;
-	for (int i=0; i&lt;n; i++){
-		cin&gt;&gt;a[i];
-		sum+=a[i];
-	}
-	cout&lt;&lt;"Sum = "&lt;&lt;sum&lt;&lt;"\nAverage = "&lt;&lt;sum/n&lt;&lt;endl;
-	getch();
-	return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Enter the total number of elements
-5
-Enter n values
-1
-2
-3
-4
-5
-Sum = 15
-Average = 3
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
        <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/swap_aliasing.cpp')">
         Swap Aliasing
        </button>
@@ -401,176 +571,6 @@ y = 20
 After Swapping
 x = 20
 y = 10
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/average_n.cpp')">
-        Average N
-       </button>
-       <div class="mt-4 hidden" id="./LAB1/average_n.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program that calculates the sum and average of n integers entered by the user.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt;  // Not in C++11 and later
-
-using namespace std;
-int main(){
-	int temp,n,sum=0;
-	float avg;
-	cout&lt;&lt;"Enter the total number of elements"&lt;&lt;endl;
-	cin&gt;&gt;n;
-	cout&lt;&lt;"Enter n values"&lt;&lt;endl;
-	for (int i=0; i&lt;n; i++){
-		cout&lt;&lt;"Enter element "&lt;&lt;i+1&lt;&lt;endl;
-		cin&gt;&gt;temp;
-		sum+=temp;
-	}
-	cout&lt;&lt;"Sum = "&lt;&lt;sum&lt;&lt;"\nAverage = "&lt;&lt;sum/n&lt;&lt;endl;
-	getch();   // Not in C++11 and later
-	return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Enter the total number of elements
-5
-Enter n values
-Enter element 1
-1
-Enter element 2
-2
-Enter element 3
-3
-Enter element 4
-4
-Enter element 5
-5
-Sum = 15
-Average = 3
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB1/student.cpp')">
-        Student
-       </button>
-       <div class="mt-4 hidden" id="./LAB1/student.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program that accepts the name, roll number, and marks of a student, then displays the student's details using a class.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; //for getch() comment this line if you using visual studio 2010 or older
-#include &lt;string&gt;
-
-using namespace std;
-
-class Student {
-        string name;
-        int roll;
-        float marks;
-    public:
-        void display() {
-            cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
-            cout &lt;&lt; "Roll: " &lt;&lt; roll &lt;&lt; endl;
-            cout &lt;&lt; "Marks: " &lt;&lt; marks &lt;&lt; endl;
-        }
-        void set(string n, int r, float m) {
-            name = n;
-            roll = r;
-            marks = m;
-        }
-};
-
-int main(){
-    Student s1;
-    string name;
-    int roll;
-    float marks;
-    cout &lt;&lt; "Enter name, roll and marks of student" &lt;&lt; endl;
-    cin &gt;&gt; name &gt;&gt; roll &gt;&gt; marks;
-    s1.set(name, roll, marks);
-    s1.display();
-    getch();
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Enter name, roll and marks of student
-Ashwith
-29
-90
-Name: Ashwith 
-Roll: 29
-Marks: 90
 </pre>
         </div>
        </div>
@@ -725,6 +725,74 @@ After swapping: x = 20, y = 10
      </button>
      <div class="mt-4 hidden space-y-4" id="LAB2">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB2/acess_specifier_public.cpp')">
+        Acess Specifier Public
+       </button>
+       <div class="mt-4 hidden" id="./LAB2/acess_specifier_public.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that demonstrates how to use a public member variable in a class. The program should display the value of a public variable x through a member function.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class Disp{
+public:
+	int x;
+	void display(){
+		cout&lt;&lt;"x = "&lt;&lt;x&lt;&lt;endl;
+	}
+};
+
+int main(){
+	Disp obj1;
+	obj1.x = 5;
+	obj1.display();
+	getch(); // Not in C++11 and later
+	return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+x = 5
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
        <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB2/acess_specifier_public_private.cpp')">
         Acess Specifier Public Private
        </button>
@@ -800,87 +868,6 @@ int main(){
          <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
 x = 5
 y = 10
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB2/friend_function_of_two_classes.cpp')">
-        Friend Function Of Two Classes
-       </button>
-       <div class="mt-4 hidden" id="./LAB2/friend_function_of_two_classes.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program that demonstrates the use of friend functions. The program should calculate the mean of two private variables from two different classes using a friend function. The program should involve two classes, sample1 and sample2, and a friend function mean that accesses the private data of both classes
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt; // Not in C++11 and later
-
-using namespace std;
-class sample2;
-class sample1{
-    int a;
-public:
-    void setA(int x){
-        a = x;
-    }
-    friend float mean(sample1, sample2);
-};
-class sample2{
-    int b;
-public:
-    void setB(int y){
-        b = y;
-    }
-    friend float mean(sample1, sample2);
-};
-float mean(sample1 s1, sample2 s2){
-    return float(s1.a + s2.b)/2;
-}
-int main(){
-    sample1 s1;
-    sample2 s2;
-    s1.setA(25);
-    s2.setB(30);
-    cout&lt;&lt;"Mean = "&lt;&lt;mean(s1, s2)&lt;&lt;endl;
-    getch(); // Not in C++11 and later
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Mean = 27.5
 </pre>
         </div>
        </div>
@@ -977,74 +964,6 @@ z = 20
        </div>
       </div>
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB2/acess_specifier_public.cpp')">
-        Acess Specifier Public
-       </button>
-       <div class="mt-4 hidden" id="./LAB2/acess_specifier_public.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program that demonstrates how to use a public member variable in a class. The program should display the value of a public variable x through a member function.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt; // Not in C++11 and later
-
-using namespace std;
-
-class Disp{
-public:
-	int x;
-	void display(){
-		cout&lt;&lt;"x = "&lt;&lt;x&lt;&lt;endl;
-	}
-};
-
-int main(){
-	Disp obj1;
-	obj1.x = 5;
-	obj1.display();
-	getch(); // Not in C++11 and later
-	return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-x = 5
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
        <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB2/friend_function.cpp')">
         Friend Function
        </button>
@@ -1118,23 +1037,16 @@ Area = 200
         </div>
        </div>
       </div>
-     </div>
-    </div>
-    <div class="mb-8">
-     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB3')">
-      LAB3
-     </button>
-     <div class="mt-4 hidden space-y-4" id="LAB3">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/max_of_two_objects_using_friend_function.cpp')">
-        Max Of Two Objects Using Friend Function
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB2/friend_function_of_two_classes.cpp')">
+        Friend Function Of Two Classes
        </button>
-       <div class="mt-4 hidden" id="./LAB3/max_of_two_objects_using_friend_function.cpp">
+       <div class="mt-4 hidden" id="./LAB2/friend_function_of_two_classes.cpp">
         <p class="text-gray-600 dark:text-gray-400 mt-2">
          <strong>
           Question:
          </strong>
-         Write a C++ program that uses two classes, xyz and abc, where each class has a private integer member variable. Both classes should have a member function to set the value of the integer. Additionally, implement a friend function max() that compares the values of these two classes and prints the greater value.
+         Write a C++ program that demonstrates the use of friend functions. The program should calculate the mean of two private variables from two different classes using a friend function. The program should involve two classes, sample1 and sample2, and a friend function mean that accesses the private data of both classes
         </p>
         <section class="mt-4">
          <div class="flex justify-between">
@@ -1164,320 +1076,34 @@ Area = 200
 #include&lt;conio.h&gt; // Not in C++11 and later
 
 using namespace std;
-
-class abc;
-
-class xyz{
-    int x;
-    public:
-    void setvalue(int i){
-        x = i;
-    }
-    friend void max(xyz, abc);
-};
-
-class abc{
+class sample2;
+class sample1{
     int a;
-    public:
-    void setvalue(int i){
-        a = i;
-    }
-    friend void max(xyz, abc);
-};  
-
-void max(xyz m, abc n){
-    if(m.x &gt; n.a){
-        cout&lt;&lt;"Max value is "&lt;&lt;m.x&lt;&lt;endl;
-    }
-    else{
-        cout&lt;&lt;"Max value is "&lt;&lt;n.a&lt;&lt;endl;
-    }
-}
-
-int main(){
-    xyz m;
-    abc n;
-    m.setvalue(10);
-    n.setvalue(20);
-    max(m, n);
-    getch(); // Not in C++11 and later
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Max value is 20
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/destructor.cpp')">
-        Destructor
-       </button>
-       <div class="mt-4 hidden" id="./LAB3/destructor.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program that demonstrates the use of constructors and destructors. The program should track and display the number of objects created and destroyed. The alpha class should maintain a static counter that is incremented when an object is created and decremented when an object is destroyed. The program should also show the impact of block-scoped objects on the counter.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; // Not in C++11 and later
-
-using namespace std;
-int count = 0;
-class alpha{
-    public:
-    alpha(){
-        count++;
-        cout&lt;&lt;"No. of object created "&lt;&lt;count&lt;&lt;endl;
-    }
-    ~alpha(){
-        count--;
-        cout&lt;&lt;"No. of object remaining "&lt;&lt;count&lt;&lt;endl;
-    }
-};
-
-int main(){
-    cout&lt;&lt;"Enter main function"&lt;&lt;endl;
-    alpha a1, a2, a3,a4;
-    {
-        cout&lt;&lt;"Entering Block 1"&lt;&lt;endl;
-        alpha a5;
-    }
-    {
-        cout&lt;&lt;"Entering Block 2"&lt;&lt;endl;
-        alpha a6;
-    }
-    cout&lt;&lt;"Re-Entering main function"&lt;&lt;endl;
-    getch(); // Not in C++11 and later
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Enter main function
-No. of object created 1
-No. of object created 2
-No. of object created 3
-No. of object created 4
-Entering Block 1
-No. of object created 5
-No. of object remaining 4
-Entering Block 2
-No. of object created 5
-No. of object remaining 4
-Re-Entering main function
-No. of object remaining 3
-No. of object remaining 2
-No. of object remaining 1
-No. of object remaining 0
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/swap_2_nums_of_2_objects_of_different_class_using_friend_function.cpp')">
-        Swap 2 Nums Of 2 Objects Of Different Class Using Friend Function
-       </button>
-       <div class="mt-4 hidden" id="./LAB3/swap_2_nums_of_2_objects_of_different_class_using_friend_function.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program that uses two classes, A and B, where each class contains a private integer member. Implement a friend function swap() to exchange the values of the two integer members from different classes. The program should display the values before and after swapping.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; // Not in C++11 and later
-
-using namespace std;
-
-class B;
-class A{
-    public:
-    int a;
-    void setvalue(int i){
-        a = i;
-    }
-    friend void swap(A &amp;, B &amp;);
-};
-class B{
-    public:
-    int b;
-    void setvalue(int i){
-        b = i;
-    }
-    friend void swap(A &amp;, B &amp;);
-};
-
-void swap(A &amp;m, B &amp;n){
-    int temp = m.a;
-    m.a = n.b;
-    n.b = temp;
-}
-
-int main(){
-    A m;
-    B n;
-    m.setvalue(10);
-    n.setvalue(20);
-    cout&lt;&lt;"Before Swapping\na = "&lt;&lt;m.a&lt;&lt;endl&lt;&lt;"b = "&lt;&lt;n.b&lt;&lt;endl;
-    swap(m, n);
-    cout&lt;&lt;"After Swapping\na = "&lt;&lt;m.a&lt;&lt;endl&lt;&lt;"b = "&lt;&lt;n.b&lt;&lt;endl;
-    getch(); // Not in C++11 and later
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Before Swapping
-a = 10
-b = 20
-After Swapping
-a = 20
-b = 10
-
-</pre>
-        </div>
-       </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/parameterized_constructor_for_student_class.cpp')">
-        Parameterized Constructor For Student Class
-       </button>
-       <div class="mt-4 hidden" id="./LAB3/parameterized_constructor_for_student_class.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a C++ program to implement a Student class that uses a parameterized constructor to initialize the student's name, roll number, and branch. The program should take input for the student's details and display them using a member function.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt;
-#include &lt;string&gt;
-
-using namespace std;
-
-class Student{
-	string name,branch;
-	int rollno;
 public:
-	Student(string,int,string); // Parameterized Constructor declaration
-	void display();
+    void setA(int x){
+        a = x;
+    }
+    friend float mean(sample1, sample2);
 };
-
-Student::Student(string n,int r,string  b){ // Parameterized Constructor definition
-	name = n;
-    rollno = r;
-    branch = b;
+class sample2{
+    int b;
+public:
+    void setB(int y){
+        b = y;
+    }
+    friend float mean(sample1, sample2);
+};
+float mean(sample1 s1, sample2 s2){
+    return float(s1.a + s2.b)/2;
 }
-
-void Student::display(){
-	cout&lt;&lt;"\nStudent Details"&lt;&lt;endl;
-	cout&lt;&lt;"Name : "&lt;&lt;name&lt;&lt;"\nRoll No. :"&lt;&lt;rollno&lt;&lt;"Branch : "&lt;&lt;branch&lt;&lt;endl;
-}
-
 int main(){
-    string name, branch;
-    int rollno;
-    cout&lt;&lt;"Enter the Name: "&lt;&lt;endl;
-	cin&gt;&gt;name;
-	cout&lt;&lt;"Enter the Roll No.: "&lt;&lt;endl;
-	cin&gt;&gt;rollno;
-	cout&lt;&lt;"Enter the Branch: "&lt;&lt;endl;
-	cin&gt;&gt;branch;
-	Student s(name,rollno,branch);
-	s.display();
-	getch();
-	return 0;
+    sample1 s1;
+    sample2 s2;
+    s1.setA(25);
+    s2.setB(30);
+    cout&lt;&lt;"Mean = "&lt;&lt;mean(s1, s2)&lt;&lt;endl;
+    getch(); // Not in C++11 and later
+    return 0;
 }
 
 </code></pre>
@@ -1487,21 +1113,18 @@ int main(){
           Output:
          </h4>
          <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Enter the Name:
-Ashwith
-Enter the Roll No.:
-29
-Enter the Branch:
-ECE
-
-Student Details
-Name : Ashwith
-Roll No. :29
-Branch : ECE
+Mean = 27.5
 </pre>
         </div>
        </div>
       </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB3')">
+      LAB3
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB3">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
        <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/copy_constructor.cpp')">
         Copy Constructor
@@ -1661,6 +1284,383 @@ ECE
 Student Details
 Name : Ashwith
 Roll No. :29Branch : ECE
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/destructor.cpp')">
+        Destructor
+       </button>
+       <div class="mt-4 hidden" id="./LAB3/destructor.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that demonstrates the use of constructors and destructors. The program should track and display the number of objects created and destroyed. The alpha class should maintain a static counter that is incremented when an object is created and decremented when an object is destroyed. The program should also show the impact of block-scoped objects on the counter.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+int count = 0;
+class alpha{
+    public:
+    alpha(){
+        count++;
+        cout&lt;&lt;"No. of object created "&lt;&lt;count&lt;&lt;endl;
+    }
+    ~alpha(){
+        count--;
+        cout&lt;&lt;"No. of object remaining "&lt;&lt;count&lt;&lt;endl;
+    }
+};
+
+int main(){
+    cout&lt;&lt;"Enter main function"&lt;&lt;endl;
+    alpha a1, a2, a3,a4;
+    {
+        cout&lt;&lt;"Entering Block 1"&lt;&lt;endl;
+        alpha a5;
+    }
+    {
+        cout&lt;&lt;"Entering Block 2"&lt;&lt;endl;
+        alpha a6;
+    }
+    cout&lt;&lt;"Re-Entering main function"&lt;&lt;endl;
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter main function
+No. of object created 1
+No. of object created 2
+No. of object created 3
+No. of object created 4
+Entering Block 1
+No. of object created 5
+No. of object remaining 4
+Entering Block 2
+No. of object created 5
+No. of object remaining 4
+Re-Entering main function
+No. of object remaining 3
+No. of object remaining 2
+No. of object remaining 1
+No. of object remaining 0
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/max_of_two_objects_using_friend_function.cpp')">
+        Max Of Two Objects Using Friend Function
+       </button>
+       <div class="mt-4 hidden" id="./LAB3/max_of_two_objects_using_friend_function.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that uses two classes, xyz and abc, where each class has a private integer member variable. Both classes should have a member function to set the value of the integer. Additionally, implement a friend function max() that compares the values of these two classes and prints the greater value.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class abc;
+
+class xyz{
+    int x;
+    public:
+    void setvalue(int i){
+        x = i;
+    }
+    friend void max(xyz, abc);
+};
+
+class abc{
+    int a;
+    public:
+    void setvalue(int i){
+        a = i;
+    }
+    friend void max(xyz, abc);
+};  
+
+void max(xyz m, abc n){
+    if(m.x &gt; n.a){
+        cout&lt;&lt;"Max value is "&lt;&lt;m.x&lt;&lt;endl;
+    }
+    else{
+        cout&lt;&lt;"Max value is "&lt;&lt;n.a&lt;&lt;endl;
+    }
+}
+
+int main(){
+    xyz m;
+    abc n;
+    m.setvalue(10);
+    n.setvalue(20);
+    max(m, n);
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Max value is 20
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/parameterized_constructor_for_student_class.cpp')">
+        Parameterized Constructor For Student Class
+       </button>
+       <div class="mt-4 hidden" id="./LAB3/parameterized_constructor_for_student_class.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program to implement a Student class that uses a parameterized constructor to initialize the student's name, roll number, and branch. The program should take input for the student's details and display them using a member function.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+class Student{
+	string name,branch;
+	int rollno;
+public:
+	Student(string,int,string); // Parameterized Constructor declaration
+	void display();
+};
+
+Student::Student(string n,int r,string  b){ // Parameterized Constructor definition
+	name = n;
+    rollno = r;
+    branch = b;
+}
+
+void Student::display(){
+	cout&lt;&lt;"\nStudent Details"&lt;&lt;endl;
+	cout&lt;&lt;"Name : "&lt;&lt;name&lt;&lt;"\nRoll No. :"&lt;&lt;rollno&lt;&lt;"Branch : "&lt;&lt;branch&lt;&lt;endl;
+}
+
+int main(){
+    string name, branch;
+    int rollno;
+    cout&lt;&lt;"Enter the Name: "&lt;&lt;endl;
+	cin&gt;&gt;name;
+	cout&lt;&lt;"Enter the Roll No.: "&lt;&lt;endl;
+	cin&gt;&gt;rollno;
+	cout&lt;&lt;"Enter the Branch: "&lt;&lt;endl;
+	cin&gt;&gt;branch;
+	Student s(name,rollno,branch);
+	s.display();
+	getch();
+	return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the Name:
+Ashwith
+Enter the Roll No.:
+29
+Enter the Branch:
+ECE
+
+Student Details
+Name : Ashwith
+Roll No. :29
+Branch : ECE
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB3/swap_2_nums_of_2_objects_of_different_class_using_friend_function.cpp')">
+        Swap 2 Nums Of 2 Objects Of Different Class Using Friend Function
+       </button>
+       <div class="mt-4 hidden" id="./LAB3/swap_2_nums_of_2_objects_of_different_class_using_friend_function.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program that uses two classes, A and B, where each class contains a private integer member. Implement a friend function swap() to exchange the values of the two integer members from different classes. The program should display the values before and after swapping.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // Not in C++11 and later
+
+using namespace std;
+
+class B;
+class A{
+    public:
+    int a;
+    void setvalue(int i){
+        a = i;
+    }
+    friend void swap(A &amp;, B &amp;);
+};
+class B{
+    public:
+    int b;
+    void setvalue(int i){
+        b = i;
+    }
+    friend void swap(A &amp;, B &amp;);
+};
+
+void swap(A &amp;m, B &amp;n){
+    int temp = m.a;
+    m.a = n.b;
+    n.b = temp;
+}
+
+int main(){
+    A m;
+    B n;
+    m.setvalue(10);
+    n.setvalue(20);
+    cout&lt;&lt;"Before Swapping\na = "&lt;&lt;m.a&lt;&lt;endl&lt;&lt;"b = "&lt;&lt;n.b&lt;&lt;endl;
+    swap(m, n);
+    cout&lt;&lt;"After Swapping\na = "&lt;&lt;m.a&lt;&lt;endl&lt;&lt;"b = "&lt;&lt;n.b&lt;&lt;endl;
+    getch(); // Not in C++11 and later
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Before Swapping
+a = 10
+b = 20
+After Swapping
+a = 20
+b = 10
+
 </pre>
         </div>
        </div>
@@ -1933,6 +1933,141 @@ S: x:-10 y:20 z:-30
      </button>
      <div class="mt-4 hidden space-y-4" id="LAB5">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB5/multilevel_inheritance.cpp')">
+        Multilevel Inheritance
+       </button>
+       <div class="mt-4 hidden" id="./LAB5/multilevel_inheritance.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a program to demonstrate Multilevel Inheritance.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+#include &lt;string&gt;
+using namespace std;
+
+class Studet
+{
+protected:
+    string name;
+    int roll;
+
+public:
+    void get_data(int r, string n)
+    {
+        name = n;
+        roll = r;
+    }
+    void put_data()
+    {
+        cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+        cout &lt;&lt; "Roll No: " &lt;&lt; roll &lt;&lt; endl;
+    }
+};
+class Test : public Studet
+{
+protected:
+    float sub1, sub2;
+    public:
+    void get_test(float m1,float m2)
+    {
+        sub1 = m1;
+        sub2 = m2;
+    }
+    void put_test()
+    {
+        cout &lt;&lt; "Marks in Subject 1: " &lt;&lt; sub1 &lt;&lt; endl;
+        cout &lt;&lt; "Marks in Subject 2: " &lt;&lt; sub2 &lt;&lt; endl;
+    }
+};
+class Result : public Test
+{
+    float total;
+    public:
+    void display()
+    {
+        total = sub1 + sub2;
+        put_data();
+        put_test();
+        cout &lt;&lt; "Total Marks: " &lt;&lt; total &lt;&lt; endl;
+    }
+};
+
+int main(){
+	string name;
+	int rollno;
+	float subj1,subj2;
+    Result r;
+    cout&lt;&lt;"Enter the roll number of the student: "&lt;&lt;endl;
+    cin&gt;&gt;rollno;
+    cout&lt;&lt;"Enter the name of the student: "&lt;&lt;endl;
+    cin&gt;&gt;name;
+    cout&lt;&lt;"Enter the marks of two subjects: "&lt;&lt;endl;
+    cin&gt;&gt;subj1&gt;&gt;subj2;
+    r.get_data(rollno,name);
+    r.get_test(subj1,subj2);
+    cout&lt;&lt;"\n\n**********RESULT**********\n\n";
+    r.display();
+    cout&lt;&lt;"\n\n**************************\n\n";
+    getch();
+    return 0;
+}
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the roll number of the student:
+29
+Enter the name of the student:
+Ashwith
+Enter the marks of two subjects:
+99 100
+
+
+**********RESULT**********
+
+Name: Ashwith
+Roll NO: 29
+Marks in Subject 1: 99
+Marks in Subject 2: 100
+Total Marks: 199
+
+
+**************************
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
        <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB5/private_inheritance.cpp')">
         Private Inheritance
        </button>
@@ -2145,16 +2280,23 @@ c = 32
         </div>
        </div>
       </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB6')">
+      LAB6
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB6">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB5/multilevel_inheritance.cpp')">
-        Multilevel Inheritance
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB6/geofig.cpp')">
+        Geofig
        </button>
-       <div class="mt-4 hidden" id="./LAB5/multilevel_inheritance.cpp">
+       <div class="mt-4 hidden" id="./LAB6/geofig.cpp">
         <p class="text-gray-600 dark:text-gray-400 mt-2">
          <strong>
           Question:
          </strong>
-         Write a program to demonstrate Multilevel Inheritance.
+         Write a program to calculate the area of a triangle and a rectangle using virtual functions.
         </p>
         <section class="mt-4">
          <div class="flex justify-between">
@@ -2180,77 +2322,66 @@ c = 32
            </span>
           </button>
          </div>
-         <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; // for getch()
-#include &lt;string&gt;
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt; //for getch()
+
 using namespace std;
 
-class Studet
-{
-protected:
-    string name;
-    int roll;
+class geofig{
+    public:
+    float a,b,area;
+    void get_data(){
+        cin&gt;&gt;a&gt;&gt;b;
+    }
+    virtual void display(){
+		// Empty
+	}
+};
 
-public:
-    void get_data(int r, string n)
-    {
-        name = n;
-        roll = r;
-    }
-    void put_data()
-    {
-        cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
-        cout &lt;&lt; "Roll No: " &lt;&lt; roll &lt;&lt; endl;
+class tri:public geofig{
+    public:
+    void display(){
+        area=0.5*a*b;
+        cout&lt;&lt;"Height and base of the triangle are: "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;endl;
+        cout&lt;&lt;"Area of the triangle is: "&lt;&lt;area&lt;&lt;endl;
     }
 };
-class Test : public Studet
-{
-protected:
-    float sub1, sub2;
+
+class rect:public geofig{
     public:
-    void get_test(float m1,float m2)
-    {
-        sub1 = m1;
-        sub2 = m2;
-    }
-    void put_test()
-    {
-        cout &lt;&lt; "Marks in Subject 1: " &lt;&lt; sub1 &lt;&lt; endl;
-        cout &lt;&lt; "Marks in Subject 2: " &lt;&lt; sub2 &lt;&lt; endl;
-    }
-};
-class Result : public Test
-{
-    float total;
-    public:
-    void display()
-    {
-        total = sub1 + sub2;
-        put_data();
-        put_test();
-        cout &lt;&lt; "Total Marks: " &lt;&lt; total &lt;&lt; endl;
+    void display(){
+        area=a*b;
+        cout&lt;&lt;"Length and breadth of the rectangle are: "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;endl;
+        cout&lt;&lt;"Area of the rectangle is: "&lt;&lt;area&lt;&lt;endl;
     }
 };
 
 int main(){
-	string name;
-	int rollno;
-	float subj1,subj2;
-    Result r;
-    cout&lt;&lt;"Enter the roll number of the student: "&lt;&lt;endl;
-    cin&gt;&gt;rollno;
-    cout&lt;&lt;"Enter the name of the student: "&lt;&lt;endl;
-    cin&gt;&gt;name;
-    cout&lt;&lt;"Enter the marks of two subjects: "&lt;&lt;endl;
-    cin&gt;&gt;subj1&gt;&gt;subj2;
-    r.get_data(rollno,name);
-    r.get_test(subj1,subj2);
-    cout&lt;&lt;"\n\n**********RESULT**********\n\n";
-    r.display();
-    cout&lt;&lt;"\n\n**************************\n\n";
+    geofig *ptr;
+	tri t1;
+	rect r1;
+	char c;
+	cout&lt;&lt;"Enter the type of figure (t/r): "&lt;&lt;endl;
+    cin&gt;&gt;c;
+    if(c=='t'){
+        cout&lt;&lt;"Enter the height and base of the triangle: "&lt;&lt;endl;
+        ptr=&amp;t1;
+        ptr-&gt;get_data();
+        ptr-&gt;display();
+    }
+    else if(c=='r'){
+        cout&lt;&lt;"Enter the length and breadth of the rectangle: "&lt;&lt;endl;
+        ptr=&amp;r1;
+        ptr-&gt;get_data();
+        ptr-&gt;display();
+    }
+    else{
+        cout&lt;&lt;"Invalid input"&lt;&lt;endl;
+    }
     getch();
     return 0;
 }
+
 </code></pre>
         </section>
         <div class="mt-4">
@@ -2258,35 +2389,16 @@ int main(){
           Output:
          </h4>
          <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Enter the roll number of the student:
-29
-Enter the name of the student:
-Ashwith
-Enter the marks of two subjects:
-99 100
-
-
-**********RESULT**********
-
-Name: Ashwith
-Roll NO: 29
-Marks in Subject 1: 99
-Marks in Subject 2: 100
-Total Marks: 199
-
-
-**************************
+Enter the type of figure (t/r):
+t
+Enter the height and base of the triangle:
+5 10
+Height and base of the triangle are: 5 and 10
+Area of the triangle is: 25
 </pre>
         </div>
        </div>
       </div>
-     </div>
-    </div>
-    <div class="mb-8">
-     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB6')">
-      LAB6
-     </button>
-     <div class="mt-4 hidden space-y-4" id="LAB6">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
        <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB6/pointer_to_objects.cpp')">
         Pointer To Objects
@@ -2512,16 +2624,23 @@ Show Derived class
         </div>
        </div>
       </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB7')">
+      LAB7
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB7">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB6/geofig.cpp')">
-        Geofig
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB7/infix_to_postfix.cpp')">
+        Infix To Postfix
        </button>
-       <div class="mt-4 hidden" id="./LAB6/geofig.cpp">
+       <div class="mt-4 hidden" id="./LAB7/infix_to_postfix.cpp">
         <p class="text-gray-600 dark:text-gray-400 mt-2">
          <strong>
           Question:
          </strong>
-         Write a program to calculate the area of a triangle and a rectangle using virtual functions.
+         Write a program to convert infix expression to postfix expression using stack.
         </p>
         <section class="mt-4">
          <div class="flex justify-between">
@@ -2547,62 +2666,77 @@ Show Derived class
            </span>
           </button>
          </div>
-         <pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;conio.h&gt; //for getch()
+         <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;stack&gt;
+#include &lt;conio.h&gt;
+#include &lt;string&gt;
 
 using namespace std;
 
-class geofig{
-    public:
-    float a,b,area;
-    void get_data(){
-        cin&gt;&gt;a&gt;&gt;b;
-    }
-    virtual void display(){
-		// Empty
-	}
-};
+// Function to return precedence of operators
+int precedence(char ch)
+{
+    if (ch == '+' || ch == '-')
+        return 1;
+    else if (ch == '*' || ch == '/')
+        return 2;
+    else if (ch == '^')
+        return 3;
+    else
+        return -1;
+}
 
-class tri:public geofig{
-    public:
-    void display(){
-        area=0.5*a*b;
-        cout&lt;&lt;"Height and base of the triangle are: "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;endl;
-        cout&lt;&lt;"Area of the triangle is: "&lt;&lt;area&lt;&lt;endl;
+// Function to convert infix to postfix
+void infixToPostfix(string s)
+{
+    stack&lt;char&gt; st;
+    string result = "";
+    for (int i = 0; i &lt; s.length(); i++)
+    {
+        char c = s[i];
+        // If the scanned character is an operand, add it to output
+        if ((c &gt;= 'a' &amp;&amp; c &lt;= 'z') || (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') || (c &gt;= '0' &amp;&amp; c &lt;= '9'))
+            result += c;
+        // If the scanned character is an '(', push it to the stack
+        else if (c == '(')
+            st.push(c);
+        // If the scanned character is an ')', pop and output from the stack until an '(' is encountered
+        else if (c == ')')
+        {
+            while (!st.empty() &amp;&amp; st.top() != '(')
+            {
+                result += st.top();
+                st.pop();
+            }
+            if (!st.empty())
+                st.pop();
+        }
+        // If the scanned character is an operator, pop all the operators from the stack which are greater than or equal to in precedence than that of the scanned operator.
+        else
+        {
+            while (!st.empty() &amp;&amp; precedence(c) &lt;= precedence(st.top()))
+            {
+                result += st.top();
+                st.pop();
+            }
+            st.push(c);
+        }
     }
-};
-
-class rect:public geofig{
-    public:
-    void display(){
-        area=a*b;
-        cout&lt;&lt;"Length and breadth of the rectangle are: "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;endl;
-        cout&lt;&lt;"Area of the rectangle is: "&lt;&lt;area&lt;&lt;endl;
+    while (!st.empty())
+    {
+        result += st.top();
+        st.pop();
     }
-};
+    cout &lt;&lt; "Postfix expression: " &lt;&lt; result &lt;&lt; endl;
+}
 
+// Main function
 int main(){
-    geofig *ptr;
-	tri t1;
-	rect r1;
-	char c;
-	cout&lt;&lt;"Enter the type of figure (t/r): "&lt;&lt;endl;
-    cin&gt;&gt;c;
-    if(c=='t'){
-        cout&lt;&lt;"Enter the height and base of the triangle: "&lt;&lt;endl;
-        ptr=&amp;t1;
-        ptr-&gt;get_data();
-        ptr-&gt;display();
-    }
-    else if(c=='r'){
-        cout&lt;&lt;"Enter the length and breadth of the rectangle: "&lt;&lt;endl;
-        ptr=&amp;r1;
-        ptr-&gt;get_data();
-        ptr-&gt;display();
-    }
-    else{
-        cout&lt;&lt;"Invalid input"&lt;&lt;endl;
-    }
+    string exp;
+    cout &lt;&lt; "Enter the infix expression: ";
+    cin &gt;&gt; exp;
+    infixToPostfix(exp);
     getch();
     return 0;
 }
@@ -2614,23 +2748,12 @@ int main(){
           Output:
          </h4>
          <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Enter the type of figure (t/r):
-t
-Enter the height and base of the triangle:
-5 10
-Height and base of the triangle are: 5 and 10
-Area of the triangle is: 25
+Enter the infix expression: A+B+C/D*E(F+G)/H
+Postfix expression: AB+CD/EFG+*H/+
 </pre>
         </div>
        </div>
       </div>
-     </div>
-    </div>
-    <div class="mb-8">
-     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB7')">
-      LAB7
-     </button>
-     <div class="mt-4 hidden space-y-4" id="LAB7">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
        <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB7/postfix_to_infix.cpp')">
         Postfix To Infix
@@ -2906,129 +3029,6 @@ Stack is empty
         </div>
        </div>
       </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB7/infix_to_postfix.cpp')">
-        Infix To Postfix
-       </button>
-       <div class="mt-4 hidden" id="./LAB7/infix_to_postfix.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a program to convert infix expression to postfix expression using stack.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">
-#include &lt;iostream&gt;
-#include &lt;stack&gt;
-#include &lt;conio.h&gt;
-#include &lt;string&gt;
-
-using namespace std;
-
-// Function to return precedence of operators
-int precedence(char ch)
-{
-    if (ch == '+' || ch == '-')
-        return 1;
-    else if (ch == '*' || ch == '/')
-        return 2;
-    else if (ch == '^')
-        return 3;
-    else
-        return -1;
-}
-
-// Function to convert infix to postfix
-void infixToPostfix(string s)
-{
-    stack&lt;char&gt; st;
-    string result = "";
-    for (int i = 0; i &lt; s.length(); i++)
-    {
-        char c = s[i];
-        // If the scanned character is an operand, add it to output
-        if ((c &gt;= 'a' &amp;&amp; c &lt;= 'z') || (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') || (c &gt;= '0' &amp;&amp; c &lt;= '9'))
-            result += c;
-        // If the scanned character is an '(', push it to the stack
-        else if (c == '(')
-            st.push(c);
-        // If the scanned character is an ')', pop and output from the stack until an '(' is encountered
-        else if (c == ')')
-        {
-            while (!st.empty() &amp;&amp; st.top() != '(')
-            {
-                result += st.top();
-                st.pop();
-            }
-            if (!st.empty())
-                st.pop();
-        }
-        // If the scanned character is an operator, pop all the operators from the stack which are greater than or equal to in precedence than that of the scanned operator.
-        else
-        {
-            while (!st.empty() &amp;&amp; precedence(c) &lt;= precedence(st.top()))
-            {
-                result += st.top();
-                st.pop();
-            }
-            st.push(c);
-        }
-    }
-    while (!st.empty())
-    {
-        result += st.top();
-        st.pop();
-    }
-    cout &lt;&lt; "Postfix expression: " &lt;&lt; result &lt;&lt; endl;
-}
-
-// Main function
-int main(){
-    string exp;
-    cout &lt;&lt; "Enter the infix expression: ";
-    cin &gt;&gt; exp;
-    infixToPostfix(exp);
-    getch();
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-Enter the infix expression: A+B+C/D*E(F+G)/H
-Postfix expression: AB+CD/EFG+*H/+
-</pre>
-        </div>
-       </div>
-      </div>
      </div>
     </div>
     <div class="mb-8">
@@ -3036,178 +3036,6 @@ Postfix expression: AB+CD/EFG+*H/+
       LAB8
      </button>
      <div class="mt-4 hidden space-y-4" id="LAB8">
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB8/linear_queue.cpp')">
-        Linear Queue
-       </button>
-       <div class="mt-4 hidden" id="./LAB8/linear_queue.cpp">
-        <p class="text-gray-600 dark:text-gray-400 mt-2">
-         <strong>
-          Question:
-         </strong>
-         Write a program to implement a linear queue.
-        </p>
-        <section class="mt-4">
-         <div class="flex justify-between">
-          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-           Code:
-          </h4>
-          <button class="copy" onclick="copyCode(event)">
-           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
-           </span>
-           <span>
-            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-             <g>
-              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
-              </path>
-             </g>
-            </svg>
-           </span>
-          </button>
-         </div>
-         <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;conio.h&gt; // for getch()
-
-#define size 5
-
-using namespace std;
-
-class Queue
-{
-    int front, rear;
-    int arr[size];
-    public:
-    Queue()
-    {
-        front = -1;
-        rear = -1;
-    }
-    void enqueue(int data)
-    {
-        if (rear == size - 1)
-        {
-            cout &lt;&lt; "Queue is full" &lt;&lt; endl;
-        }
-        else
-        {
-            if (front == -1)
-            {
-                front = 0;
-            }
-            rear++;
-            arr[rear] = data;
-            cout &lt;&lt; data &lt;&lt; " is enqueued" &lt;&lt; endl;
-        }
-    }
-    void dequeue()
-    {
-        if (front == -1)
-        {
-            cout &lt;&lt; "Queue is empty" &lt;&lt; endl;
-        }
-        else
-        {
-            cout &lt;&lt; arr[front] &lt;&lt; " is dequeued" &lt;&lt; endl;
-            front++;
-            if (front &gt; rear)
-            {
-                front = rear = -1;
-            }
-        }
-    }
-    void display()
-    {
-        if (front == -1)
-        {
-            cout &lt;&lt; "Queue is empty" &lt;&lt; endl;
-        }
-        else
-        {
-            cout &lt;&lt; "Queue elements are: ";
-            for (int i = front; i &lt;= rear; i++)
-            {
-                cout &lt;&lt; arr[i] &lt;&lt; " ";
-            }
-            cout &lt;&lt; endl;
-        }
-    }
-};
-
-int main()
-{
-    Queue ob;
-    int choice;
-    int item;
-    cout &lt;&lt; "1. Enqueue" &lt;&lt; endl;
-    cout &lt;&lt; "2. Dequeue" &lt;&lt; endl;
-    cout &lt;&lt; "3. Display" &lt;&lt; endl;
-    cout &lt;&lt; "4. Exit" &lt;&lt; endl;
-    for(;;)
-    {
-        cout &lt;&lt; "Enter your choice: ";
-        cin &gt;&gt; choice;
-        switch (choice)
-        {
-        case 1:
-            cout &lt;&lt; "Enter the element to be Enqueue: ";
-            cin &gt;&gt; item;
-            ob.enqueue(item);
-            break;
-        case 2:
-            ob.dequeue();
-            break;
-        case 3:
-            ob.display();
-            break;
-        case 4:
-            exit(0);
-        default:
-            cout &lt;&lt; "Invalid choice" &lt;&lt; endl;
-        }
-    }
-    getch();
-    return 0;
-}
-
-</code></pre>
-        </section>
-        <div class="mt-4">
-         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
-          Output:
-         </h4>
-         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-1. Enqueue
-2. Dequeue
-3. Display
-4. Exit
-Enter your choice: 1
-Enter the element to be Enqueue: 3
-3 is enqueued
-Enter your choice: 1
-Enter the element to be Enqueue: 5
-5 is enqueued
-Enter your choice: 1
-Enter the element to be Enqueue: 0
-0 is enqueued
-Enter your choice: 2
-3 is dequeued
-Enter your choice: 2
-5 is dequeued
-Enter your choice: 2
-0 is dequeued
-Enter your choice: 2
-Queue is empty
-Enter your choice:
-</pre>
-        </div>
-       </div>
-      </div>
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
        <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB8/circular_queue.cpp')">
         Circular Queue
@@ -3389,23 +3217,16 @@ Enter your choice:
         </div>
        </div>
       </div>
-     </div>
-    </div>
-    <div class="mb-8">
-     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB9')">
-      LAB9
-     </button>
-     <div class="mt-4 hidden space-y-4" id="LAB9">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
-       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB9/linked_list.cpp')">
-        Linked List
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB8/linear_queue.cpp')">
+        Linear Queue
        </button>
-       <div class="mt-4 hidden" id="./LAB9/linked_list.cpp">
+       <div class="mt-4 hidden" id="./LAB8/linear_queue.cpp">
         <p class="text-gray-600 dark:text-gray-400 mt-2">
          <strong>
           Question:
          </strong>
-         Write a program to implement a singly linked list.
+         Write a program to implement a linear queue.
         </p>
         <section class="mt-4">
          <div class="flex justify-between">
@@ -3434,137 +3255,65 @@ Enter your choice:
          <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;conio.h&gt; // for getch()
 
+#define size 5
+
 using namespace std;
 
-struct Node
+class Queue
 {
-    int data;
-    Node *next;
-};
-
-class list
-{
-public:
-    Node *head;
-    int item;
-    list()
+    int front, rear;
+    int arr[size];
+    public:
+    Queue()
     {
-        head = NULL;
+        front = -1;
+        rear = -1;
     }
-
-    void insert_front()
+    void enqueue(int data)
     {
-        Node *newNode = new Node;
-        newNode-&gt;data = item;
-        newNode-&gt;next = head;
-        head = newNode;
-    }
-
-    void insert_rear()
-    {
-        Node *newNode = new Node;
-        newNode-&gt;data = item;
-        newNode-&gt;next = NULL;
-        if (head == NULL)
+        if (rear == size - 1)
         {
-            head = newNode;
+            cout &lt;&lt; "Queue is full" &lt;&lt; endl;
         }
         else
         {
-            Node *curr = head;
-            while (curr-&gt;next != NULL)
+            if (front == -1)
             {
-                curr = curr-&gt;next;
+                front = 0;
             }
-            curr-&gt;next = newNode;
+            rear++;
+            arr[rear] = data;
+            cout &lt;&lt; data &lt;&lt; " is enqueued" &lt;&lt; endl;
         }
     }
-    void delete_front()
+    void dequeue()
     {
-        if (head == NULL)
+        if (front == -1)
         {
-            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+            cout &lt;&lt; "Queue is empty" &lt;&lt; endl;
         }
         else
         {
-            Node *newNode = head;
-            head = head-&gt;next;
-            delete newNode;
+            cout &lt;&lt; arr[front] &lt;&lt; " is dequeued" &lt;&lt; endl;
+            front++;
+            if (front &gt; rear)
+            {
+                front = rear = -1;
+            }
         }
     }
-
-    void delete_rear()
-    {
-        if (head == NULL)
-        {
-            cout &lt;&lt; "List is empty" &lt;&lt; endl;
-        }
-        else
-        {
-            Node *curr = head;
-            Node *prev = NULL;
-            while (curr-&gt;next != NULL)
-            {
-                prev = curr;
-                curr = curr-&gt;next;
-            }
-            if (prev == NULL)
-            {
-                head = NULL;
-            }
-            else
-            {
-                prev-&gt;next = NULL;
-            }
-            delete curr;
-        }
-    }
-
-    void search_and_delete()
-    {
-        if (head == NULL)
-        {
-            cout &lt;&lt; "List is empty" &lt;&lt; endl;
-        }
-        else
-        {
-            Node *curr = head;
-            Node *prev = NULL;
-            while (curr != NULL)
-            {
-                if (curr-&gt;data == item)
-                {
-                    if (prev == NULL)
-                    {
-                        head = curr-&gt;next;
-                    }
-                    else
-                    {
-                        prev-&gt;next = curr-&gt;next;
-                    }
-                    delete curr;
-                    return;
-                }
-                prev = curr;
-                curr = curr-&gt;next;
-            }
-            cout &lt;&lt; "Element not found" &lt;&lt; endl;
-        }
-    }
-
     void display()
     {
-        if (head == NULL)
+        if (front == -1)
         {
-            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+            cout &lt;&lt; "Queue is empty" &lt;&lt; endl;
         }
         else
         {
-            Node *curr = head;
-            while (curr != NULL)
+            cout &lt;&lt; "Queue elements are: ";
+            for (int i = front; i &lt;= rear; i++)
             {
-                cout &lt;&lt; curr-&gt;data &lt;&lt; " ";
-                curr = curr-&gt;next;
+                cout &lt;&lt; arr[i] &lt;&lt; " ";
             }
             cout &lt;&lt; endl;
         }
@@ -3573,47 +3322,31 @@ public:
 
 int main()
 {
-    list ob;
+    Queue ob;
     int choice;
     int item;
-    for (;;)
+    cout &lt;&lt; "1. Enqueue" &lt;&lt; endl;
+    cout &lt;&lt; "2. Dequeue" &lt;&lt; endl;
+    cout &lt;&lt; "3. Display" &lt;&lt; endl;
+    cout &lt;&lt; "4. Exit" &lt;&lt; endl;
+    for(;;)
     {
-        cout &lt;&lt; "1. Insert at front" &lt;&lt; endl;
-        cout &lt;&lt; "2. Insert at rear" &lt;&lt; endl;
-        cout &lt;&lt; "3. Delete from front" &lt;&lt; endl;
-        cout &lt;&lt; "4. Delete from rear" &lt;&lt; endl;
-        cout &lt;&lt; "5. Search and delete" &lt;&lt; endl;
-        cout &lt;&lt; "6. Display" &lt;&lt; endl;
-        cout &lt;&lt; "7. Exit" &lt;&lt; endl;
         cout &lt;&lt; "Enter your choice: ";
         cin &gt;&gt; choice;
         switch (choice)
         {
         case 1:
-            cout &lt;&lt; "Enter the element to be inserted at front : ";
-            cin &gt;&gt; ob.item;
-            ob.insert_front();
+            cout &lt;&lt; "Enter the element to be Enqueue: ";
+            cin &gt;&gt; item;
+            ob.enqueue(item);
             break;
         case 2:
-            cout &lt;&lt; "Enter the element to be inserted at rear : ";
-            cin &gt;&gt; ob.item;
-            ob.insert_rear();
+            ob.dequeue();
             break;
         case 3:
-            ob.delete_front();
-            break;
-        case 4:
-            ob.delete_rear();
-            break;
-        case 5:
-            cout &lt;&lt; "Enter the element to be searched and deleted : ";
-            cin &gt;&gt; ob.item;
-            ob.search_and_delete();
-            break;
-        case 6:
             ob.display();
             break;
-        case 7:
+        case 4:
             exit(0);
         default:
             cout &lt;&lt; "Invalid choice" &lt;&lt; endl;
@@ -3623,7 +3356,6 @@ int main()
     return 0;
 }
 
-
 </code></pre>
         </section>
         <div class="mt-4">
@@ -3631,113 +3363,39 @@ int main()
           Output:
          </h4>
          <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
-Enter your choice: 6
-List is empty
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
 Enter your choice: 1
-Enter the element to be inserted at front : 5
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
+Enter the element to be Enqueue: 3
+3 is enqueued
+Enter your choice: 1
+Enter the element to be Enqueue: 5
+5 is enqueued
+Enter your choice: 1
+Enter the element to be Enqueue: 0
+0 is enqueued
 Enter your choice: 2
-Enter the element to be inserted at rear : 10
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
-Enter your choice: 1
-Enter the element to be inserted at front : 15
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
-Enter your choice: 6
-15 5 10
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
-Enter your choice: 3
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
-Enter your choice: 6
-5 10
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
-Enter your choice: 4
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
-Enter your choice: 6
-5
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
-Enter your choice: 4
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
-Enter your choice: 6
-List is empty
-1. Insert at front
-2. Insert at rear
-3. Delete from front
-4. Delete from rear
-5. Search and delete
-6. Display
-7. Exit
+3 is dequeued
+Enter your choice: 2
+5 is dequeued
+Enter your choice: 2
+0 is dequeued
+Enter your choice: 2
+Queue is empty
+Enter your choice:
 </pre>
         </div>
        </div>
       </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('LAB9')">
+      LAB9
+     </button>
+     <div class="mt-4 hidden space-y-4" id="LAB9">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
        <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB9/doubly_linked_list.cpp')">
         Doubly Linked List
@@ -4097,6 +3755,1820 @@ List is empty
 5. Search and delete
 6. Display
 7. Exit
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./LAB9/linked_list.cpp')">
+        Linked List
+       </button>
+       <div class="mt-4 hidden" id="./LAB9/linked_list.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a program to implement a singly linked list.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+
+using namespace std;
+
+struct Node
+{
+    int data;
+    Node *next;
+};
+
+class list
+{
+public:
+    Node *head;
+    int item;
+    list()
+    {
+        head = NULL;
+    }
+
+    void insert_front()
+    {
+        Node *newNode = new Node;
+        newNode-&gt;data = item;
+        newNode-&gt;next = head;
+        head = newNode;
+    }
+
+    void insert_rear()
+    {
+        Node *newNode = new Node;
+        newNode-&gt;data = item;
+        newNode-&gt;next = NULL;
+        if (head == NULL)
+        {
+            head = newNode;
+        }
+        else
+        {
+            Node *curr = head;
+            while (curr-&gt;next != NULL)
+            {
+                curr = curr-&gt;next;
+            }
+            curr-&gt;next = newNode;
+        }
+    }
+    void delete_front()
+    {
+        if (head == NULL)
+        {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            Node *newNode = head;
+            head = head-&gt;next;
+            delete newNode;
+        }
+    }
+
+    void delete_rear()
+    {
+        if (head == NULL)
+        {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            Node *curr = head;
+            Node *prev = NULL;
+            while (curr-&gt;next != NULL)
+            {
+                prev = curr;
+                curr = curr-&gt;next;
+            }
+            if (prev == NULL)
+            {
+                head = NULL;
+            }
+            else
+            {
+                prev-&gt;next = NULL;
+            }
+            delete curr;
+        }
+    }
+
+    void search_and_delete()
+    {
+        if (head == NULL)
+        {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            Node *curr = head;
+            Node *prev = NULL;
+            while (curr != NULL)
+            {
+                if (curr-&gt;data == item)
+                {
+                    if (prev == NULL)
+                    {
+                        head = curr-&gt;next;
+                    }
+                    else
+                    {
+                        prev-&gt;next = curr-&gt;next;
+                    }
+                    delete curr;
+                    return;
+                }
+                prev = curr;
+                curr = curr-&gt;next;
+            }
+            cout &lt;&lt; "Element not found" &lt;&lt; endl;
+        }
+    }
+
+    void display()
+    {
+        if (head == NULL)
+        {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            Node *curr = head;
+            while (curr != NULL)
+            {
+                cout &lt;&lt; curr-&gt;data &lt;&lt; " ";
+                curr = curr-&gt;next;
+            }
+            cout &lt;&lt; endl;
+        }
+    }
+};
+
+int main()
+{
+    list ob;
+    int choice;
+    int item;
+    for (;;)
+    {
+        cout &lt;&lt; "1. Insert at front" &lt;&lt; endl;
+        cout &lt;&lt; "2. Insert at rear" &lt;&lt; endl;
+        cout &lt;&lt; "3. Delete from front" &lt;&lt; endl;
+        cout &lt;&lt; "4. Delete from rear" &lt;&lt; endl;
+        cout &lt;&lt; "5. Search and delete" &lt;&lt; endl;
+        cout &lt;&lt; "6. Display" &lt;&lt; endl;
+        cout &lt;&lt; "7. Exit" &lt;&lt; endl;
+        cout &lt;&lt; "Enter your choice: ";
+        cin &gt;&gt; choice;
+        switch (choice)
+        {
+        case 1:
+            cout &lt;&lt; "Enter the element to be inserted at front : ";
+            cin &gt;&gt; ob.item;
+            ob.insert_front();
+            break;
+        case 2:
+            cout &lt;&lt; "Enter the element to be inserted at rear : ";
+            cin &gt;&gt; ob.item;
+            ob.insert_rear();
+            break;
+        case 3:
+            ob.delete_front();
+            break;
+        case 4:
+            ob.delete_rear();
+            break;
+        case 5:
+            cout &lt;&lt; "Enter the element to be searched and deleted : ";
+            cin &gt;&gt; ob.item;
+            ob.search_and_delete();
+            break;
+        case 6:
+            ob.display();
+            break;
+        case 7:
+            exit(0);
+        default:
+            cout &lt;&lt; "Invalid choice" &lt;&lt; endl;
+        }
+    }
+    getch();
+    return 0;
+}
+
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 6
+List is empty
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 1
+Enter the element to be inserted at front : 5
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 2
+Enter the element to be inserted at rear : 10
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 1
+Enter the element to be inserted at front : 15
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 6
+15 5 10
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 3
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 6
+5 10
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 4
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 6
+5
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 4
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+Enter your choice: 6
+List is empty
+1. Insert at front
+2. Insert at rear
+3. Delete from front
+4. Delete from rear
+5. Search and delete
+6. Display
+7. Exit
+</pre>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="mb-8">
+     <button class="w-full text-left px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none transition-colors" onclick="toggleLab('Test Questions')">
+      Test Questions
+     </button>
+     <div class="mt-4 hidden space-y-4" id="Test Questions">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/1 friend_exchange.cpp')">
+        1 Friend Exchange
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/1 friend_exchange.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program, using common friend function, the function is called by reference to exchange the private data members of two classes, display the data before exchange and after exchange
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // comment if you are are using modern compilers
+
+using namespace std;
+
+// Forward declaration of class B
+class B;
+
+class A
+{
+private:
+    int dataA;
+
+public:
+    A(int val)
+    {
+        dataA = val;
+    }
+
+    void display()
+    {
+        cout &lt;&lt; "Data of class A: " &lt;&lt; dataA &lt;&lt; endl;
+    }
+
+    // Declare friend function
+    friend void exchange(A &amp;, B &amp;);
+};
+
+class B
+{
+private:
+    int dataB;
+
+public:
+    B(int val)
+    {
+        dataB = val;
+    }
+
+    void display()
+    {
+        cout &lt;&lt; "Data of class B: " &lt;&lt; dataB &lt;&lt; endl;
+    }
+
+    // Declare friend function
+    friend void exchange(A &amp;, B &amp;);
+};
+
+// Common friend function to exchange data members of two classes
+void exchange(A &amp;objA, B &amp;objB)
+{
+    int temp = objA.dataA;
+    objA.dataA = objB.dataB;
+    objB.dataB = temp;
+}
+
+int main()
+{
+    A objA(10);
+    B objB(20);
+
+    cout &lt;&lt; "Before exchange:" &lt;&lt; endl;
+    objA.display();
+    objB.display();
+
+    // Call friend function to exchange data
+    exchange(objA, objB);
+
+    cout &lt;&lt; "\nAfter exchange:" &lt;&lt; endl;
+    objA.display();
+    objB.display();
+
+    getch(); // comment if using modern compilers
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Before exchange:
+Data of class A: 10
+Data of class B: 20
+
+After exchange:
+Data of class A: 20
+Data of class B: 10
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/2 complex_addition.cpp')">
+        2 Complex Addition
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/2 complex_addition.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program, to perform addition of two complex numbers, use default and parameterized constructor and display the both complex numbers and sum of two complex numbers. (e.g. 2+3j)
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">
+#include&lt;iostream&gt;
+#include &lt;conio.h&gt; // comment if you are are using modern compilers
+
+using namespace std;
+
+class Complex {
+private:
+    int real;
+    int imag;
+public:
+    // Default constructor
+    Complex() {
+        real = 0;
+        imag = 0;
+    }
+
+    // Parameterized constructor
+    Complex(int r, int i) {
+        real = r;
+        imag = i;
+    }
+
+    // Function to display complex number
+    void display() {
+        cout &lt;&lt; real &lt;&lt; " + " &lt;&lt; imag &lt;&lt; "j" &lt;&lt; endl;
+    }
+
+    // Function to add two complex numbers
+    Complex add(Complex c) {
+        Complex temp;
+        temp.real = real + c.real;
+        temp.imag = imag + c.imag;
+        return temp;
+    }
+};
+
+int main() {
+    // Create complex numbers using parameterized constructor
+    Complex c1(2, 3);
+    Complex c2(4, 5);
+
+    // Display the complex numbers
+    cout &lt;&lt; "Complex Number 1: ";
+    c1.display();
+    cout &lt;&lt; "Complex Number 2: ";
+    c2.display();
+
+    // Add the complex numbers
+    Complex c3 = c1.add(c2);
+
+    // Display the sum of complex numbers
+    cout &lt;&lt; "Sum of Complex Numbers: ";
+    c3.display();
+
+    getch(); 
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Complex Number 1: 2 + 3j
+Complex Number 2: 4 + 5j
+Sum of Complex Numbers: 6 + 8j
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/3 unary_minus_operator_overloaded.cpp')">
+        3 Unary Minus Operator Overloaded
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/3 unary_minus_operator_overloaded.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program, to demonstrate unary minus operator is overloaded.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+
+using namespace std;
+
+class Space
+{
+    int x, y, z;
+public:
+void getdata(int a, int b, int c); 
+void display(void);
+void operator -();
+};
+
+void Space::getdata(int a, int b, int c)
+{
+    x = a;
+    y = b;
+    z = c;
+}
+void Space::display(void)
+{
+    cout &lt;&lt; "x:" &lt;&lt; x &lt;&lt; " y:" &lt;&lt; y &lt;&lt; " z:" &lt;&lt; z &lt;&lt; "\n";
+}
+void Space::operator -()
+{
+    x = -x;
+    y = -y;
+    z = -z;
+}
+
+int main()
+{
+    Space S;
+    S.getdata(10, -20, 30);
+    cout &lt;&lt; "S: ";
+    S.display();
+    -S;
+    cout &lt;&lt; "S: ";
+    S.display();
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+S: x:10 y:-20 z:30
+S: x:-10 y:20 z:-30
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/4 student_result.cpp')">
+        4 Student Result
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/4 student_result.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Create a base class Student which reads and displays roll_no of the student. Derive a class test from student class which reads and prints two subject marks, now derive one more class result which inherits the marks from test class of the student, find total marks and display the sum. Use appropriate type of inheritance to implement above program.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">
+#include&lt;iostream&gt;
+#include &lt;conio.h&gt; // comment if you are are using modern compilers
+
+using namespace std;
+
+// Base class Student
+class Student {
+protected:
+    int roll_no;
+public:
+    void readRollNo() {
+        cout &lt;&lt; "Enter Roll No: ";
+        cin &gt;&gt; roll_no;
+    }
+
+    void displayRollNo() {
+        cout &lt;&lt; "Roll No: " &lt;&lt; roll_no &lt;&lt; endl;
+    }
+};
+
+// Derived class Test from Student
+class Test : public Student {
+protected:
+    int marks1, marks2;
+public:
+    void readMarks() {
+        cout &lt;&lt; "Enter Marks for Subject 1: ";
+        cin &gt;&gt; marks1;
+        cout &lt;&lt; "Enter Marks for Subject 2: ";
+        cin &gt;&gt; marks2;
+    }
+
+    void displayMarks() {
+        cout &lt;&lt; "Marks for Subject 1: " &lt;&lt; marks1 &lt;&lt; endl;
+        cout &lt;&lt; "Marks for Subject 2: " &lt;&lt; marks2 &lt;&lt; endl;
+    }
+};
+
+// Derived class Result from Test
+class Result : public Test {
+private:
+    int total;
+public:
+    void calculateTotal() {
+        total = marks1 + marks2;
+    }
+
+    void displayResult() {
+        displayRollNo(); // Display roll number from Student class
+        displayMarks();  // Display marks from Test class
+        cout &lt;&lt; "Total Marks: " &lt;&lt; total &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Result r;
+
+    // Read roll number and marks
+    r.readRollNo();
+    r.readMarks();
+
+    // Calculate total marks
+    r.calculateTotal();
+
+    // Display result
+    cout &lt;&lt; "\nStudent Result:" &lt;&lt; endl;
+    r.displayResult();
+
+    getch(); 
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter Roll No: 29
+Enter Marks for Subject 1: 10
+Enter Marks for Subject 2: 20
+
+Student Result:
+Roll No: 29
+Marks for Subject 1: 10
+Marks for Subject 2: 20
+Total Marks: 30
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/5 student_sports_result.cpp')">
+        5 Student Sports Result
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/5 student_sports_result.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Create a class Student which reads and displays roll_no of the student. Create another class Test which reads and prints two subject marks, now create one more class SportsMark which reads and prints sports marks of the student, derive a single class Result from all above mentioned classes to find total marks of the student and display it. Use appropriate type of inheritance to implement above program.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">
+#include&lt;iostream&gt;
+#include &lt;conio.h&gt; // comment if you are are using modern compilers
+
+using namespace std;
+
+// Base class Student
+class Student {
+protected:
+    int roll_no;
+public:
+    void readRollNo() {
+        cout &lt;&lt; "Enter Roll No: ";
+        cin &gt;&gt; roll_no;
+    }
+
+    void displayRollNo() {
+        cout &lt;&lt; "Roll No: " &lt;&lt; roll_no &lt;&lt; endl;
+    }
+};
+
+// Base class Test
+class Test {
+protected:
+    int marks1, marks2;
+public:
+    void readMarks() {
+        cout &lt;&lt; "Enter Marks for Subject 1: ";
+        cin &gt;&gt; marks1;
+        cout &lt;&lt; "Enter Marks for Subject 2: ";
+        cin &gt;&gt; marks2;
+    }
+
+    void displayMarks() {
+        cout &lt;&lt; "Marks for Subject 1: " &lt;&lt; marks1 &lt;&lt; endl;
+        cout &lt;&lt; "Marks for Subject 2: " &lt;&lt; marks2 &lt;&lt; endl;
+    }
+};
+
+// Base class SportsMark
+class SportsMark {
+protected:
+    int sportsMarks;
+public:
+    void readSportsMarks() {
+        cout &lt;&lt; "Enter Sports Marks: ";
+        cin &gt;&gt; sportsMarks;
+    }
+
+    void displaySportsMarks() {
+        cout &lt;&lt; "Sports Marks: " &lt;&lt; sportsMarks &lt;&lt; endl;
+    }
+};
+
+// Derived class Result from Student, Test, and SportsMark
+class Result : public Student, public Test, public SportsMark {
+private:
+    int total;
+public:
+    void calculateTotal() {
+        total = marks1 + marks2 + sportsMarks;
+    }
+
+    void displayResult() {
+        displayRollNo();       // Display roll number from Student class
+        displayMarks();        // Display marks from Test class
+        displaySportsMarks();  // Display sports marks from SportsMark class
+        cout &lt;&lt; "Total Marks: " &lt;&lt; total &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Result r;
+
+    // Read roll number, subject marks, and sports marks
+    r.readRollNo();
+    r.readMarks();
+    r.readSportsMarks();
+
+    // Calculate total marks
+    r.calculateTotal();
+
+    // Display result
+    cout &lt;&lt; "\nStudent Result:" &lt;&lt; endl;
+    r.displayResult();
+
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter Roll No: 29
+Enter Marks for Subject 1: 10
+Enter Marks for Subject 2: 20
+Enter Sports Marks: 30
+
+Student Result:
+Roll No: 29
+Marks for Subject 1: 10
+Marks for Subject 2: 20
+Sports Marks: 30
+Total Marks: 60
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/6 geofig_area.cpp')">
+        6 Geofig Area
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/6 geofig_area.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program to create a base class geofig with member function getdata() to accept the sides of the geofig and display() function. Make the display () virtual. Define two derived class called rect and tri with member function display() to compute the respective area and display the sides and area. Make an interactive program to accept the appropriate dimension for the chosen figure.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;conio.h&gt; //for getch()
+
+using namespace std;
+
+class geofig{
+    public:
+    float a,b,area;
+    void get_data(){
+        cin&gt;&gt;a&gt;&gt;b;
+    }
+    virtual void display(){
+		// Empty
+	}
+};
+
+class tri:public geofig{
+    public:
+    void display(){
+        area=0.5*a*b;
+        cout&lt;&lt;"Height and base of the triangle are: "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;endl;
+        cout&lt;&lt;"Area of the triangle is: "&lt;&lt;area&lt;&lt;endl;
+    }
+};
+
+class rect:public geofig{
+    public:
+    void display(){
+        area=a*b;
+        cout&lt;&lt;"Length and breadth of the rectangle are: "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;endl;
+        cout&lt;&lt;"Area of the rectangle is: "&lt;&lt;area&lt;&lt;endl;
+    }
+};
+
+int main(){
+    geofig *ptr;
+	tri t1;
+	rect r1;
+	char c;
+	cout&lt;&lt;"Enter the type of figure (t/r): "&lt;&lt;endl;
+    cin&gt;&gt;c;
+    if(c=='t'){
+        cout&lt;&lt;"Enter the height and base of the triangle: "&lt;&lt;endl;
+        ptr=&amp;t1;
+        ptr-&gt;get_data();
+        ptr-&gt;display();
+    }
+    else if(c=='r'){
+        cout&lt;&lt;"Enter the length and breadth of the rectangle: "&lt;&lt;endl;
+        ptr=&amp;r1;
+        ptr-&gt;get_data();
+        ptr-&gt;display();
+    }
+    else{
+        cout&lt;&lt;"Invalid input"&lt;&lt;endl;
+    }
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the type of figure (t/r):
+t
+Enter the height and base of the triangle:
+5 10
+Height and base of the triangle are: 5 and 10
+Area of the triangle is: 25
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/7 stack_implementation.cpp')">
+        7 Stack Implementation
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/7 stack_implementation.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program, to implement basic stack operations using array.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for _getch()
+# define stack_size 5
+
+using namespace std;
+
+class stack
+{
+    int top;
+    int s[stack_size]
+public:
+	int item;
+    stack()
+    {
+        top = -1;
+    }
+    void push(int item)
+    {
+        if (top &gt;= stack_size - 1)
+            cout &lt;&lt; "Stack Overflow" &lt;&lt; endl;
+        else
+            s[++top] = item;
+        cout &lt;&lt; item &lt;&lt; " pushed into stack" &lt;&lt; endl;
+    }
+    void pop()
+    {
+        if (top &lt; 0)
+            cout &lt;&lt; "Stack is empty" &lt;&lt; endl;
+        else
+            cout &lt;&lt; s[top--] &lt;&lt; " popped from stack" &lt;&lt; endl;
+    }
+    void display()
+    {
+        if (top &lt; 0)
+            cout &lt;&lt; "Stack is empty" &lt;&lt; endl;
+        else
+            cout &lt;&lt; "Stack elements are: ";
+        for (int i = 0; i &lt;= top; i++)
+        {
+            cout &lt;&lt; s[i] &lt;&lt; " ";
+        }
+        cout &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    stack ob;
+    int choice;
+    cout &lt;&lt; "1. Push" &lt;&lt; endl;
+    cout &lt;&lt; "2. Pop" &lt;&lt; endl;
+    cout &lt;&lt; "3. Display" &lt;&lt; endl;
+    cout &lt;&lt; "4. Exit" &lt;&lt; endl;
+    for(;;)
+    {
+        cout &lt;&lt; "Enter your choice: ";
+        cin &gt;&gt; choice;
+        switch (choice)
+        {
+        case 1:
+            cout &lt;&lt; "Enter the element to be pushed: ";
+            cin &gt;&gt; ob.item;
+            ob.push(ob.item);
+            break;
+        case 2:
+            ob.pop();
+            break;
+        case 3:
+            ob.display();
+            break;
+        case 4:
+            exit(0);
+        default:
+            cout &lt;&lt; "Invalid choice" &lt;&lt; endl;
+        }
+    }
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+1. Push
+2. Pop
+3. Display
+4. Exit
+Enter your choice: 1
+Enter the element to be pushed: 5
+5 pushed into stack
+
+Enter your choice: 1
+Enter the element to be pushed: 10
+10 pushed into stack
+
+Enter your choice: 1
+Enter the element to be pushed: 15
+15 pushed into stack
+
+Enter your choice: 2
+15 popped from stack
+
+Enter your choice: 3
+Stack elements are: 5 10
+
+Enter your choice: 2
+10 popped from stack
+
+Enter your choice: 2
+5 popped from stack
+
+Enter your choice: 2
+Stack is empty
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/8 infix_to_postfix.cpp')">
+        8 Infix To Postfix
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/8 infix_to_postfix.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program, to convert the given infix expression to postfix expression.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;stack&gt;
+#include &lt;conio.h&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+// Function to return precedence of operators
+int precedence(char ch)
+{
+    if (ch == '+' || ch == '-')
+        return 1;
+    else if (ch == '*' || ch == '/')
+        return 2;
+    else if (ch == '^')
+        return 3;
+    else
+        return -1;
+}
+
+// Function to convert infix to postfix
+void infixToPostfix(string s)
+{
+    stack&lt;char&gt; st;
+    string result = "";
+    for (int i = 0; i &lt; s.length(); i++)
+    {
+        char c = s[i];
+        // If the scanned character is an operand, add it to output
+        if ((c &gt;= 'a' &amp;&amp; c &lt;= 'z') || (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') || (c &gt;= '0' &amp;&amp; c &lt;= '9'))
+            result += c;
+        // If the scanned character is an '(', push it to the stack
+        else if (c == '(')
+            st.push(c);
+        // If the scanned character is an ')', pop and output from the stack until an '(' is encountered
+        else if (c == ')')
+        {
+            while (!st.empty() &amp;&amp; st.top() != '(')
+            {
+                result += st.top();
+                st.pop();
+            }
+            if (!st.empty())
+                st.pop();
+        }
+        // If the scanned character is an operator, pop all the operators from the stack which are greater than or equal to in precedence than that of the scanned operator.
+        else
+        {
+            while (!st.empty() &amp;&amp; precedence(c) &lt;= precedence(st.top()))
+            {
+                result += st.top();
+                st.pop();
+            }
+            st.push(c);
+        }
+    }
+    while (!st.empty())
+    {
+        result += st.top();
+        st.pop();
+    }
+    cout &lt;&lt; "Postfix expression: " &lt;&lt; result &lt;&lt; endl;
+}
+
+// Main function
+int main(){
+    string exp;
+    cout &lt;&lt; "Enter the infix expression: ";
+    cin &gt;&gt; exp;
+    infixToPostfix(exp);
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the infix expression: A+B+C/D*E(F+G)/H
+Postfix expression: AB+CD/EFG+*H/+
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/9 evalute_valid_postfix.cpp')">
+        9 Evalute Valid Postfix
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/9 evalute_valid_postfix.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program, to evaluate a valid postfix expression and display the result.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;cstring&gt;
+
+using namespace std;
+
+class Stack
+{
+public:
+    char postfix[30];
+    int s[30];
+    int result;
+    int top;
+    Stack()
+    {
+        top = -1;
+    }
+
+    // Fuction to evaluate postfix expression
+    void evaluateExpressions()
+    {
+        for (int i = 0; i &lt; strlen(postfix); i++)
+        {
+            char ch = postfix[i];
+            if (isdigit(ch))
+            {
+                s[++top] = ch - '0';
+            }
+            else
+            {
+                int op2 = s[top--];
+                int op1 = s[top--];
+                performOperation(op1, op2, ch);
+                s[++top] = result;
+            }
+        }
+    }
+
+    void performOperation(int op1,int op2,char symbol){
+        switch (symbol)
+        {
+        case '+':
+            result = op1 + op2;
+            break;
+        case '-':
+            result = op1 - op2;
+            break;
+        case '*':
+            result = op1 * op2;
+            break;
+        case '/':
+            result = op1 / op2;
+            break;
+        case '^':
+        case '$':
+            result = pow(op1, op2);
+            break;
+        }
+    }
+};
+
+int main()
+{
+    Stack ob;
+    cout &lt;&lt; "Enter the postfix expression: ";
+    cin &gt;&gt; ob.postfix;
+    ob.evaluateExpressions();
+    cout &lt;&lt; "Result: " &lt;&lt; ob.result &lt;&lt; endl;
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/10 linear_queue.cpp')">
+        10 Linear Queue
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/10 linear_queue.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program, to implement linear queue operations using array.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+
+#define size 5
+
+using namespace std;
+
+class Queue
+{
+    int front, rear;
+    int arr[size];
+    public:
+    Queue()
+    {
+        front = -1;
+        rear = -1;
+    }
+    void enqueue(int data)
+    {
+        if (rear == size - 1)
+        {
+            cout &lt;&lt; "Queue is full" &lt;&lt; endl;
+        }
+        else
+        {
+            if (front == -1)
+            {
+                front = 0;
+            }
+            rear++;
+            arr[rear] = data;
+            cout &lt;&lt; data &lt;&lt; " is enqueued" &lt;&lt; endl;
+        }
+    }
+    void dequeue()
+    {
+        if (front == -1)
+        {
+            cout &lt;&lt; "Queue is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            cout &lt;&lt; arr[front] &lt;&lt; " is dequeued" &lt;&lt; endl;
+            front++;
+            if (front &gt; rear)
+            {
+                front = rear = -1;
+            }
+        }
+    }
+    void display()
+    {
+        if (front == -1)
+        {
+            cout &lt;&lt; "Queue is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            cout &lt;&lt; "Queue elements are: ";
+            for (int i = front; i &lt;= rear; i++)
+            {
+                cout &lt;&lt; arr[i] &lt;&lt; " ";
+            }
+            cout &lt;&lt; endl;
+        }
+    }
+};
+
+int main()
+{
+    Queue ob;
+    int choice;
+    int item;
+    cout &lt;&lt; "1. Enqueue" &lt;&lt; endl;
+    cout &lt;&lt; "2. Dequeue" &lt;&lt; endl;
+    cout &lt;&lt; "3. Display" &lt;&lt; endl;
+    cout &lt;&lt; "4. Exit" &lt;&lt; endl;
+    for(;;)
+    {
+        cout &lt;&lt; "Enter your choice: ";
+        cin &gt;&gt; choice;
+        switch (choice)
+        {
+        case 1:
+            cout &lt;&lt; "Enter the element to be Enqueue: ";
+            cin &gt;&gt; item;
+            ob.enqueue(item);
+            break;
+        case 2:
+            ob.dequeue();
+            break;
+        case 3:
+            ob.display();
+            break;
+        case 4:
+            exit(0);
+        default:
+            cout &lt;&lt; "Invalid choice" &lt;&lt; endl;
+        }
+    }
+    getch();
+    return 0;
+}
+
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
+Enter your choice: 1
+Enter the element to be Enqueue: 3
+3 is enqueued
+Enter your choice: 1
+Enter the element to be Enqueue: 5
+5 is enqueued
+Enter your choice: 1
+Enter the element to be Enqueue: 0
+0 is enqueued
+Enter your choice: 2
+3 is dequeued
+Enter your choice: 2
+5 is dequeued
+Enter your choice: 2
+0 is dequeued
+Enter your choice: 2
+Queue is empty
+Enter your choice:
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/11 circular_queue.cpp')">
+        11 Circular Queue
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/11 circular_queue.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program, to implement circular queue operations using array.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch()
+
+#define size 3
+
+using namespace std;
+
+class CircularQueue
+{
+    int front, rear;
+    int arr[size];
+	int count;
+    public:
+    CircularQueue()
+    {	count = 0;
+        front = -1;
+        rear = -1;
+    }
+    void enqueue(int data)
+	{	
+        if (count == size)
+        {
+            cout &lt;&lt; "Queue is full" &lt;&lt; endl;
+        }
+        else
+        {
+            if (front == -1)
+            {
+                front = 0;
+            }
+            rear = (rear+1)%size;
+            arr[rear] = data;
+			count = count+1;
+            cout &lt;&lt; data &lt;&lt; " is enqueued" &lt;&lt; endl;
+        }
+    }
+    void dequeue()
+    {
+        if (count == 0)
+        {
+            cout &lt;&lt; "Queue is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            cout &lt;&lt; arr[front] &lt;&lt; " is dequeued" &lt;&lt; endl;
+            front = (front+1)%size;
+            count--;
+        }
+    }
+    void display()
+    {
+        if (front == -1)
+        {
+            cout &lt;&lt; "Queue is empty" &lt;&lt; endl;
+        }
+        else
+        {
+            cout &lt;&lt; "Queue elements are: ";
+			int j = 0;
+			int i = front;
+            while (j&lt;count)
+            {
+                cout &lt;&lt; arr[i] &lt;&lt; " ";
+				i = (i+1)%size;
+				j++;
+            }
+            cout &lt;&lt; endl;
+        }
+    }
+};
+
+int main()
+{
+    CircularQueue ob;
+    int choice;
+    int item;
+	cout&lt;&lt;"Circular Queue\n";
+    cout &lt;&lt; "1. Enqueue" &lt;&lt; endl;
+    cout &lt;&lt; "2. Dequeue" &lt;&lt; endl;
+    cout &lt;&lt; "3. Display" &lt;&lt; endl;
+    cout &lt;&lt; "4. Exit" &lt;&lt; endl;
+    for(;;)
+    {
+        cout &lt;&lt; "Enter your choice: ";
+        cin &gt;&gt; choice;
+        switch (choice)
+        {
+        case 1:
+            cout &lt;&lt; "Enter the element to be Enqueue : ";
+            cin &gt;&gt; item;
+            ob.enqueue(item);
+            break;
+        case 2:
+            ob.dequeue();
+            break;
+        case 3:
+            ob.display();
+            break;
+        case 4:
+            exit(0);
+        default:
+            cout &lt;&lt; "Invalid choice" &lt;&lt; endl;
+        }
+    }
+    getch();
+    return 0;
+}
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Circular Queue
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
+Enter your choice: 1
+Enter the element to be Enqueue : 1
+1 is enqueued
+Enter your choice: 1
+Enter the element to be Enqueue : 2
+2 is enqueued
+Enter your choice: 1
+Enter the element to be Enqueue : 3
+3 is enqueued
+Enter your choice: 1
+Enter the element to be Enqueue : 4
+Queue is full
+Enter your choice: 3
+Queue elements are: 1 2 3
+Enter your choice: 2
+1 is dequeued
+Enter your choice: 2
+2 is dequeued
+Enter your choice: 2
+3 is dequeued
+Enter your choice: 2
+Queue is empty
+Enter your choice:
 </pre>
         </div>
        </div>
