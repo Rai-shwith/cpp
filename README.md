@@ -75,6 +75,7 @@ Note:
 - [1 Friend Exchange](.\Test Questions\1 friend_exchange.cpp)
 - [10 Linear Queue](.\Test Questions\10 linear_queue.cpp)
 - [11 Circular Queue](.\Test Questions\11 circular_queue.cpp)
+- [12 Priority Queue](.\Test Questions\12 priority_queue.cpp)
 - [13 User Operation On Singly Linked List](.\Test Questions\13 user_operation_on_singly_linked_list.cpp)
 - [14 Delete From Front Using Linked List](.\Test Questions\14 delete_from_front_using_linked_list.cpp)
 - [15 Search And Delete Using Circular Linked List](.\Test Questions\15 search_and_delete_using_circular_linked_list.cpp)
