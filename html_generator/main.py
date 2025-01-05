@@ -111,7 +111,6 @@ def generate_html(cpp_files):
     for lab, files in cpp_files.items():
         programs = [] # store the inner HTML for each program
         for file_path in sorted(files, key=lambda x: int(re.search(r'\d+', os.path.basename(x)).group()) if re.search(r'\d+', os.path.basename(x)) else 0):
-            print(file_path)
             title = generate_title(file_path=file_path)
             (question,code,result) = get_question_code_result(file_path=file_path)
             programs.append(get_lab_component(file_path=file_path,title=title,question=question,code=code,result=result))

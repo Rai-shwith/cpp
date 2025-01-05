@@ -5573,6 +5573,659 @@ Enter your choice:
         </div>
        </div>
       </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/13 user_operation_on_singly_linked_list.cpp')">
+        13 User Operation On Singly Linked List
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/13 user_operation_on_singly_linked_list.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ programs, that reads a list of integers form that reads a list of integers from the user, and search for a particular key in the created list if search is successful then delete it and update the rest list and display the list contents using singly linked list.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch
+
+using namespace std;
+
+struct Node
+{
+    int data;
+    Node *link;
+};
+
+class LinkedList
+{
+public:
+    Node *head; // head of list
+    LinkedList()
+    {
+        head = NULL;
+    }
+    void construct_linked_list_from_array(int *, int);
+    void search_and_delete(int key);
+    void display();
+};
+
+void LinkedList::construct_linked_list_from_array(int *arr, int n)
+{
+    Node *temp;
+    for (int i = 0; i &lt; n; i++)
+    {
+        Node *new_node = new Node;
+        new_node-&gt;data = arr[i];
+        new_node-&gt;link = NULL;
+        if (head == NULL)
+        {
+            head = new_node;
+            temp = head;
+        }
+        else
+        {
+            temp-&gt;link = new_node;
+            temp = temp-&gt;link;
+        }
+    }
+}
+
+void LinkedList::search_and_delete(int key)
+{
+    if (head == NULL)
+    {
+        cout &lt;&lt; "List is empty" &lt;&lt; endl;
+        return;
+    }
+    if (head-&gt;data == key)
+    {
+        Node *temp = head;
+        head = head-&gt;link;
+        delete temp;
+        return;
+    }
+    Node *temp = head;
+    while (temp-&gt;link != NULL)
+    {
+        if (temp-&gt;link-&gt;data == key)
+        {
+            Node *temp1 = temp-&gt;link;
+            temp-&gt;link = temp-&gt;link-&gt;link;
+            delete temp1;
+            return;
+        }
+        temp = temp-&gt;link;
+    }
+    cout &lt;&lt; "Key not found" &lt;&lt; endl;
+}
+
+void LinkedList::display()
+{
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        cout &lt;&lt; temp-&gt;data &lt;&lt; " ";
+        temp = temp-&gt;link;
+    }
+}
+
+int main(){
+    int n,a[100],key;
+    cout&lt;&lt;"Enter the number of elements: ";
+    cin&gt;&gt;n;
+    cout&lt;&lt;"Enter the elements: ";
+    for(int i=0;i&lt;n;i++){
+        cin&gt;&gt;a[i];
+    }
+    LinkedList list;
+    list.construct_linked_list_from_array(a,n);
+    cout&lt;&lt;"Enter the key to search and delete: ";
+    cin&gt;&gt;key;
+    list.search_and_delete(key);
+    cout&lt;&lt;"List after deleting the key: ";
+    list.display();
+    getch();
+    return 0;
+}
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the number of elements: 5
+Enter the elements: 1 2 3 4 5
+Enter the key to search and delete: 3
+List after deleting the key: 1 2 4 5 
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/14 delete_from_front_using_linked_list.cpp')">
+        14 Delete From Front Using Linked List
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/14 delete_from_front_using_linked_list.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ program, that reads a list of integers from the user, and deletes a data from the frontend of created list and display the list contents using Singly Linked List.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch
+
+using namespace std;
+
+struct Node {
+    int data;
+    Node *link;
+};
+
+class LinkedList {
+public:
+    Node *head;
+    LinkedList() { head = NULL; }
+
+    void construct_linked_list_from_array(int *arr, int n) {
+        Node *temp;
+        for (int i = 0; i &lt; n; i++) {
+            Node *new_node = new Node;
+            new_node-&gt;data = arr[i];
+            new_node-&gt;link = NULL;
+            if (!head) {
+                head = new_node;
+                temp = head;
+            } else {
+                temp-&gt;link = new_node;
+                temp = temp-&gt;link;
+            }
+        }
+    }
+
+    void delete_from_front() {
+        if (!head) {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+            return;
+        }
+        Node *temp = head;
+        head = head-&gt;link;
+        delete temp;
+    }
+
+    void display() {
+        Node *temp = head;
+        while (temp) {
+            cout &lt;&lt; temp-&gt;data &lt;&lt; " ";
+            temp = temp-&gt;link;
+        }
+        cout &lt;&lt; endl;
+    }
+};
+
+int main() {
+    int n, arr[100];
+    cout &lt;&lt; "Enter the number of elements: ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "Enter the elements: ";
+    for(int i = 0; i &lt; n; i++) {
+        cin &gt;&gt; arr[i];
+    }
+    LinkedList list;
+    list.construct_linked_list_from_array(arr, n);
+    cout&lt;&lt; "List: ";
+    list.display();
+    list.delete_from_front();
+    cout &lt;&lt; "List after deleting from front: ";
+    list.display();
+    getch();
+    return 0;
+}
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the number of elements: 6
+Enter the elements: 1 2 3 4 5 6
+List: 1 2 3 4 5 6 
+List after deleting from front: 2 3 4 5 6 
+</pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/15 search_and_delete_using_circular_linked_list.cpp')">
+        15 Search And Delete Using Circular Linked List
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/15 search_and_delete_using_circular_linked_list.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         Write a C++ programs, that reads a list of integers form that reads a list of integers from the user, and search for a particular key in the created list if search is successful then delete it and update the rest list and display the list contents using Circular linked list.
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch
+
+using namespace std;
+
+struct Node {
+    int data;
+    Node* link;
+};
+
+class CircularLinkedList {
+public:
+    Node* last;
+    CircularLinkedList() { last = NULL; }
+
+    void insert_rear(int data) {
+        Node* new_node = new Node;
+        new_node-&gt;data = data;
+        if(!last) {
+            last = new_node;
+            last-&gt;link = last;
+        } else {
+            new_node-&gt;link = last-&gt;link;
+            last-&gt;link = new_node;
+            last = new_node;
+        }
+    }
+
+    void construct_linked_list_from_array(int* arr, int n) {
+        for(int i = 0; i &lt; n; i++){
+            insert_rear(arr[i]);
+        }
+    }
+
+    void search_and_delete(int key) {
+        if(!last) {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+            return;
+        }
+        Node *curr = last-&gt;link, *prev = last;
+        do {
+            if(curr-&gt;data == key) {
+                // If there's only one node in the list
+                if(curr == last &amp;&amp; curr-&gt;link == last) {
+                    delete curr;
+                    last = NULL;
+                }
+                // If the key is in the first node of the list
+                else if(curr == last-&gt;link) {
+                    last-&gt;link = curr-&gt;link;
+                    delete curr;
+                }
+                // If the key is in the last node of the list
+                else if(curr == last) {
+                    prev-&gt;link = curr-&gt;link;
+                    last = prev;
+                    delete curr;
+                }
+                // Otherwise, it's in a middle node
+                else {
+                    prev-&gt;link = curr-&gt;link;
+                    delete curr;
+                }
+                return;
+            }
+            prev = curr;
+            curr = curr-&gt;link;
+        } while(curr != last-&gt;link);
+        cout &lt;&lt; "Key not found" &lt;&lt; endl;
+    }
+
+    void display() {
+        if(!last) {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+            return;
+        }
+        Node* temp = last-&gt;link;
+        do {
+            cout &lt;&lt; temp-&gt;data &lt;&lt; " ";
+            temp = temp-&gt;link;
+        } while(temp != last-&gt;link);
+        cout &lt;&lt; endl;
+    }
+};
+
+int main() {
+    int n, arr[100], key;
+    cout &lt;&lt; "Enter the number of elements: ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "Enter the elements: ";
+    for(int i = 0; i &lt; n; i++) {
+        cin &gt;&gt; arr[i];
+    }
+    CircularLinkedList list;
+    list.construct_linked_list_from_array(arr, n);
+    cout &lt;&lt; "Enter the key to search and delete: ";
+    cin &gt;&gt; key;
+    list.search_and_delete(key);
+    cout &lt;&lt; "List after deleting the key: ";
+    list.display();
+    getch();
+    return 0;
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">a C++ programs, that reads a list of integers form that reads a list of integers from the user, and search for a particular key in the created list if search is successful then delete it and update the rest list and display the list contents using Circular linked list.
+#include <iostream>
+#include <conio.h> // for getch
+
+using namespace std;
+
+struct Node {
+    int data;
+    Node* link;
+};
+
+class CircularLinkedList {
+public:
+    Node* last;
+    CircularLinkedList() { last = NULL; }
+
+    void insert_rear(int data) {
+        Node* new_node = new Node;
+        new_node-&gt;data = data;
+        if(!last) {
+            last = new_node;
+            last-&gt;link = last;
+        } else {
+            new_node-&gt;link = last-&gt;link;
+            last-&gt;link = new_node;
+            last = new_node;
+        }
+    }
+
+    void construct_linked_list_from_array(int* arr, int n) {
+        for(int i = 0; i &lt; n; i++){
+            insert_rear(arr[i]);
+        }
+    }
+
+    void search_and_delete(int key) {
+        if(!last) {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+            return;
+        }
+        Node *curr = last-&gt;link, *prev = last;
+        do {
+            if(curr-&gt;data == key) {
+                // If there's only one node in the list
+                if(curr == last &amp;&amp; curr-&gt;link == last) {
+                    delete curr;
+                    last = NULL;
+                }
+                // If the key is in the first node of the list
+                else if(curr == last-&gt;link) {
+                    last-&gt;link = curr-&gt;link;
+                    delete curr;
+                }
+                // If the key is in the last node of the list
+                else if(curr == last) {
+                    prev-&gt;link = curr-&gt;link;
+                    last = prev;
+                    delete curr;
+                }
+                // Otherwise, it's in a middle node
+                else {
+                    prev-&gt;link = curr-&gt;link;
+                    delete curr;
+                }
+                return;
+            }
+            prev = curr;
+            curr = curr-&gt;link;
+        } while(curr != last-&gt;link);
+        cout &lt;&lt; "Key not found" &lt;&lt; endl;
+    }
+
+    void display() {
+        if(!last) {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+            return;
+        }
+        Node* temp = last-&gt;link;
+        do {
+            cout &lt;&lt; temp-&gt;data &lt;&lt; " ";
+            temp = temp-&gt;link;
+        } while(temp != last-&gt;link);
+        cout &lt;&lt; endl;
+    }
+};
+
+int main() {
+    int n, arr[100], key;
+    cout &lt;&lt; "Enter the number of elements: ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "Enter the elements: ";
+    for(int i = 0; i &lt; n; i++) {
+        cin &gt;&gt; arr[i];
+    }
+    CircularLinkedList list;
+    list.construct_linked_list_from_array(arr, n);
+    cout &lt;&lt; "Enter the key to search and delete: ";
+    cin &gt;&gt; key;
+    list.search_and_delete(key);
+    cout &lt;&lt; "List after deleting the key: ";
+    list.display();
+    getch();
+    return 0;
+</conio.h></iostream></pre>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors">
+       <button class="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100" onclick="toggleProgram('./Test Questions/16 delet_from_frontend_using_doubly_linked_list.cpp')">
+        16 Delet From Frontend Using Doubly Linked List
+       </button>
+       <div class="mt-4 hidden" id="./Test Questions/16 delet_from_frontend_using_doubly_linked_list.cpp">
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+         <strong>
+          Question:
+         </strong>
+         write a C++ program that reads a list of integers from the user, and deletes a data from the front end of created list and display the list contents using linear doubly linked List
+        </p>
+        <section class="mt-4">
+         <div class="flex justify-between">
+          <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+           Code:
+          </h4>
+          <button class="copy" onclick="copyCode(event)">
+           <span class="tooltip" data-text-end="Copied!" data-text-initial="Copy to clipboard">
+           </span>
+           <span>
+            <svg class="clipboard" height="20" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 6.35 6.35" width="20" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+            <svg class="checkmark" height="18" style="enable-background:new 0 0 512 512" version="1.1" viewbox="0 0 24 24" width="18" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+             <g>
+              <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" fill="currentColor">
+              </path>
+             </g>
+            </svg>
+           </span>
+          </button>
+         </div>
+         <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;conio.h&gt; // for getch
+
+using namespace std;
+
+struct Node {
+    int data;
+    Node* prev;
+    Node* next;
+};
+
+class DoublyLinkedList {
+public:
+    Node* head;
+    DoublyLinkedList() { head = NULL; }
+    
+    void insert_rear(int data) {
+        Node* new_node = new Node;
+        new_node-&gt;data = data;
+        new_node-&gt;prev = NULL;
+        new_node-&gt;next = NULL;
+        if(!head) {
+            head = new_node;
+        } else {
+            Node* temp = head;
+            while(temp-&gt;next) {
+                temp = temp-&gt;next;
+            }
+            temp-&gt;next = new_node;
+            new_node-&gt;prev = temp;
+        }
+    }
+
+    void delete_from_front() {
+        if(!head) {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+            return;
+        }
+        Node* temp = head;
+        head = head-&gt;next;
+        if(head) {
+            head-&gt;prev = NULL;
+        }
+        delete temp;
+    }
+
+    void display() {
+        if(!head) {
+            cout &lt;&lt; "List is empty" &lt;&lt; endl;
+            return;
+        }
+        Node* temp = head;
+        while(temp) {
+            cout &lt;&lt; temp-&gt;data &lt;&lt; " ";
+            temp = temp-&gt;next;
+        }
+        cout &lt;&lt; endl;
+    }
+};
+
+int main() {
+    int n, arr[100];
+    cout &lt;&lt; "Enter the number of elements: ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "Enter the elements: ";
+    for(int i = 0; i &lt; n; i++) {
+        cin &gt;&gt; arr[i];
+    }
+    
+    DoublyLinkedList list;
+    for(int i = 0; i &lt; n; i++) {
+        list.insert_rear(arr[i]);
+    }
+    cout &lt;&lt; "List: ";
+    list.display();
+    list.delete_from_front();
+    cout &lt;&lt; "List after deleting from front: ";
+    list.display();
+
+    getch();
+    return 0;
+}
+</code></pre>
+        </section>
+        <div class="mt-4">
+         <h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">
+          Output:
+         </h4>
+         <pre class="bg-gray-900 text-green-400 overflow-x-auto p-3 rounded-md dark:bg-gray-700">
+Enter the number of elements: 6
+Enter the elements: 2 4 6 8 10 12
+List: 2 4 6 8 10 12 
+List after deleting from front: 4 6 8 10 12 
+</pre>
+        </div>
+       </div>
+      </div>
      </div>
     </div>
    </div>
